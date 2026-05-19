@@ -17,6 +17,7 @@ import { CustomCursor } from './components/CustomCursor';
 import { FlashlightSection } from './components/FlashlightSection';
 import { Magnetic } from './components/Magnetic';
 import { InitialCentering } from './components/InitialCentering';
+import { KeyboardNavigation } from './components/KeyboardNavigation';
 import { useIsMobile } from './hooks/useIsMobile';
 import Matter from 'matter-js';
 import { useAudio } from './contexts/AudioContext';
@@ -31,41 +32,6 @@ export const PhysicsContext = createContext<PhysicsContextType>({
 });
 
 
-
-const KeyboardNavigation = ({ transformRef }: { transformRef: any }) => {
-  const { setTransform, zoomToElement } = useControls();
-
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (document.activeElement?.tagName === 'INPUT' || document.activeElement?.tagName === 'TEXTAREA') return;
-
-      const panAmount = 150;
-      let { x, y, scale } = transformRef.current;
-      let moved = false;
-
-      switch (e.key.toLowerCase()) {
-        case 'w': case 'arrowup': y += panAmount; moved = true; break;
-        case 's': case 'arrowdown': y -= panAmount; moved = true; break;
-        case 'a': case 'arrowleft': x += panAmount; moved = true; break;
-        case 'd': case 'arrowright': x -= panAmount; moved = true; break;
-        case ' ': // Spacebar
-          e.preventDefault();
-          const sw = window.innerWidth;
-          const sh = window.innerHeight;
-          const targetScale = Math.min((sw * 0.84) / 1100, (sh * 0.84) / 700, 1.4);
-          zoomToElement('node-hero', targetScale, 600, 'easeOut');
-          break;
-      }
-
-      if (moved) setTransform(x, y, scale, 150, 'linear');
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [setTransform, zoomToElement, transformRef]);
-
-  return null;
-};
 
 // Interactive 3D Node Wrapper
 const InteractiveNode = ({ children, startX, startY, width, height, shape = 'rectangle', zIndex = 10, delay = 0, id, innerClassName = "", loadingProgress }: InteractiveNodeProps) => {
