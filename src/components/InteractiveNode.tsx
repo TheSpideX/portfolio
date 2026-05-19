@@ -213,6 +213,20 @@ export const InteractiveNode = ({ children, startX, startY, width, height, shape
     pointerHistoryRef.current = [];
   };
 
+  // Visibility-based GSAP control
+  useEffect(() => {
+    if (!floatTweenRef.current) return;
+
+    if (isVisible) {
+      // Node entered viewport - resume animation from start
+      floatTweenRef.current.restart();
+    } else {
+      // Node left viewport - reset to start and pause
+      floatTweenRef.current.progress(0);
+      floatTweenRef.current.pause();
+    }
+  }, [isVisible]);
+
   useGSAP(() => {
     // Ambient floating (starts after initial reveal)
     floatTweenRef.current = gsap.to(floatRef.current, {
@@ -222,7 +236,8 @@ export const InteractiveNode = ({ children, startX, startY, width, height, shape
       repeat: -1,
       yoyo: true,
       ease: "sine.inOut",
-      delay: 2.5 + delay // Wait for initial reveal
+      delay: 2.5 + delay, // Wait for initial reveal
+      paused: !isVisible, // Start paused if not visible
     });
 
     // 3D Tilt effect
