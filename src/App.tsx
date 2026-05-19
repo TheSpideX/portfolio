@@ -13,6 +13,8 @@ import { MobileLayout } from './components/MobileLayout';
 import { useIsMobile } from './hooks/useIsMobile';
 import Matter from 'matter-js';
 import { useAudio } from './contexts/AudioContext';
+import { NAV_ITEMS, NODE_ORDER } from './constants/navItems';
+import { Project, PROJECTS } from './constants/projects';
 
 interface PhysicsContextType {
   engine: Matter.Engine | null;
@@ -223,16 +225,7 @@ const InitialCentering = () => {
   return null;
 };
 
-export const NAV_ITEMS = [
-  { label: 'Hero', id: 'node-hero', w: 1100, h: 700, x: 1500, y: 1500 },
-  { label: 'About', id: 'node-about', w: 1100, h: 700, x: 1700, y: 80 },
-  { label: 'Work', id: 'node-work', w: 1600, h: 900, x: 3000, y: 1450 },
-  { label: 'Stack', id: 'node-stack', w: 1600, h: 600, x: 1600, y: 2950 },
-  { label: 'Process', id: 'node-process', w: 950, h: 840, x: 100, y: 1500 },
-  { label: 'Expertise', id: 'node-expertise', w: 1050, h: 960, x: 200, y: 2900 },
-  { label: 'Manifesto', id: 'node-manifesto', w: 1200, h: 800, x: 3300, y: 50 },
-  { label: 'Contact', id: 'node-contact', w: 850, h: 850, x: 100, y: 100 },
-];
+
 
 const KeyboardNavigation = ({ transformRef }: { transformRef: any }) => {
   const { setTransform, zoomToElement } = useControls();
@@ -556,8 +549,7 @@ const InteractiveNode = ({ children, startX, startY, width, height, shape = 'rec
 
           {/* SKELETON OVERLAY */}
           {(() => {
-            const order = ['node-hero', 'node-about', 'node-work', 'node-stack', 'node-process', 'node-expertise', 'node-manifesto', 'node-contact'];
-            const nodeIndex = order.indexOf(id || '');
+            const nodeIndex = NODE_ORDER.indexOf(id || '');
             const isSkeleton = loadingProgress !== undefined && loadingProgress < Math.min(100, (nodeIndex + 1) * 12.5);
 
             return (
@@ -569,8 +561,7 @@ const InteractiveNode = ({ children, startX, startY, width, height, shape = 'rec
 
           {/* ALWAYS RENDER CHILDREN FOR GSAP / PHYSICS */}
           {(() => {
-            const order = ['node-hero', 'node-about', 'node-work', 'node-stack', 'node-process', 'node-expertise', 'node-manifesto', 'node-contact'];
-            const nodeIndex = order.indexOf(id || '');
+            const nodeIndex = NODE_ORDER.indexOf(id || '');
             const isSkeleton = loadingProgress !== undefined && loadingProgress < Math.min(100, (nodeIndex + 1) * 12.5);
 
             return (
@@ -635,7 +626,6 @@ const EasterEgg = () => {
 };
 
 // Project Detail Panel
-interface Project { title: string; type: string; year: string; desc: string; tech: string[]; img: string; link: string; }
 const ProjectDetailPanel = ({ project, onClose }: { project: Project | null; onClose: () => void }) => {
   const panelRef = useRef<HTMLDivElement>(null);
   useGSAP(() => {
@@ -1233,12 +1223,7 @@ function DesktopApp() {
                   <span className="font-mono text-gray-500 text-xl uppercase tracking-widest">2024 - 2026</span>
                 </div>
                 <div className="flex flex-col w-full border-t border-white/20">
-                  {[
-                    { title: 'SystemSim', type: 'Distributed Systems Platform', year: '2025', img: '10', desc: 'A reality-grounded distributed systems simulator. Innovated an ACID-like Isolation architecture for emergent resource contention. Built 4 universal base engines in Go with 90-92% hardware-level accuracy using real Intel/Samsung profiles.', tech: ['Go', 'gRPC', 'WebSocket', 'PostgreSQL', 'Redis', 'Docker', 'React'], link: 'https://github.com/TheSpideX/SystemSim' },
-                    { title: 'NoRegret', type: 'Mesh Networking Stack', year: '2025', img: '20', desc: 'A serverless mesh networking stack that operates without internet or cellular infrastructure. Architected a Digital Factory C++ engine using the Actor model with NASA-grade FEC and Yggdrasil routing for resilient packet processing.', tech: ['C++', 'Kotlin', 'JNI', 'CAF', 'Go', 'Yggdrasil', 'Noise Protocol'], link: 'https://github.com/TheSpideX/NoRegret' },
-                    { title: 'This Portfolio', type: 'Interactive Canvas', year: '2026', img: '30', desc: 'The portfolio you are exploring right now. An infinite canvas with physics simulation, 3D terrain, audio synthesis, and draggable nodes. Designed the architecture, used AI to build it. Proof that I can make anything I can imagine.', tech: ['React', 'Three.js', 'Matter.js', 'GSAP', 'Web Audio', 'Tailwind'], link: '#' },
-                    { title: 'Next Project', type: 'Your Idea Here', year: '2026', img: '40', desc: 'Have a problem that needs a novel solution? I architect systems that do not exist yet, then build them. Tell me what you need.', tech: ['Any Stack', 'Any Domain', 'AI-Augmented'], link: '#contact' }
-                  ].map((item, index) => (
+                  {PROJECTS.map((item, index) => (
                     <div
                       key={index}
                       onClick={() => setSelectedProject(item)}
