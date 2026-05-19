@@ -700,10 +700,10 @@ const ProjectDetailPanel = ({ project, onClose }: { project: Project | null; onC
           </div>
           <div className="flex gap-4 border-t border-white/10 pt-8">
             <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-mono font-bold text-black bg-[#ccff00] px-8 py-4 rounded-full hover:scale-105 transition-transform uppercase tracking-widest">
-              <ExternalLink className="w-4 h-4" /> Live Site
+              <Github className="w-4 h-4" /> GitHub
             </a>
-            <a href="#" className="flex items-center gap-2 font-mono text-white border border-white/20 px-8 py-4 rounded-full hover:border-[#ccff00] hover:text-[#ccff00] transition-colors uppercase tracking-widest">
-              <Github className="w-4 h-4" /> Code
+            <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-mono text-white border border-white/20 px-8 py-4 rounded-full hover:border-[#ccff00] hover:text-[#ccff00] transition-colors uppercase tracking-widest">
+              <ExternalLink className="w-4 h-4" /> View Project
             </a>
           </div>
         </div>
