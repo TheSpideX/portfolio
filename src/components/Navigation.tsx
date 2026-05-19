@@ -31,10 +31,10 @@ export const Navigation = ({ discoveredNodes }: { discoveredNodes: string[] }) =
       Math.pow(viewCenterY - targetCenterY, 2)
     );
 
-    // Dynamic duration based on distance (min 500ms, max 1200ms)
-    const baseDuration = 500;
-    const distanceFactor = 0.5; // ms per pixel
-    const duration = Math.min(1200, Math.max(baseDuration, baseDuration + distance * distanceFactor));
+    // Dynamic duration based on distance (min 800ms, max 2000ms)
+    const baseDuration = 800;
+    const distanceFactor = 0.8; // ms per pixel
+    const duration = Math.min(2000, Math.max(baseDuration, baseDuration + distance * distanceFactor));
 
     zoomToElement(id, targetScale, duration, 'easeInOutCubic');
   };
