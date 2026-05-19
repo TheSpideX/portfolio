@@ -13,9 +13,9 @@ export const PhysicsStack = ({ width = 1600, height = 600 }: { width?: number; h
     const { playTick, playWhoosh, startHum, stopHum } = useAudio();
 
     const marquees = [
-        { text: 'REACT // NEXT.JS // TYPESCRIPT // ', color: '#ccff00' },
-        { text: 'GSAP // THREE.JS // WEBGL // ', color: 'white' },
-        { text: 'NODE.JS // POSTGRES // SUPABASE // ', color: '#60a5fa' },
+        { text: 'C++ // GO // KOTLIN // TYPESCRIPT // ', color: '#ccff00' },
+        { text: 'gRPC // WEBSOCKET // DOCKER // REDIS // ', color: 'white' },
+        { text: 'POSTGRESQL // YGGDRASIL // CAF // AI TOOLS // ', color: '#60a5fa' },
     ];
 
     const updateMousePos = (clientX: number, clientY: number) => {

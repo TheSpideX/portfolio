@@ -1347,7 +1347,7 @@ export default function App() {
                   <div className="col-span-5 row-span-3 rounded-2xl relative group" style={{ transform: 'translateZ(40px)', transformStyle: 'preserve-3d' }}>
                     {/* Background Layer */}
                     <div className="absolute inset-0 bg-zinc-900 rounded-2xl border border-white/5 overflow-hidden pointer-events-none">
-                      <img src="https://picsum.photos/seed/portrait101/600/500?grayscale" alt="Profile" className="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 group-hover:grayscale-0 grayscale" />
+                      <img src="https://api.dicebear.com/7.x/initials/svg?seed=KS&backgroundColor=ccff00&textColor=000000&fontSize=40&fontWeight=700&size=200" alt="Kumar Satyam" className="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 group-hover:grayscale-0 grayscale" />
                       <div className="absolute inset-0 bg-[#ccff00] mix-blend-overlay opacity-0 group-hover:opacity-30 transition-opacity duration-500" />
                     </div>
                     {/* Live Clock */}
