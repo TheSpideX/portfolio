@@ -1,12 +1,28 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useControls } from 'react-zoom-pan-pinch';
 
 export const KeyboardNavigation = ({ transformRef }: { transformRef: any }) => {
   const { setTransform, zoomToElement } = useControls();
+  const recentKeysRef = useRef('');
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (document.activeElement?.tagName === 'INPUT' || document.activeElement?.tagName === 'TEXTAREA') return;
+
+      // Track recent keys for easter egg detection
+      recentKeysRef.current += e.key.toLowerCase();
+      if (recentKeysRef.current.length > 4) {
+        recentKeysRef.current = recentKeysRef.current.slice(-4);
+      }
+
+      // Skip WASD if user is typing 'void' (easter egg)
+      const typingVoid = recentKeysRef.current.includes('v') && 
+        (recentKeysRef.current.endsWith('v') || 
+         recentKeysRef.current.endsWith('vo') || 
+         recentKeysRef.current.endsWith('voi') || 
+         recentKeysRef.current.endsWith('void'));
+
+      if (typingVoid) return;
 
       const panAmount = 150;
       let { x, y, scale } = transformRef.current;
