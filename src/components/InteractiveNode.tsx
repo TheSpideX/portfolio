@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useContext } from 'react';
+import React, { useRef, useEffect, useContext, useState } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import Matter from 'matter-js';
@@ -17,8 +17,33 @@ export const InteractiveNode = ({ children, startX, startY, width, height, shape
   const dragOffsetRef = useRef({ x: 0, y: 0 });
   const floatTweenRef = useRef<gsap.core.Tween | null>(null);
 
+  // Visibility tracking
+  const [isVisible, setIsVisible] = useState(false);
+  const isVisibleRef = useRef(false);
+
   // Track recent pointer positions for throw velocity
   const pointerHistoryRef = useRef<{ x: number; y: number; t: number }[]>([]);
+
+  // IntersectionObserver for visibility detection
+  useEffect(() => {
+    const element = nodeRef.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        const visible = entry.isIntersecting;
+        setIsVisible(visible);
+        isVisibleRef.current = visible;
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(element);
+
+    return () => {
+      observer.unobserve(element);
+    };
+  }, []);
 
   // Physics Body Initialization
   useEffect(() => {
@@ -30,6 +55,7 @@ export const InteractiveNode = ({ children, startX, startY, width, height, shape
       frictionAir: 0.08,
       angle: 0,
       inertia: Infinity,
+      sleepThreshold: 60, // Frames of inactivity before sleeping
     };
 
     const initialX = startX + width / 2;
@@ -47,14 +73,42 @@ export const InteractiveNode = ({ children, startX, startY, width, height, shape
       if (nodeRef.current && bodyRef.current) {
         const { x, y } = bodyRef.current.position;
         nodeRef.current.style.transform = `translate(${x - width / 2}px, ${y - height / 2}px)`;
+
+        // Visibility-based sleep logic
+        const visible = isVisibleRef.current;
+        const dragging = isDraggingRef.current;
+        const hasMomentum = bodyRef.current.speed > 0.5;
+
+        if (!visible && !dragging && !hasMomentum) {
+          // Put body to sleep (not static!) - can be woken by collision
+          if (!bodyRef.current.isSleeping) {
+            Matter.Sleeping.set(bodyRef.current, true);
+          }
+        } else {
+          // Wake up body if it's sleeping
+          if (bodyRef.current.isSleeping) {
+            Matter.Sleeping.set(bodyRef.current, false);
+          }
+        }
       }
       animationFrameId = requestAnimationFrame(updateTransform);
     };
 
     updateTransform();
 
+    // Collision wake-up: wake sleeping bodies when hit
+    const handleCollision = (event: Matter.IEventCollision<Matter.Engine>) => {
+      event.pairs.forEach(pair => {
+        if (pair.bodyA.isSleeping) Matter.Sleeping.set(pair.bodyA, false);
+        if (pair.bodyB.isSleeping) Matter.Sleeping.set(pair.bodyB, false);
+      });
+    };
+
+    Matter.Events.on(engine, 'collisionStart', handleCollision);
+
     return () => {
       cancelAnimationFrame(animationFrameId);
+      Matter.Events.off(engine, 'collisionStart', handleCollision);
       Matter.World.remove(engine.world, body);
     };
   }, [engine, startX, startY, width, height, shape]);
@@ -69,6 +123,11 @@ export const InteractiveNode = ({ children, startX, startY, width, height, shape
     isDraggingRef.current = true;
 
     if (!engine || !bodyRef.current || !transformRef.current) return;
+
+    // Wake up body if sleeping
+    if (bodyRef.current.isSleeping) {
+      Matter.Sleeping.set(bodyRef.current, false);
+    }
 
     // Zero velocity immediately to prevent momentum fighting
     Matter.Body.setVelocity(bodyRef.current, { x: 0, y: 0 });
