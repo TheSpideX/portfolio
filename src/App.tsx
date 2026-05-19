@@ -16,6 +16,7 @@ import { ProjectDetailPanel } from './components/ProjectDetailPanel';
 import { CustomCursor } from './components/CustomCursor';
 import { FlashlightSection } from './components/FlashlightSection';
 import { Magnetic } from './components/Magnetic';
+import { InitialCentering } from './components/InitialCentering';
 import { useIsMobile } from './hooks/useIsMobile';
 import Matter from 'matter-js';
 import { useAudio } from './contexts/AudioContext';
@@ -28,31 +29,6 @@ export const PhysicsContext = createContext<PhysicsContextType>({
   transformRef: { current: { x: 0, y: 0, scale: 1 } },
   setIsDragging: () => { }
 });
-
-
-
-// Initial Centering Component
-const InitialCentering = () => {
-  const { zoomToElement } = useControls();
-  const hasCentered = useRef(false);
-
-  useEffect(() => {
-    if (hasCentered.current) return;
-
-    // Wait for the DOM and TransformWrapper to finish mounting
-    const timer = setTimeout(() => {
-      const sw = window.innerWidth;
-      const sh = window.innerHeight;
-      const targetScale = Math.min((sw * 0.84) / 1200, (sh * 0.84) / 800, 1.4);
-      // Center instantly (0ms) on the Start node
-      zoomToElement('node-start', targetScale, 0);
-      hasCentered.current = true;
-    }, 50);
-    return () => clearTimeout(timer);
-  }, [zoomToElement]);
-
-  return null;
-};
 
 
 
