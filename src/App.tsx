@@ -1,11 +1,9 @@
-import React, { useRef, useState, useEffect, useCallback, createContext, useContext } from 'react';
+import React, { useRef, useState, useEffect, useCallback, createContext, useContext, Suspense } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { Move, Github, Linkedin, Twitter, Dribbble, ExternalLink, ArrowUpRight, X, Copy, Check, MapPin, Clock, Volume2, VolumeX, Box, LayoutGrid, ArrowRight, Sparkles } from 'lucide-react';
 import { TransformWrapper, TransformComponent, useControls } from "react-zoom-pan-pinch";
-import Background3D from './components/Background3D';
 
-import { PhysicsStack } from './components/PhysicsStack';
 import { ProcessTimeline } from './components/ProcessTimeline';
 import { ExpertiseSection } from './components/ExpertiseSection';
 import { ScrambleText } from './components/ScrambleText';
@@ -19,13 +17,17 @@ import { Magnetic } from './components/Magnetic';
 import { InitialCentering } from './components/InitialCentering';
 import { KeyboardNavigation } from './components/KeyboardNavigation';
 import { useIsMobile } from './hooks/useIsMobile';
-import Matter from 'matter-js';
 import { useAudio } from './contexts/AudioContext';
 import { NAV_ITEMS, NODE_ORDER } from './constants/navItems';
 import { Project, PROJECTS } from './constants/projects';
 import { PhysicsContextType, InteractiveNodeProps } from './types';
 import { PhysicsContext } from './contexts/PhysicsContext';
-import { InteractiveNode } from './components/InteractiveNode';
+
+// Lazy load heavy components (Three.js, Matter.js)
+const Background3D = React.lazy(() => import('./components/Background3D'));
+const PhysicsStack = React.lazy(() => import('./components/PhysicsStack'));
+const InteractiveNode = React.lazy(() => import('./components/InteractiveNode'));
+import Matter from 'matter-js';
 
 // Re-export for backward compatibility
 export { PhysicsContext };
@@ -273,7 +275,9 @@ function MobileApp() {
 
   return (
     <div className="relative w-full h-screen text-white font-sans overflow-x-hidden overflow-y-auto">
-      <Background3D transformRef={transformRef} />
+      <Suspense fallback={null}>
+        <Background3D transformRef={transformRef} />
+      </Suspense>
       <div className="grid-bg fixed inset-0 pointer-events-none" />
       <div className="noise-bg fixed inset-0 pointer-events-none" />
       <MobileLayout />
@@ -380,7 +384,9 @@ function DesktopApp() {
     <PhysicsContext.Provider value={{ engine, transformRef, setIsDragging }}>
       <div ref={containerRef} className="relative w-full h-screen text-white font-sans overflow-hidden">
         <CustomCursor />
-        <Background3D transformRef={transformRef} />
+        <Suspense fallback={null}>
+          <Background3D transformRef={transformRef} />
+        </Suspense>
         <div className="grid-bg fixed inset-0 pointer-events-none" />
         <div className="noise-bg fixed inset-0 pointer-events-none" />
         <ProjectDetailPanel project={selectedProject} onClose={() => setSelectedProject(null)} />
@@ -451,6 +457,7 @@ function DesktopApp() {
           <KeyboardNavigation transformRef={transformRef} />
           {experienceStarted && <Navigation discoveredNodes={discoveredNodes} />}
           <TransformComponent wrapperStyle={{ width: "100vw", height: "100vh", cursor: "grab" }}>
+            <Suspense fallback={null}>
             <div className="w-[5000px] h-[4000px] relative">
 
               {/* NODE START: Loading & Selection */}
@@ -853,7 +860,9 @@ function DesktopApp() {
 
               {/* NODE 7: TECH STACK - Physics Marquee */}
               <InteractiveNode loadingProgress={loadingProgress} id="node-stack" startX={1600} startY={2950} width={1600} height={600} zIndex={10} delay={1.2}>
-                <PhysicsStack width={1600} height={600} />
+                <Suspense fallback={null}>
+                  <PhysicsStack width={1600} height={600} />
+                </Suspense>
               </InteractiveNode>
 
               {/* NODE 8: PROCESS - Timeline (LEFT, beside Hero) */}
@@ -878,6 +887,7 @@ function DesktopApp() {
               </div>
 
             </div>
+            </Suspense>
           </TransformComponent>
         </TransformWrapper>
       </div>

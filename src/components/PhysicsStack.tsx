@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Matter from 'matter-js';
 import { useAudio } from '../contexts/AudioContext';
 
-export const PhysicsStack = ({ width = 1600, height = 600 }: { width?: number; height?: number }) => {
+const PhysicsStack = ({ width = 1600, height = 600 }: { width?: number; height?: number }) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const engineRef = useRef<Matter.Engine | null>(null);
     const runnerRef = useRef<Matter.Runner | null>(null);
@@ -342,3 +342,5 @@ export const PhysicsStack = ({ width = 1600, height = 600 }: { width?: number; h
         </div>
     );
 };
+
+export default PhysicsStack;

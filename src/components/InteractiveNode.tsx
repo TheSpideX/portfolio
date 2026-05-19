@@ -6,7 +6,7 @@ import { PhysicsContext } from '../contexts/PhysicsContext';
 import { InteractiveNodeProps } from '../types';
 import { NODE_ORDER } from '../constants/navItems';
 
-export const InteractiveNode = ({ children, startX, startY, width, height, shape = 'rectangle', zIndex = 10, delay = 0, id, innerClassName = "", loadingProgress }: InteractiveNodeProps) => {
+const InteractiveNode = ({ children, startX, startY, width, height, shape = 'rectangle', zIndex = 10, delay = 0, id, innerClassName = "", loadingProgress }: InteractiveNodeProps) => {
   const nodeRef = useRef<HTMLDivElement>(null);
   const floatRef = useRef<HTMLDivElement>(null);
   const tiltRef = useRef<HTMLDivElement>(null);
@@ -323,3 +323,5 @@ export const InteractiveNode = ({ children, startX, startY, width, height, shape
     </div>
   );
 };
+
+export default InteractiveNode;
