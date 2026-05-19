@@ -14,3 +14,7 @@ coverage/
 
 # Playwright MCP
 .playwright-mcp/
+
+# Personal files
+resume.pdf
+AGENTS.md
