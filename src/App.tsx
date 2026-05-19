@@ -1101,7 +1101,7 @@ export default function App() {
                 {/* Rotating Role Badge */}
                 {(() => {
                   const [badgeIdx, setBadgeIdx] = useState(0);
-                  const badges = ['Available for Work', 'Based in London', 'Open to Collabs'];
+                  const badges = ['Open for Freelance', 'IIT Dhanbad CSE', 'AI-Augmented Builder'];
                   useEffect(() => {
                     const interval = setInterval(() => setBadgeIdx(i => (i + 1) % badges.length), 3000);
                     return () => clearInterval(interval);
@@ -1116,8 +1116,8 @@ export default function App() {
                   );
                 })()}
                 {/* Particle-spawning hero words */}
-                {(['CREATIVE', 'FRONTEND', 'DEVELOPER'] as const).map((word, idx) => {
-                  const isOutline = word === 'FRONTEND';
+                {(['SYSTEMS', 'BREAKTHROUGH', 'ENGINEER'] as const).map((word, idx) => {
+                  const isOutline = word === 'BREAKTHROUGH';
                   const zDepth = [120, 160, 100][idx];
                   return (
                     <div key={word} className="text-reveal-mask overflow-hidden pb-8 pt-4 -mt-4 relative" style={{ transform: `translateZ(${zDepth}px)` }}>
@@ -1152,11 +1152,11 @@ export default function App() {
 
                 <div className="hero-subtext mt-8 flex justify-between items-end gap-8 border-t border-white/20 pt-6" style={{ transform: 'translateZ(60px)' }}>
                   <p className="font-mono text-xl max-w-lg text-gray-400">
-                    Crafting award-winning digital experiences with a focus on motion, interaction, and brutalist design principles.
+                    I design novel system architectures and build what others say can't be done. Every project starts as an impossible idea — I make it real.
                   </p>
                   {/* Stats strip */}
                   <div className="flex gap-8 shrink-0">
-                    {[{ n: '5+', l: 'Yrs Exp' }, { n: '30+', l: 'Projects' }, { n: '8+', l: 'Awards' }].map(s => (
+                    {[{ n: '3+', l: 'Novel Systems' }, { n: 'AIR 5007', l: 'JEE Advanced' }, { n: '8.59', l: 'CGPA / 10' }].map(s => (
                       <div key={s.l} className="text-center">
                         <div className="font-display text-4xl text-[#ccff00]">{s.n}</div>
                         <div className="font-mono text-xs text-gray-500 uppercase tracking-widest mt-1">{s.l}</div>
