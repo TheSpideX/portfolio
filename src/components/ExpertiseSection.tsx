@@ -1,24 +1,24 @@
 import React, { useState } from 'react';
-import { Code2, MonitorPlay, Layers } from 'lucide-react';
+import { Server, Sparkles, Lightbulb } from 'lucide-react';
 
 const expertise = [
   {
-    title: 'Creative Dev',
-    desc: 'Building immersive, interactive web experiences using WebGL, GSAP, and modern frontend frameworks.',
-    tags: ['WebGL', 'GSAP', 'Three.js', 'React'],
-    icon: Code2
+    title: 'Systems Architecture',
+    desc: 'Designing novel system architectures that solve problems others have not attempted. From ACID-like isolation to mesh networking — I architect what does not exist yet.',
+    tags: ['Distributed Systems', 'Microservices', 'gRPC', 'WebSocket'],
+    icon: Server
   },
   {
-    title: 'Motion Design',
-    desc: 'Crafting fluid animations and transitions that bring interfaces to life and guide user attention.',
-    tags: ['Framer', 'CSS', 'SVG'],
-    icon: MonitorPlay
+    title: 'AI-Augmented Build',
+    desc: 'Using AI as a force multiplier. I design the architecture and breakthroughs, then leverage AI to execute rapidly. The idea is mine, the speed is exponential.',
+    tags: ['Rapid Prototyping', 'AI Tools', 'Full-Stack', 'Any Stack'],
+    icon: Sparkles
   },
   {
-    title: 'UI/UX Eng',
-    desc: 'Bridging the gap between design and engineering with pixel-perfect, accessible interfaces.',
-    tags: ['Figma', 'Tailwind', 'A11y'],
-    icon: Layers
+    title: 'Breakthrough Thinking',
+    desc: 'Every project starts as an impossible idea. I find the novel approach, design the algorithm, and build what others say cannot be done. Not limited to any domain.',
+    tags: ['Algorithm Design', 'Problem Solving', 'Novel Patterns', 'Research'],
+    icon: Lightbulb
   }
 ];
 
