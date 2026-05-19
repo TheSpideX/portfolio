@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
 const steps = [
-  { num: '01', title: 'Discover', desc: 'Deep-dive into brand, audience & goals. Research competitors, define creative direction.', duration: '1W', details: ['Interviews', 'Analysis', 'Brief'] },
-  { num: '02', title: 'Design', desc: 'Wireframes & high-fidelity Figma prototypes. Every pixel intentional, every interaction polished.', duration: '2W', details: ['Wireframes', 'Hi-fi Mocks', 'Motion'] },
-  { num: '03', title: 'Build', desc: 'Production-grade code. Performance, accessibility and animation are non-negotiable.', duration: '3W', details: ['Architecture', 'WebGL/GSAP', 'CI/CD'] },
-  { num: '04', title: 'Ship', desc: 'Deploy, test, iterate. Post-launch support ensures everything runs flawlessly.', duration: '1W', details: ['Audit', 'A/B Test', 'Support'] },
+  { num: '01', title: 'The Impossible Idea', desc: 'Find a problem nobody has solved. Identify why existing solutions fail. See what others cannot see yet.', duration: 'IDEA', details: ['Problem Analysis', 'Gap Identification', 'Novel Approach'] },
+  { num: '02', title: 'Architecture', desc: 'Design the breakthroughs. Map the system from first principles. Every decision is mine — the architecture, the algorithms, the isolation model.', duration: 'DESIGN', details: ['System Design', 'Breakthrough Logic', 'First Principles'] },
+  { num: '03', title: 'AI-Augmented Build', desc: 'Execute rapidly using AI as a force multiplier. I architect, AI implements. The idea is mine, the speed is exponential.', duration: 'BUILD', details: ['AI Tools', 'Rapid Iteration', 'Any Stack'] },
+  { num: '04', title: 'Ship & Prove', desc: 'Deploy, test, and prove it works. The system speaks for itself — 90% accuracy, zero infrastructure dependency, novel patterns.', duration: 'SHIP', details: ['Validation', 'Metrics', 'Documentation'] },
 ];
 
 export const ProcessTimeline = () => {
