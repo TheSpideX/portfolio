@@ -1212,7 +1212,7 @@ export default function App() {
                       <div className="absolute bottom-4 right-6 text-[160px] font-display leading-none text-black/10 pointer-events-none select-none" style={{ transform: 'translateZ(-30px) rotate(5deg)' }}>”</div>
 
                       <div ref={manifestoRef} style={{ transformStyle: 'preserve-3d' }}>
-                        <h2 className="text-6xl font-display uppercase leading-tight relative z-10" style={{ transform: 'translateZ(100px)', transformStyle: 'preserve-3d' }}>
+                        <h2 className="text-5xl font-display uppercase leading-snug relative z-10" style={{ transform: 'translateZ(100px)', transformStyle: 'preserve-3d' }}>
                           {("I build things that should not exist. Every project starts as an impossible idea - a problem nobody has solved, a system nobody has architected. I do not accept limitations on language, domain, or tool. I design the breakthroughs, then I execute. AI is my force multiplier, not my replacement. The architecture is mine. The vision is mine. The result speaks for itself.").split(' ').map((word, i) => (
                             <span key={i} className="manifesto-word inline-block mr-4" style={{ transformStyle: 'preserve-3d' }}>
                               <span className="manifesto-word-hover cursor-default">{word}</span>

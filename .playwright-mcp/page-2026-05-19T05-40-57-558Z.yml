@@ -1,0 +1,501 @@
+- generic [ref=e3]:
+  - button "Sound Off" [ref=e7]:
+    - img [ref=e8]
+    - generic [ref=e12]: Sound Off
+  - generic:
+    - img
+    - paragraph: Drag to pan • Scroll to zoom
+  - 'button "GRAVITY: OFF" [ref=e13]'
+  - generic [ref=e16]:
+    - generic [ref=e19]:
+      - generic:
+        - generic: Initializing Node...
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - generic [ref=e23]:
+            - generic [ref=e24]: System Initialization
+            - generic [ref=e25]: Loading...
+          - generic [ref=e26]:
+            - generic [ref=e28]:
+              - generic [ref=e29]: "000"
+              - generic [ref=e30]: "%"
+            - generic [ref=e38]:
+              - generic [ref=e41]: "0"
+              - generic [ref=e44]: "25"
+              - generic [ref=e47]: "50"
+              - generic [ref=e50]: "75"
+              - generic [ref=e53]: "100"
+        - button "01 Path One Exploration Mode Free-roam 3D canvas. Discover hidden nodes organically to unlock navigation tabs." [ref=e54]:
+          - generic:
+            - generic: "01"
+          - generic [ref=e57]:
+            - generic [ref=e58]: Path One
+            - img [ref=e59]
+          - generic [ref=e62]:
+            - heading "Exploration Mode" [level=2] [ref=e64]:
+              - text: Exploration
+              - text: Mode
+            - paragraph [ref=e66]: Free-roam 3D canvas. Discover hidden nodes organically to unlock navigation tabs.
+        - button "02 Path Two Direct Access All navigation tabs are unlocked from the start. Instantly jump to any section." [ref=e67]:
+          - generic:
+            - generic: "02"
+          - generic [ref=e70]:
+            - generic [ref=e71]: Path Two
+            - img [ref=e72]
+          - generic [ref=e75]:
+            - heading "Direct Access" [level=2] [ref=e77]:
+              - text: Direct
+              - text: Access
+            - paragraph [ref=e79]: All navigation tabs are unlocked from the start. Instantly jump to any section.
+    - generic:
+      - img
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: Initializing Node...
+            - generic:
+              - generic:
+                - generic:
+                  - heading "THE VOID" [level=2]
+                  - paragraph:
+                    - text: You found the secret node.
+                    - text: "\"In the infinite canvas of the web, curiosity is the only compass.\""
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: Initializing Node...
+            - generic:
+              - generic:
+                - generic: Open for Freelance
+              - generic:
+                - heading "SYSTEMS" [level=1]
+              - generic:
+                - heading "BREAKTHROUGH" [level=1]
+              - generic:
+                - heading "ENGINEER" [level=1]
+              - generic:
+                - paragraph: I design novel system architectures and build what others say can't be done. Every project starts as an impossible idea - I make it real.
+                - generic:
+                  - generic:
+                    - generic: 3+
+                    - generic: Novel Systems
+                  - generic:
+                    - generic: AIR 5007
+                    - generic: JEE Advanced
+                  - generic:
+                    - generic: "8.59"
+                    - generic: CGPA / 10
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: Initializing Node...
+            - generic:
+              - generic:
+                - generic: “
+                - generic: ”
+                - generic:
+                  - heading "I build things that should not exist. Every project starts as an impossible idea - a problem nobody has solved, a system nobody has architected. I do not accept limitations on language, domain, or tool. I design the breakthroughs, then I execute. AI is my force multiplier, not my replacement. The architecture is mine. The vision is mine. The result speaks for itself." [level=2]:
+                    - generic:
+                      - generic: I
+                    - generic:
+                      - generic: build
+                    - generic:
+                      - generic: things
+                    - generic:
+                      - generic: that
+                    - generic:
+                      - generic: should
+                    - generic:
+                      - generic: not
+                    - generic:
+                      - generic: exist.
+                    - generic:
+                      - generic: Every
+                    - generic:
+                      - generic: project
+                    - generic:
+                      - generic: starts
+                    - generic:
+                      - generic: as
+                    - generic:
+                      - generic: an
+                    - generic:
+                      - generic: impossible
+                    - generic:
+                      - generic: idea
+                    - generic:
+                      - generic: "-"
+                    - generic:
+                      - generic: a
+                    - generic:
+                      - generic: problem
+                    - generic:
+                      - generic: nobody
+                    - generic:
+                      - generic: has
+                    - generic:
+                      - generic: solved,
+                    - generic:
+                      - generic: a
+                    - generic:
+                      - generic: system
+                    - generic:
+                      - generic: nobody
+                    - generic:
+                      - generic: has
+                    - generic:
+                      - generic: architected.
+                    - generic:
+                      - generic: I
+                    - generic:
+                      - generic: do
+                    - generic:
+                      - generic: not
+                    - generic:
+                      - generic: accept
+                    - generic:
+                      - generic: limitations
+                    - generic:
+                      - generic: "on"
+                    - generic:
+                      - generic: language,
+                    - generic:
+                      - generic: domain,
+                    - generic:
+                      - generic: or
+                    - generic:
+                      - generic: tool.
+                    - generic:
+                      - generic: I
+                    - generic:
+                      - generic: design
+                    - generic:
+                      - generic: the
+                    - generic:
+                      - generic: breakthroughs,
+                    - generic:
+                      - generic: then
+                    - generic:
+                      - generic: I
+                    - generic:
+                      - generic: execute.
+                    - generic:
+                      - generic: AI
+                    - generic:
+                      - generic: is
+                    - generic:
+                      - generic: my
+                    - generic:
+                      - generic: force
+                    - generic:
+                      - generic: multiplier,
+                    - generic:
+                      - generic: not
+                    - generic:
+                      - generic: my
+                    - generic:
+                      - generic: replacement.
+                    - generic:
+                      - generic: The
+                    - generic:
+                      - generic: architecture
+                    - generic:
+                      - generic: is
+                    - generic:
+                      - generic: mine.
+                    - generic:
+                      - generic: The
+                    - generic:
+                      - generic: vision
+                    - generic:
+                      - generic: is
+                    - generic:
+                      - generic: mine.
+                    - generic:
+                      - generic: The
+                    - generic:
+                      - generic: result
+                    - generic:
+                      - generic: speaks
+                    - generic:
+                      - generic: for
+                    - generic:
+                      - generic: itself.
+                - img
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: Initializing Node...
+            - generic:
+              - generic:
+                - heading "Systems I Built" [level=2]
+                - generic: 2024 - 2026
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: "01"
+                    - heading "SystemSim" [level=3]
+                  - generic:
+                    - generic: "2025"
+                    - generic: Distributed Systems Platform
+                    - img
+                  - generic:
+                    - img "SystemSim"
+                - generic:
+                  - generic:
+                    - generic: "02"
+                    - heading "NoRegret" [level=3]
+                  - generic:
+                    - generic: "2025"
+                    - generic: Mesh Networking Stack
+                    - img
+                  - generic:
+                    - img "NoRegret"
+                - generic:
+                  - generic:
+                    - generic: "03"
+                    - heading "This Portfolio" [level=3]
+                  - generic:
+                    - generic: "2026"
+                    - generic: Interactive Canvas
+                    - img
+                  - generic:
+                    - img "This Portfolio"
+                - generic:
+                  - generic:
+                    - generic: "04"
+                    - heading "Next Project" [level=3]
+                  - generic:
+                    - generic: "2026"
+                    - generic: Your Idea Here
+                    - img
+                  - generic:
+                    - img "Next Project"
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: Initializing Node...
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - heading "Expertise" [level=2]
+                    - generic: CORE_MODULES
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: MOD // 01
+                            - generic: Active
+                          - generic:
+                            - generic:
+                              - img
+                              - img
+                            - heading "Systems Architecture" [level=3]
+                          - paragraph: Designing novel system architectures that solve problems others have not attempted. From ACID-like isolation to mesh networking — I architect what does not exist yet.
+                          - generic:
+                            - generic: Distributed Systems
+                            - generic: Microservices
+                            - generic: gRPC
+                            - generic: WebSocket
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: MOD // 02
+                            - generic: Active
+                          - generic:
+                            - generic:
+                              - img
+                              - img
+                            - heading "AI-Augmented Build" [level=3]
+                          - paragraph: Using AI as a force multiplier. I design the architecture and breakthroughs, then leverage AI to execute rapidly. The idea is mine, the speed is exponential.
+                          - generic:
+                            - generic: Rapid Prototyping
+                            - generic: AI Tools
+                            - generic: Full-Stack
+                            - generic: Any Stack
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: MOD // 03
+                            - generic: Active
+                          - generic:
+                            - generic:
+                              - img
+                              - img
+                            - heading "Breakthrough Thinking" [level=3]
+                          - paragraph: Every project starts as an impossible idea. I find the novel approach, design the algorithm, and build what others say cannot be done. Not limited to any domain.
+                          - generic:
+                            - generic: Algorithm Design
+                            - generic: Problem Solving
+                            - generic: Novel Patterns
+                            - generic: Research
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: Initializing Node...
+            - generic:
+              - generic:
+                - generic:
+                  - heading "LET'S TALK" [level=2]
+                - generic:
+                  - button "satyamiitdnbd@gmail.com"
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: Initializing Node...
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: Available for Freelance
+                  - heading "KUMAR SATYAM" [level=2]:
+                    - text: KUMAR
+                    - text: SATYAM
+                  - paragraph: Systems Architect & Idea-First Builder
+                - generic:
+                  - generic:
+                    - img "Profile"
+                  - generic:
+                    - img
+                    - text: 11:10:57
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: 0+
+                  - generic:
+                    - generic:
+                      - generic: "0"
+                      - generic: Novel Systems
+                    - generic:
+                      - generic: 0+
+                      - generic: LeetCode Solved
+                    - generic:
+                      - generic: "0"
+                      - generic: CGPA / 10
+                    - generic:
+                      - generic: ∞
+                      - generic: Coffees
+                - generic:
+                  - generic:
+                    - paragraph: I architect novel systems and use AI to build them fast. Every project I touch starts as an impossible idea - I design the breakthroughs, then execute. Not limited to any language or domain.
+                    - generic:
+                      - generic: Freelance
+                      - generic: Open Source
+                      - generic: System Design
+                  - generic:
+                    - generic:
+                      - generic:
+                        - img
+                      - generic:
+                        - generic: Dhanbad
+                        - generic: IIT Dhanbad, India
+                    - generic:
+                      - generic: ♪
+                      - generic:
+                        - generic: SystemSim
+                        - generic: Currently Building
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: Initializing Node...
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: REACT // NEXT.JS // TYPESCRIPT // REACT // NEXT.JS // TYPESCRIPT // REACT // NEXT.JS // TYPESCRIPT // REACT // NEXT.JS // TYPESCRIPT // REACT // NEXT.JS // TYPESCRIPT // REACT // NEXT.JS // TYPESCRIPT // REACT // NEXT.JS // TYPESCRIPT // REACT // NEXT.JS // TYPESCRIPT // REACT // NEXT.JS // TYPESCRIPT // REACT // NEXT.JS // TYPESCRIPT //
+                  - generic:
+                    - generic: GSAP // THREE.JS // WEBGL // GSAP // THREE.JS // WEBGL // GSAP // THREE.JS // WEBGL // GSAP // THREE.JS // WEBGL // GSAP // THREE.JS // WEBGL // GSAP // THREE.JS // WEBGL // GSAP // THREE.JS // WEBGL // GSAP // THREE.JS // WEBGL // GSAP // THREE.JS // WEBGL // GSAP // THREE.JS // WEBGL //
+                  - generic:
+                    - generic: NODE.JS // POSTGRES // SUPABASE // NODE.JS // POSTGRES // SUPABASE // NODE.JS // POSTGRES // SUPABASE // NODE.JS // POSTGRES // SUPABASE // NODE.JS // POSTGRES // SUPABASE // NODE.JS // POSTGRES // SUPABASE // NODE.JS // POSTGRES // SUPABASE // NODE.JS // POSTGRES // SUPABASE // NODE.JS // POSTGRES // SUPABASE // NODE.JS // POSTGRES // SUPABASE //
+                - generic:
+                  - heading "TECH STACK" [level=2]
+                - generic:
+                  - generic: Click & Hold
+                  - generic: Singularity
+                  - generic: Release
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: Initializing Node...
+            - generic:
+              - generic: "04"
+              - generic:
+                - heading "How I Work" [level=2]
+                - generic: SYS.PROCESS_FLOW
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: "[01]"
+                        - heading "The Impossible Idea" [level=3]
+                      - generic:
+                        - generic: IDEA
+                        - generic: Active
+                    - generic:
+                      - generic:
+                        - generic:
+                          - paragraph: Find a problem nobody has solved. Identify why existing solutions fail. See what others cannot see yet.
+                          - generic:
+                            - generic: Problem Analysis
+                            - generic: Gap Identification
+                            - generic: Novel Approach
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: "[02]"
+                        - heading "Architecture" [level=3]
+                      - generic:
+                        - generic: DESIGN
+                        - generic: Active
+                    - generic:
+                      - generic:
+                        - generic:
+                          - paragraph: Design the breakthroughs. Map the system from first principles. Every decision is mine — the architecture, the algorithms, the isolation model.
+                          - generic:
+                            - generic: System Design
+                            - generic: Breakthrough Logic
+                            - generic: First Principles
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: "[03]"
+                        - heading "AI-Augmented Build" [level=3]
+                      - generic:
+                        - generic: BUILD
+                        - generic: Active
+                    - generic:
+                      - generic:
+                        - generic:
+                          - paragraph: Execute rapidly using AI as a force multiplier. I architect, AI implements. The idea is mine, the speed is exponential.
+                          - generic:
+                            - generic: AI Tools
+                            - generic: Rapid Iteration
+                            - generic: Any Stack
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: "[04]"
+                        - heading "Ship & Prove" [level=3]
+                      - generic:
+                        - generic: SHIP
+                        - generic: Active
+                    - generic:
+                      - generic:
+                        - generic:
+                          - paragraph: Deploy, test, and prove it works. The system speaks for itself — 90% accuracy, zero infrastructure dependency, novel patterns.
+                          - generic:
+                            - generic: Validation
+                            - generic: Metrics
+                            - generic: Documentation
