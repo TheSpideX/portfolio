@@ -1,0 +1,446 @@
+- generic [ref=e3]:
+  - button "Sound Off" [ref=e7]:
+    - img [ref=e8]
+    - generic [ref=e12]: Sound Off
+  - generic:
+    - img
+    - paragraph: Drag to pan • Scroll to zoom
+  - 'button "GRAVITY: OFF" [ref=e13]'
+  - generic [ref=e83]:
+    - button "Hero" [ref=e84]
+    - button "About" [ref=e85]
+    - button "Work" [ref=e86]
+    - button "Stack" [ref=e87]
+    - button "Process" [ref=e88]
+    - button "Expertise" [ref=e89]
+    - button "Manifesto" [ref=e90]
+    - button "Contact" [ref=e91]
+  - generic [ref=e16]:
+    - generic [ref=e17]:
+      - generic:
+        - generic:
+          - generic:
+            - generic: Initializing Node...
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - generic: System Initialization
+                  - generic: Complete
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: "100"
+                      - generic: "%"
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: "0"
+                      - generic:
+                        - generic: "25"
+                      - generic:
+                        - generic: "50"
+                      - generic:
+                        - generic: "75"
+                      - generic:
+                        - generic: "100"
+              - button "01 Path One Exploration Mode Free-roam 3D canvas. Discover hidden nodes organically to unlock navigation tabs.":
+                - generic:
+                  - generic: "01"
+                - generic:
+                  - generic:
+                    - generic: Path One
+                    - img
+                - generic:
+                  - generic:
+                    - heading "Exploration Mode" [level=2]:
+                      - text: Exploration
+                      - text: Mode
+                  - generic:
+                    - paragraph: Free-roam 3D canvas. Discover hidden nodes organically to unlock navigation tabs.
+              - button "02 Path Two Direct Access All navigation tabs are unlocked from the start. Instantly jump to any section.":
+                - generic:
+                  - generic: "02"
+                - generic:
+                  - generic:
+                    - generic: Path Two
+                    - img
+                - generic:
+                  - generic:
+                    - heading "Direct Access" [level=2]:
+                      - text: Direct
+                      - text: Access
+                  - generic:
+                    - paragraph: All navigation tabs are unlocked from the start. Instantly jump to any section.
+    - generic [ref=e92]:
+      - img
+      - generic [ref=e93]:
+        - generic:
+          - generic:
+            - generic:
+              - generic: Initializing Node...
+            - generic:
+              - generic:
+                - generic:
+                  - heading "THE VOID" [level=2]
+                  - paragraph:
+                    - text: You found the secret node.
+                    - text: "\"In the infinite canvas of the web, curiosity is the only compass.\""
+      - generic [ref=e96]:
+        - generic:
+          - generic: Initializing Node...
+        - generic [ref=e97]:
+          - generic [ref=e100]: Open for Freelance
+          - heading "SYSTEMS" [level=1] [ref=e102]
+          - heading "BREAKTHROUGH" [level=1] [ref=e104]
+          - heading "ENGINEER" [level=1] [ref=e106]
+          - generic [ref=e107]:
+            - paragraph [ref=e108]: I design novel system architectures and build what others say can't be done. Every project starts as an impossible idea - I make it real.
+            - generic [ref=e109]:
+              - generic [ref=e110]:
+                - generic [ref=e111]: 3+
+                - generic [ref=e112]: Novel Systems
+              - generic [ref=e113]:
+                - generic [ref=e114]: AIR 5007
+                - generic [ref=e115]: JEE Advanced
+              - generic [ref=e116]:
+                - generic [ref=e117]: "8.59"
+                - generic [ref=e118]: CGPA / 10
+      - generic [ref=e121]:
+        - generic:
+          - generic: Initializing Node...
+        - generic [ref=e123]:
+          - generic: “
+          - generic: ”
+          - heading "I build things that should not exist. Every project starts as an impossible idea - a problem nobody has solved, a system nobody has architected. I do not accept limitations on language, domain, or tool. I design the breakthroughs, then I execute. AI is my force multiplier, not my replacement. The architecture is mine. The vision is mine. The result speaks for itself." [level=2] [ref=e125]:
+            - generic [ref=e127]: I
+            - generic [ref=e129]: build
+            - generic [ref=e131]: things
+            - generic [ref=e133]: that
+            - generic [ref=e135]: should
+            - generic [ref=e137]: not
+            - generic [ref=e139]: exist.
+            - generic [ref=e141]: Every
+            - generic [ref=e143]: project
+            - generic [ref=e145]: starts
+            - generic [ref=e147]: as
+            - generic [ref=e149]: an
+            - generic [ref=e151]: impossible
+            - generic [ref=e153]: idea
+            - generic [ref=e155]: "-"
+            - generic [ref=e157]: a
+            - generic [ref=e159]: problem
+            - generic [ref=e161]: nobody
+            - generic [ref=e163]: has
+            - generic [ref=e165]: solved,
+            - generic [ref=e167]: a
+            - generic [ref=e169]: system
+            - generic [ref=e171]: nobody
+            - generic [ref=e173]: has
+            - generic [ref=e175]: architected.
+            - generic [ref=e177]: I
+            - generic [ref=e179]: do
+            - generic [ref=e181]: not
+            - generic [ref=e183]: accept
+            - generic [ref=e185]: limitations
+            - generic [ref=e187]: "on"
+            - generic [ref=e189]: language,
+            - generic [ref=e191]: domain,
+            - generic [ref=e193]: or
+            - generic [ref=e195]: tool.
+            - generic [ref=e197]: I
+            - generic [ref=e199]: design
+            - generic [ref=e201]: the
+            - generic [ref=e203]: breakthroughs,
+            - generic [ref=e205]: then
+            - generic [ref=e207]: I
+            - generic [ref=e209]: execute.
+            - generic [ref=e211]: AI
+            - generic [ref=e213]: is
+            - generic [ref=e215]: my
+            - generic [ref=e217]: force
+            - generic [ref=e219]: multiplier,
+            - generic [ref=e221]: not
+            - generic [ref=e223]: my
+            - generic [ref=e225]: replacement.
+            - generic [ref=e227]: The
+            - generic [ref=e229]: architecture
+            - generic [ref=e231]: is
+            - generic [ref=e233]: mine.
+            - generic [ref=e235]: The
+            - generic [ref=e237]: vision
+            - generic [ref=e239]: is
+            - generic [ref=e241]: mine.
+            - generic [ref=e243]: The
+            - generic [ref=e245]: result
+            - generic [ref=e247]: speaks
+            - generic [ref=e249]: for
+            - generic [ref=e251]: itself.
+          - img [ref=e252]
+      - generic [ref=e256]:
+        - generic:
+          - generic: Initializing Node...
+        - generic [ref=e257]:
+          - generic [ref=e258]:
+            - heading "Systems I Built" [level=2] [ref=e259]
+            - generic [ref=e260]: 2024 - 2026
+          - generic [ref=e261]:
+            - generic [ref=e262] [cursor=pointer]:
+              - generic [ref=e263]:
+                - generic [ref=e264]: "01"
+                - heading "SystemSim" [level=3] [ref=e265]
+              - generic [ref=e266]:
+                - generic [ref=e267]: "2025"
+                - generic [ref=e268]: Distributed Systems Platform
+                - img [ref=e269]
+              - generic:
+                - img "SystemSim"
+            - generic [ref=e272] [cursor=pointer]:
+              - generic [ref=e273]:
+                - generic [ref=e274]: "02"
+                - heading "NoRegret" [level=3] [ref=e275]
+              - generic [ref=e276]:
+                - generic [ref=e277]: "2025"
+                - generic [ref=e278]: Mesh Networking Stack
+                - img [ref=e279]
+              - generic:
+                - img "NoRegret"
+            - generic [ref=e282] [cursor=pointer]:
+              - generic [ref=e283]:
+                - generic [ref=e284]: "03"
+                - heading "This Portfolio" [level=3] [ref=e285]
+              - generic [ref=e286]:
+                - generic [ref=e287]: "2026"
+                - generic [ref=e288]: Interactive Canvas
+                - img [ref=e289]
+              - generic:
+                - img "This Portfolio"
+            - generic [ref=e292] [cursor=pointer]:
+              - generic [ref=e293]:
+                - generic [ref=e294]: "04"
+                - heading "Next Project" [level=3] [ref=e295]
+              - generic [ref=e296]:
+                - generic [ref=e297]: "2026"
+                - generic [ref=e298]: Your Idea Here
+                - img [ref=e299]
+              - generic:
+                - img "Next Project"
+      - generic [ref=e304]:
+        - generic:
+          - generic: Initializing Node...
+        - generic [ref=e307]:
+          - generic [ref=e308]:
+            - heading "Expertise" [level=2] [ref=e309]
+            - generic [ref=e310]: CORE_MODULES
+          - generic [ref=e312]:
+            - generic [ref=e314] [cursor=pointer]:
+              - generic [ref=e315]:
+                - generic [ref=e316]: MOD // 01
+                - generic [ref=e317]: Active
+              - generic [ref=e318]:
+                - generic [ref=e319]:
+                  - img [ref=e320]
+                  - img [ref=e325]
+                - heading "Systems Architecture" [level=3] [ref=e330]
+              - paragraph [ref=e331]: Designing novel system architectures that solve problems others have not attempted. From ACID-like isolation to mesh networking — I architect what does not exist yet.
+              - generic [ref=e332]:
+                - generic [ref=e333]: Distributed Systems
+                - generic [ref=e334]: Microservices
+                - generic [ref=e335]: gRPC
+                - generic [ref=e336]: WebSocket
+            - generic [ref=e340] [cursor=pointer]:
+              - generic [ref=e341]:
+                - generic [ref=e342]: MOD // 02
+                - generic [ref=e343]: Active
+              - generic [ref=e344]:
+                - generic [ref=e345]:
+                  - img [ref=e346]
+                  - img [ref=e351]
+                - heading "AI-Augmented Build" [level=3] [ref=e356]
+              - paragraph [ref=e357]: Using AI as a force multiplier. I design the architecture and breakthroughs, then leverage AI to execute rapidly. The idea is mine, the speed is exponential.
+              - generic [ref=e358]:
+                - generic [ref=e359]: Rapid Prototyping
+                - generic [ref=e360]: AI Tools
+                - generic [ref=e361]: Full-Stack
+                - generic [ref=e362]: Any Stack
+            - generic [ref=e366] [cursor=pointer]:
+              - generic [ref=e367]:
+                - generic [ref=e368]: MOD // 03
+                - generic [ref=e369]: Active
+              - generic [ref=e370]:
+                - generic [ref=e371]:
+                  - img [ref=e372]
+                  - img [ref=e376]
+                - heading "Breakthrough Thinking" [level=3] [ref=e380]
+              - paragraph [ref=e381]: Every project starts as an impossible idea. I find the novel approach, design the algorithm, and build what others say cannot be done. Not limited to any domain.
+              - generic [ref=e382]:
+                - generic [ref=e383]: Algorithm Design
+                - generic [ref=e384]: Problem Solving
+                - generic [ref=e385]: Novel Patterns
+                - generic [ref=e386]: Research
+      - generic [ref=e391]:
+        - generic:
+          - generic: Initializing Node...
+        - generic [ref=e393]:
+          - heading "LET'S TALK" [level=2] [ref=e395]
+          - button "satyamiitdnbd@gmail.com" [ref=e397]
+      - generic [ref=e400]:
+        - generic:
+          - generic: Initializing Node...
+        - generic [ref=e402]:
+          - generic [ref=e403]:
+            - generic [ref=e406]: Available for Freelance
+            - heading "KUMAR SATYAM" [level=2] [ref=e407]:
+              - text: KUMAR
+              - text: SATYAM
+            - paragraph [ref=e408]: Systems Architect & Idea-First Builder
+          - generic [ref=e409]:
+            - generic:
+              - img "Profile"
+            - generic [ref=e410]:
+              - img [ref=e411]
+              - text: 09:55:36
+          - generic [ref=e414]:
+            - generic:
+              - generic:
+                - generic: 3+
+            - generic [ref=e415]:
+              - generic [ref=e416]:
+                - generic [ref=e417]: "3"
+                - generic [ref=e418]: Novel Systems
+              - generic [ref=e419]:
+                - generic [ref=e420]: 300+
+                - generic [ref=e421]: LeetCode Solved
+              - generic [ref=e422]:
+                - generic [ref=e423]: "8.59"
+                - generic [ref=e424]: CGPA / 10
+              - generic [ref=e425]:
+                - generic [ref=e426]: ∞
+                - generic [ref=e427]: Coffees
+          - generic [ref=e428]:
+            - generic [ref=e429]:
+              - paragraph [ref=e430]: I architect novel systems and use AI to build them fast. Every project I touch starts as an impossible idea - I design the breakthroughs, then execute. Not limited to any language or domain.
+              - generic [ref=e431]:
+                - generic [ref=e432]: Freelance
+                - generic [ref=e433]: Open Source
+                - generic [ref=e434]: System Design
+            - generic [ref=e435]:
+              - generic [ref=e436]:
+                - img [ref=e438]
+                - generic [ref=e442]:
+                  - generic [ref=e443]: Dhanbad
+                  - generic [ref=e444]: IIT Dhanbad, India
+              - generic [ref=e445]:
+                - generic [ref=e446]: ♪
+                - generic [ref=e447]:
+                  - generic [ref=e448]: SystemSim
+                  - generic [ref=e449]: Currently Building
+      - generic [ref=e458]:
+        - generic:
+          - generic: Initializing Node...
+        - generic [ref=e460]:
+          - generic:
+            - generic:
+              - generic: REACT // NEXT.JS // TYPESCRIPT // REACT // NEXT.JS // TYPESCRIPT // REACT // NEXT.JS // TYPESCRIPT // REACT // NEXT.JS // TYPESCRIPT // REACT // NEXT.JS // TYPESCRIPT // REACT // NEXT.JS // TYPESCRIPT // REACT // NEXT.JS // TYPESCRIPT // REACT // NEXT.JS // TYPESCRIPT // REACT // NEXT.JS // TYPESCRIPT // REACT // NEXT.JS // TYPESCRIPT //
+            - generic:
+              - generic: GSAP // THREE.JS // WEBGL // GSAP // THREE.JS // WEBGL // GSAP // THREE.JS // WEBGL // GSAP // THREE.JS // WEBGL // GSAP // THREE.JS // WEBGL // GSAP // THREE.JS // WEBGL // GSAP // THREE.JS // WEBGL // GSAP // THREE.JS // WEBGL // GSAP // THREE.JS // WEBGL // GSAP // THREE.JS // WEBGL //
+            - generic:
+              - generic: NODE.JS // POSTGRES // SUPABASE // NODE.JS // POSTGRES // SUPABASE // NODE.JS // POSTGRES // SUPABASE // NODE.JS // POSTGRES // SUPABASE // NODE.JS // POSTGRES // SUPABASE // NODE.JS // POSTGRES // SUPABASE // NODE.JS // POSTGRES // SUPABASE // NODE.JS // POSTGRES // SUPABASE // NODE.JS // POSTGRES // SUPABASE // NODE.JS // POSTGRES // SUPABASE //
+          - generic:
+            - heading "TECH STACK" [level=2]
+          - generic:
+            - generic: Click & Hold
+            - generic: Singularity
+            - generic: Release
+          - generic:
+            - generic: C++
+            - generic: Go
+            - generic: Kotlin
+            - generic: TypeScript
+            - generic: React
+            - generic: gRPC
+            - generic: WebSocket
+            - generic: Docker
+            - generic: PostgreSQL
+            - generic: Redis
+            - generic: Yggdrasil
+            - generic: CAF
+            - generic: JNI
+            - generic: CGO
+            - generic: AI Tools
+            - generic: System Design
+            - generic: Architecture
+            - generic: Algorithms
+            - generic: Any Stack
+            - generic: Breakthroughs
+      - generic [ref=e463]:
+        - generic:
+          - generic: Initializing Node...
+        - generic [ref=e464]:
+          - generic: "04"
+          - generic [ref=e465]:
+            - heading "How I Work" [level=2] [ref=e466]
+            - generic [ref=e467]: SYS.PROCESS_FLOW
+          - generic [ref=e469]:
+            - generic [ref=e470] [cursor=pointer]:
+              - generic [ref=e471]:
+                - generic [ref=e472]:
+                  - generic [ref=e473]: "[01]"
+                  - heading "The Impossible Idea" [level=3] [ref=e474]
+                - generic [ref=e475]:
+                  - generic [ref=e476]: IDEA
+                  - generic [ref=e477]: Active
+              - generic [ref=e480]:
+                - paragraph [ref=e481]: Find a problem nobody has solved. Identify why existing solutions fail. See what others cannot see yet.
+                - generic [ref=e482]:
+                  - generic [ref=e483]: Problem Analysis
+                  - generic [ref=e485]: Gap Identification
+                  - generic [ref=e487]: Novel Approach
+            - generic [ref=e490] [cursor=pointer]:
+              - generic [ref=e491]:
+                - generic [ref=e492]:
+                  - generic [ref=e493]: "[02]"
+                  - heading "Architecture" [level=3] [ref=e494]
+                - generic [ref=e495]:
+                  - generic [ref=e496]: DESIGN
+                  - generic [ref=e497]: Active
+              - generic:
+                - generic:
+                  - generic:
+                    - paragraph: Design the breakthroughs. Map the system from first principles. Every decision is mine — the architecture, the algorithms, the isolation model.
+                    - generic:
+                      - generic: System Design
+                      - generic: Breakthrough Logic
+                      - generic: First Principles
+            - generic [ref=e498] [cursor=pointer]:
+              - generic [ref=e499]:
+                - generic [ref=e500]:
+                  - generic [ref=e501]: "[03]"
+                  - heading "AI-Augmented Build" [level=3] [ref=e502]
+                - generic [ref=e503]:
+                  - generic [ref=e504]: BUILD
+                  - generic [ref=e505]: Active
+              - generic:
+                - generic:
+                  - generic:
+                    - paragraph: Execute rapidly using AI as a force multiplier. I architect, AI implements. The idea is mine, the speed is exponential.
+                    - generic:
+                      - generic: AI Tools
+                      - generic: Rapid Iteration
+                      - generic: Any Stack
+            - generic [ref=e507] [cursor=pointer]:
+              - generic [ref=e508]:
+                - generic [ref=e509]:
+                  - generic [ref=e510]: "[04]"
+                  - heading "Ship & Prove" [level=3] [ref=e511]
+                - generic [ref=e512]:
+                  - generic [ref=e513]: SHIP
+                  - generic [ref=e514]: Active
+              - generic:
+                - generic:
+                  - generic:
+                    - paragraph: Deploy, test, and prove it works. The system speaks for itself — 90% accuracy, zero infrastructure dependency, novel patterns.
+                    - generic:
+                      - generic: Validation
+                      - generic: Metrics
+                      - generic: Documentation
