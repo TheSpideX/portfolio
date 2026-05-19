@@ -7,3 +7,10 @@ coverage/
 .env*
 !.env.example
 .vercel
+
+# Screenshots (keep only public/ PNGs)
+*.png
+!public/*.png
+
+# Playwright MCP
+.playwright-mcp/

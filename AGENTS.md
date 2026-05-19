@@ -4,50 +4,44 @@
 - **Engine/Runtime:** Node.js v22 TypeScript / Vite
 - **Framework Core:** React 19 + Tailwind CSS v4 + GSAP + Three.js (R3F)
 - **Physics Engine:** Matter.js (client-side physics for draggable nodes)
-- **Persistence Layer:** None (static portfolio, no backend)
+- **Hosting:** Vercel (spidexlab.me)
 - **Test Infrastructure:** TypeScript type checking (`npm run lint`)
 
 ## 2. Structural Codebase Map
-- `src/App.tsx` → Main application — ALL portfolio nodes, navigation, cursor, physics context, loading, easter eggs (~76KB monolith)
-- `src/components/Background3D.tsx` → Three.js wireframe terrain + floating particles background
-- `src/components/ExpertiseSection.tsx` → Expertise/skills grid cards with 3D tilt
-- `src/components/PhysicsStack.tsx` → Matter.js physics-based tech stack with orbiting pills
+- `src/App.tsx` → Desktop layout — infinite canvas with physics nodes, navigation, cursor
+- `src/components/MobileLayout.tsx` → Mobile layout — vertical scroll with desktop recommendation dialog
+- `src/components/Background3D.tsx` → Three.js wireframe terrain + floating particles
+- `src/components/ExpertiseSection.tsx` → Expertise/skills grid cards (responsive)
+- `src/components/PhysicsStack.tsx` → Matter.js physics-based tech stack
 - `src/components/ProcessTimeline.tsx` → Work process accordion timeline
+- `src/components/ScrambleText.tsx` → Text scramble hover effect
+- `src/hooks/useIsMobile.ts` → Mobile detection hook
 - `src/contexts/AudioContext.tsx` → Web Audio API synthesized UI sounds
-- `src/index.css` → Global styles, custom cursor, animations, typography
+- `src/index.css` → Global styles, custom cursor, animations
+- `public/` → Static assets (favicon.svg, og-image.svg, myself.png)
 
-## 3. Strict Project Conventions
-- **Naming Constraints:** PascalCase for components, camelCase for hooks/variables
-- **Design System:** Dark theme (zinc-950), accent color `#ccff00` (lime), Anton display font, JetBrains Mono
-- **Interaction Philosophy:** Every section should be interactive — no static walls of text
-- **Content Rule:** All content must reflect Kumar's REAL identity — systems architect, idea-first builder, AI-assisted execution
+## 3. Design System
+- **Colors:** Dark theme (zinc-950), accent `#ccff00` (lime)
+- **Fonts:** Anton (display), JetBrains Mono (mono), Inter (sans)
+- **Responsive:** Desktop = infinite canvas, Mobile = vertical scroll (<1024px)
+- **3D Background:** Preserved on both mobile and desktop
 
-## 4. Active Milestone & Git Triggers
-- **Active Branch:** `main`
-- **Current Sprint Objective:** Replace all placeholder content with Kumar's real narrative
-- **No-Touch Zones:** `src/contexts/AudioContext.tsx`, `src/components/Background3D.tsx` (unless feature changes are explicitly requested)
-- **Commit Trigger:** After each section transformation, commit with descriptive message
+## 4. Key Files
+- `index.html` → Favicon, OG meta tags, Twitter cards
+- `AGENTS.md` → This file (project context)
+- `resume.pdf` → Kumar's resume (not deployed)
 
-## 5. Content Transformation Map
-### Sections to Transform (in order):
-1. **Hero Section** — Title, subtitle, rotating badges, stats
-2. **About Section** — Name, bio, profile image, location, tags
-3. **Work Section** — Projects (SystemSim, NoRegret, Portfolio itself)
-4. **Expertise Section** — Skills cards (Architecture, AI-Assisted Dev, Rapid Prototyping)
-5. **Process Timeline** — How Kumar works (Idea → Architecture → AI Build → Ship)
-6. **Manifesto** — Kumar's engineering philosophy
-7. **Contact Section** — Real email, availability
-8. **Tech Stack** — Physics pills with real tech + "AI-Assisted" as a skill
-9. **Navigation & Metadata** — Page title, meta tags
+## 5. Deployment
+- **GitHub:** TheSpideX/portfolio
+- **Vercel:** spidexlab.me (auto-deploys from main branch)
+- **Custom Domain:** spidexlab.me (via Namecheap + Vercel DNS)
 
-## 6. Kumar's Profile (for content reference)
+## 6. Kumar's Profile
 - **Name:** Kumar Satyam
 - **Education:** IIT Dhanbad (ISM), B.Tech CSE, CGPA 8.59
 - **JEE Advanced:** AIR 5007
-- **Identity:** Architect of ideas, not limited to any language/domain
-- **Pattern:** Problem → Novel Architecture → AI-Assisted Implementation → Ship
-- **Projects:** SystemSim (Go), NoRegret (C++), this portfolio (React)
+- **Identity:** Systems architect, idea-first builder, AI-augmented execution
 - **GitHub:** TheSpideX
+- **LinkedIn:** kumar-satyam-64a807255
+- **LeetCode:** spideX
 - **Email:** satyamiitdnbd@gmail.com
-- **Skills:** C++, Go, Kotlin, TypeScript, gRPC, WebSocket, PostgreSQL, Redis, Docker, React, Android SDK (Jetpack Compose)
-- **Approach:** Uses AI as a build tool, not a crutch. Architects the system, designs the breakthroughs, then executes.
