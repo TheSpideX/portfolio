@@ -308,6 +308,7 @@ function DesktopApp() {
   };
 
   const engineRef = useRef<Matter.Engine | null>(null);
+  const runnerRef = useRef<Matter.Runner | null>(null);
   if (!engineRef.current) {
     const newEngine = Matter.Engine.create();
     newEngine.gravity.x = 0;
@@ -318,6 +319,7 @@ function DesktopApp() {
 
   useEffect(() => {
     const runner = Matter.Runner.create();
+    runnerRef.current = runner;
     Matter.Runner.run(runner, engine);
 
     const wallOptions = { isStatic: true, render: { visible: false }, friction: 0.5, restitution: 0.2 };
@@ -381,7 +383,7 @@ function DesktopApp() {
   }, { scope: containerRef, dependencies: [experienceStarted] });
 
   return (
-    <PhysicsContext.Provider value={{ engine, transformRef, setIsDragging }}>
+    <PhysicsContext.Provider value={{ engine, runner: runnerRef.current, transformRef, setIsDragging }}>
       <div ref={containerRef} className="relative w-full h-screen text-white font-sans overflow-hidden">
         <CustomCursor />
         <Suspense fallback={null}>

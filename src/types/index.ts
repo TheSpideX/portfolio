@@ -3,6 +3,7 @@ import Matter from 'matter-js';
 
 export interface PhysicsContextType {
   engine: Matter.Engine | null;
+  runner: Matter.Runner | null;
   transformRef: React.RefObject<{ x: number, y: number, scale: number }>;
   setIsDragging: (isDragging: boolean) => void;
 }

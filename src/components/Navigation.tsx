@@ -1,13 +1,21 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef, useCallback } from 'react';
 import { useControls } from 'react-zoom-pan-pinch';
+import Matter from 'matter-js';
 import { NAV_ITEMS } from '../constants/navItems';
 import { PhysicsContext } from '../contexts/PhysicsContext';
 
 export const Navigation = ({ discoveredNodes }: { discoveredNodes: string[] }) => {
   const { zoomToElement } = useControls();
-  const { transformRef } = useContext(PhysicsContext);
+  const { transformRef, engine, runner } = useContext(PhysicsContext);
+  const isZoomingRef = useRef(false);
+  const zoomTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  const handleNav = (id: string, w: number, h: number, x: number, y: number) => {
+  const handleNav = useCallback((id: string, w: number, h: number, x: number, y: number) => {
+    // Debounce: if already zooming, cancel previous and start new
+    if (zoomTimeoutRef.current) {
+      clearTimeout(zoomTimeoutRef.current);
+    }
+
     const sw = window.innerWidth;
     const sh = window.innerHeight;
     const targetScale = Math.min((sw * 0.84) / w, (sh * 0.84) / h, 1.4);
@@ -36,8 +44,22 @@ export const Navigation = ({ discoveredNodes }: { discoveredNodes: string[] }) =
     const distanceFactor = 0.8; // ms per pixel
     const duration = Math.min(2000, Math.max(baseDuration, baseDuration + distance * distanceFactor));
 
+    // Pause physics during zoom for smooth animation
+    if (runner && engine) {
+      Matter.Runner.stop(runner);
+    }
+
+    isZoomingRef.current = true;
     zoomToElement(id, targetScale, duration, 'easeInOutCubic');
-  };
+
+    // Resume physics after zoom completes
+    zoomTimeoutRef.current = setTimeout(() => {
+      if (runner && engine) {
+        Matter.Runner.run(runner, engine);
+      }
+      isZoomingRef.current = false;
+    }, duration + 50); // Small buffer after animation
+  }, [zoomToElement, transformRef, engine, runner]);
 
   return (
     <div className="fixed top-8 left-1/2 -translate-x-1/2 z-[100] flex gap-4 md:gap-8 bg-black/80 backdrop-blur-md px-8 py-4 rounded-full border border-white/10 shadow-2xl transition-all duration-500 overflow-hidden">
