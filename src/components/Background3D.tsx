@@ -63,7 +63,7 @@ const WireframeTerrain = () => {
 };
 
 const FloatingParticles = () => {
-  const count = 800;
+  const count = 500;
   const meshRef = useRef<THREE.InstancedMesh>(null);
   const dummy = useMemo(() => new THREE.Object3D(), []);
   
