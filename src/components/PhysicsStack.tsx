@@ -5,11 +5,13 @@ import { useAudio } from '../contexts/AudioContext';
 export const PhysicsStack = ({ width = 1600, height = 600 }: { width?: number; height?: number }) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const engineRef = useRef<Matter.Engine | null>(null);
+    const runnerRef = useRef<Matter.Runner | null>(null);
     const pillBodiesRef = useRef<Matter.Body[]>([]);
     const isMouseInsideRef = useRef(false);
     const isMouseDownRef = useRef(false);
     const localMousePosRef = useRef({ x: width / 2, y: height / 2 });
     const [elements, setElements] = useState<{ id: number; x: number; y: number; text: string; angle: number; color: string; w: number; h: number }[]>([]);
+    const [isVisible, setIsVisible] = useState(false);
     const { playTick, playWhoosh, startHum, stopHum } = useAudio();
 
     const marquees = [
@@ -17,6 +19,36 @@ export const PhysicsStack = ({ width = 1600, height = 600 }: { width?: number; h
         { text: 'gRPC // WEBSOCKET // DOCKER // REDIS // ', color: 'white' },
         { text: 'POSTGRESQL // YGGDRASIL // CAF // AI TOOLS // ', color: '#60a5fa' },
     ];
+
+    // IntersectionObserver for visibility detection
+    useEffect(() => {
+        const element = containerRef.current;
+        if (!element) return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsVisible(entry.isIntersecting);
+            },
+            { threshold: 0.1 }
+        );
+
+        observer.observe(element);
+
+        return () => {
+            observer.unobserve(element);
+        };
+    }, []);
+
+    // Pause/resume physics runner based on visibility
+    useEffect(() => {
+        if (!runnerRef.current) return;
+
+        if (isVisible) {
+            Matter.Runner.run(runnerRef.current, engineRef.current!);
+        } else {
+            Matter.Runner.stop(runnerRef.current);
+        }
+    }, [isVisible]);
 
     const updateMousePos = (clientX: number, clientY: number) => {
         if (!containerRef.current) return;
@@ -52,6 +84,7 @@ export const PhysicsStack = ({ width = 1600, height = 600 }: { width?: number; h
 
         // Runner
         const runner = Matter.Runner.create();
+        runnerRef.current = runner;
         Matter.Runner.run(runner, engine);
 
         const skills = [
