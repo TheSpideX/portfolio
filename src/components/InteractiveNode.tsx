@@ -247,17 +247,30 @@ const InteractiveNode = ({ children, startX, startY, width, height, shape = 'rec
     const xTo = gsap.quickTo(element, "rotationY", { duration: 0.8, ease: "power3.out" });
     const yTo = gsap.quickTo(element, "rotationX", { duration: 0.8, ease: "power3.out" });
 
+    // Throttle tilt to 30fps (every other frame)
+    let tiltThrottleId: number | null = null;
+    let lastMouseEvent: MouseEvent | null = null;
+
     const handleMouseMove = (e: MouseEvent) => {
-      const rect = element.getBoundingClientRect();
-      const x = (e.clientX - rect.left) / rect.width - 0.5;
-      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      lastMouseEvent = e;
+      if (tiltThrottleId !== null) return;
 
-      // Scale tilt strength with canvas zoom so it feels consistent at any zoom level.
-      const canvasScale = transformRef.current?.scale ?? 1;
-      const tiltStrength = Math.min(30, Math.max(8, 30 * canvasScale));
+      tiltThrottleId = requestAnimationFrame(() => {
+        if (!lastMouseEvent) return;
+        const rect = element.getBoundingClientRect();
+        const x = (lastMouseEvent.clientX - rect.left) / rect.width - 0.5;
+        const y = (lastMouseEvent.clientY - rect.top) / rect.height - 0.5;
 
-      xTo(x * tiltStrength);
-      yTo(-y * tiltStrength);
+        // Scale tilt strength with canvas zoom so it feels consistent at any zoom level.
+        const canvasScale = transformRef.current?.scale ?? 1;
+        const tiltStrength = Math.min(30, Math.max(8, 30 * canvasScale));
+
+        xTo(x * tiltStrength);
+        yTo(-y * tiltStrength);
+
+        tiltThrottleId = null;
+        lastMouseEvent = null;
+      });
     };
 
     const handleMouseLeave = () => {
