@@ -39,10 +39,10 @@ export const Navigation = ({ discoveredNodes }: { discoveredNodes: string[] }) =
       Math.pow(viewCenterY - targetCenterY, 2)
     );
 
-    // Dynamic duration based on distance (min 800ms, max 2000ms)
-    const baseDuration = 800;
-    const distanceFactor = 0.8; // ms per pixel
-    const duration = Math.min(2000, Math.max(baseDuration, baseDuration + distance * distanceFactor));
+    // Dynamic duration based on distance (min 600ms, max 1500ms)
+    const baseDuration = 600;
+    const distanceFactor = 0.6; // ms per pixel
+    const duration = Math.min(1500, Math.max(baseDuration, baseDuration + distance * distanceFactor));
 
     // Pause physics during zoom for smooth animation
     if (runner && engine) {
@@ -50,7 +50,7 @@ export const Navigation = ({ discoveredNodes }: { discoveredNodes: string[] }) =
     }
 
     isZoomingRef.current = true;
-    zoomToElement(id, targetScale, duration, 'easeInOutCubic');
+    zoomToElement(id, targetScale, duration, 'easeInOutQuad');
 
     // Resume physics after zoom completes
     zoomTimeoutRef.current = setTimeout(() => {
