@@ -26,7 +26,7 @@ export const ExpertiseSection = () => {
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
 
   return (
-    <div className="grid grid-cols-2 gap-4 h-full" style={{ transformStyle: 'preserve-3d' }}>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 h-full" style={{ transformStyle: 'preserve-3d' }}>
       {expertise.map((item, idx) => {
         const isHovered = hoveredIdx === idx;
         const isOtherHovered = hoveredIdx !== null && hoveredIdx !== idx;
@@ -36,7 +36,7 @@ export const ExpertiseSection = () => {
         return (
           <div
             key={idx}
-            className={`relative group cursor-pointer rounded-xl border transition-all duration-500 bg-black/40 backdrop-blur-sm ${isWide ? 'col-span-2' : 'col-span-1'}`}
+            className={`relative group cursor-pointer rounded-xl border transition-all duration-500 bg-black/40 backdrop-blur-sm ${isWide ? 'md:col-span-2' : ''}`}
             style={{
               transform: `translateZ(${isHovered ? 60 : isOtherHovered ? 10 : 30}px) scale(${isHovered ? 1.02 : isOtherHovered ? 0.98 : 1})`,
               borderColor: isHovered ? 'rgba(204, 255, 0, 0.4)' : 'rgba(255, 255, 255, 0.1)',
