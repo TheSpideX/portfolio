@@ -26,7 +26,7 @@ import { PhysicsContext } from './contexts/PhysicsContext';
 // Lazy load heavy components (Three.js, Matter.js)
 const Background3D = React.lazy(() => import('./components/Background3D'));
 const PhysicsStack = React.lazy(() => import('./components/PhysicsStack'));
-const InteractiveNode = React.lazy(() => import('./components/InteractiveNode'));
+import InteractiveNode from './components/InteractiveNode';
 import Matter from 'matter-js';
 
 // Re-export for backward compatibility
@@ -457,7 +457,6 @@ function DesktopApp() {
           <KeyboardNavigation transformRef={transformRef} />
           {experienceStarted && <Navigation discoveredNodes={discoveredNodes} />}
           <TransformComponent wrapperStyle={{ width: "100vw", height: "100vh", cursor: "grab" }}>
-            <Suspense fallback={null}>
             <div className="w-[5000px] h-[4000px] relative">
 
               {/* NODE START: Loading & Selection */}
@@ -887,7 +886,6 @@ function DesktopApp() {
               </div>
 
             </div>
-            </Suspense>
           </TransformComponent>
         </TransformWrapper>
       </div>
