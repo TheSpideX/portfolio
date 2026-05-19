@@ -1,20 +1,41 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Kumar Satyam — Expressive Portfolio
 
-# Run and deploy your AI Studio app
+An infinite canvas portfolio with physics simulation, 3D terrain, audio synthesis, and draggable nodes. Every interaction decision was mine — built with AI assistance as proof that I can make anything I can imagine.
 
-This contains everything you need to run your app locally.
+## What This Is
 
-View your app in AI Studio: https://ai.studio/apps/f34e3c97-b7ff-48ca-962b-d34854229916
+This portfolio demonstrates my approach to building:
+1. **I have an impossible idea** — an infinite canvas portfolio with physics
+2. **I design the architecture** — Matter.js nodes, Three.js terrain, GSAP animations
+3. **I use AI to execute** — rapid prototyping, any stack
+4. **The result speaks for itself** — the portfolio you're exploring right now
+
+## Tech Stack
+
+- **Framework:** React 19 + TypeScript + Vite
+- **3D:** Three.js (React Three Fiber) — wireframe terrain, floating particles
+- **Physics:** Matter.js — draggable nodes with gravity, collision, orbit
+- **Animation:** GSAP — scroll animations, magnetic hover, text scramble
+- **Audio:** Web Audio API — synthesized UI sounds (tick, whoosh, unlock chime)
+- **Styling:** Tailwind CSS v4
+
+## Projects Showcased
+
+- **SystemSim** — Distributed systems simulator with ACID-like Isolation (Go)
+- **NoRegret** — Serverless mesh networking stack (C++, Kotlin)
+- **This Portfolio** — Meta-proof of the idea → AI build pattern
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
+```bash
+npm install
+npm run dev
+```
 
+## About Me
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+I'm Kumar Satyam, IIT Dhanbad CSE student. I architect novel systems and build what others say can't be done. Every project starts as an impossible idea — I make it real.
+
+- **GitHub:** [TheSpideX](https://github.com/TheSpideX)
+- **LinkedIn:** [Kumar Satyam](https://www.linkedin.com/in/kumar-satyam-64a807255)
+- **Email:** satyamiitdnbd@gmail.com
