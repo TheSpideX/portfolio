@@ -414,6 +414,7 @@ function DesktopApp() {
 
         <TransformWrapper
           panning={{ disabled: isDragging }}
+          doubleClick={{ disabled: true }}
           initialScale={1.0}
           initialPositionX={-1050}
           initialPositionY={-1350}
