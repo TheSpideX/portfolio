@@ -15,12 +15,7 @@ import Matter from 'matter-js';
 import { useAudio } from './contexts/AudioContext';
 import { NAV_ITEMS, NODE_ORDER } from './constants/navItems';
 import { Project, PROJECTS } from './constants/projects';
-
-interface PhysicsContextType {
-  engine: Matter.Engine | null;
-  transformRef: React.RefObject<{ x: number, y: number, scale: number }>;
-  setIsDragging: (isDragging: boolean) => void;
-}
+import { PhysicsContextType, InteractiveNodeProps } from './types';
 
 export const PhysicsContext = createContext<PhysicsContextType>({
   engine: null,
@@ -319,20 +314,6 @@ const GravityButton = () => {
 };
 
 // Interactive 3D Node Wrapper
-interface InteractiveNodeProps {
-  children: React.ReactNode;
-  startX: number;
-  startY: number;
-  width: number;
-  height: number;
-  shape?: 'rectangle' | 'circle';
-  zIndex?: number;
-  delay?: number;
-  id?: string;
-  innerClassName?: string;
-  loadingProgress?: number;
-}
-
 const InteractiveNode = ({ children, startX, startY, width, height, shape = 'rectangle', zIndex = 10, delay = 0, id, innerClassName = "", loadingProgress }: InteractiveNodeProps) => {
   const nodeRef = useRef<HTMLDivElement>(null);
   const floatRef = useRef<HTMLDivElement>(null);
