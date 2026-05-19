@@ -9,7 +9,7 @@ export const Navigation = ({ discoveredNodes }: { discoveredNodes: string[] }) =
     const sw = window.innerWidth;
     const sh = window.innerHeight;
     const targetScale = Math.min((sw * 0.84) / w, (sh * 0.84) / h, 1.4);
-    zoomToElement(id, targetScale, 900, 'easeOut');
+    zoomToElement(id, targetScale, 600, 'easeInOutCubic');
   };
 
   return (
