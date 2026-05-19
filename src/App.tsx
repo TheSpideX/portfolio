@@ -1213,7 +1213,7 @@ export default function App() {
 
                       <div ref={manifestoRef} style={{ transformStyle: 'preserve-3d' }}>
                         <h2 className="text-7xl font-display uppercase leading-tight relative z-10" style={{ transform: 'translateZ(100px)', transformStyle: 'preserve-3d' }}>
-                          {("I believe the web should be an experience, not just a document. By combining bold typography, unexpected interactions, and smooth motion, we can build digital spaces that people actually remember.").split(' ').map((word, i) => (
+                          {("I build things that should not exist. Every project starts as an impossible idea — a problem nobody has solved, a system nobody has architected. I do not accept limitations on language, domain, or tool. I design the breakthroughs, then I execute. AI is my force multiplier, not my replacement. The architecture is mine. The vision is mine. The result speaks for itself.").split(' ').map((word, i) => (
                             <span key={i} className="manifesto-word inline-block mr-4" style={{ transformStyle: 'preserve-3d' }}>
                               <span className="manifesto-word-hover cursor-default">{word}</span>
                             </span>
