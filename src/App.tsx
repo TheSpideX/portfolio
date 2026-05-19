@@ -26,7 +26,7 @@ export const PhysicsContext = createContext<PhysicsContextType>({
 // Text Scramble Component
 const ScrambleText = ({ text, className = "" }: { text: string, className?: string }) => {
   const [displayText, setDisplayText] = useState(text);
-  const chars = '!<>-_\\/[]{}—=+*^?#________';
+  const chars = '!<>-_\\/[]{}-=+*^?#________';
 
   const scramble = () => {
     let iteration = 0;
@@ -423,10 +423,10 @@ const InteractiveNode = ({ children, startX, startY, width, height, shape = 'rec
     };
   }, [engine, startX, startY, width, height, shape]);
 
-  // Drag Handling — direct setPosition approach (no constraints)
+  // Drag Handling - direct setPosition approach (no constraints)
   const handlePointerDown = (e: React.PointerEvent) => {
     if ((e.target as HTMLElement).closest('button, a, input, textarea, .no-drag')) return;
-    
+
     e.stopPropagation();
     e.currentTarget.setPointerCapture(e.pointerId);
     setIsDragging(true);
@@ -689,7 +689,7 @@ const ProjectDetailPanel = ({ project, onClose }: { project: Project | null; onC
           <div className="flex justify-between items-start">
             <div>
               <h3 className="text-6xl font-display uppercase text-white">{project.title}</h3>
-              <p className="font-mono text-[#ccff00] text-lg uppercase tracking-widest mt-2">{project.type} — {project.year}</p>
+              <p className="font-mono text-[#ccff00] text-lg uppercase tracking-widest mt-2">{project.type} - {project.year}</p>
             </div>
           </div>
           <p className="font-mono text-gray-400 text-xl leading-relaxed border-t border-white/10 pt-8">{project.desc}</p>
@@ -719,7 +719,7 @@ const StartNodeContent = ({ started, onStart, loadingProgress }: { started: bool
   useGSAP(() => {
     if (loadingProgress >= 100 && !started) {
       const tl = gsap.timeline();
-      tl.fromTo('.split-reveal', 
+      tl.fromTo('.split-reveal',
         { y: 60, opacity: 0, rotationX: -20 },
         { y: 0, opacity: 1, rotationX: 0, duration: 1.2, stagger: 0.1, ease: "power4.out", delay: 0.8 }
       );
@@ -730,7 +730,7 @@ const StartNodeContent = ({ started, onStart, loadingProgress }: { started: bool
     gsap.to('.split-reveal', {
       y: -40, opacity: 0, duration: 0.5, stagger: 0.05, ease: "power3.in"
     });
-    
+
     setTimeout(() => {
       onStart(mode);
       setTimeout(() => {
@@ -744,9 +744,9 @@ const StartNodeContent = ({ started, onStart, loadingProgress }: { started: bool
 
   return (
     <div ref={containerRef} className="w-full h-full bg-[#050505] rounded-[40px] border border-white/10 overflow-hidden relative flex shadow-2xl" style={{ transformStyle: 'preserve-3d' }}>
-      
+
       {/* Loading Overlay */}
-      <div 
+      <div
         className="absolute inset-0 z-50 bg-[#050505] flex flex-col justify-between p-12 transition-transform duration-1000 delay-500 ease-[cubic-bezier(0.76,0,0.24,1)]"
         style={{ transform: loadingProgress >= 100 ? 'translateY(-100%)' : 'translateY(0%)', transformStyle: 'preserve-3d' }}
       >
@@ -754,21 +754,21 @@ const StartNodeContent = ({ started, onStart, loadingProgress }: { started: bool
           <span>System Initialization</span>
           <span className="text-[#ccff00]">{loadingProgress < 100 ? 'Loading...' : 'Complete'}</span>
         </div>
-        
+
         <div className="flex flex-col items-center justify-center flex-1 w-full max-w-4xl mx-auto" style={{ transform: 'translateZ(80px)' }}>
-          
+
           {/* Main Counter */}
           <div className="relative flex flex-col items-center justify-center w-full py-20 mb-12">
             {/* Background Glow */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#ccff00]/5 rounded-full blur-[100px] pointer-events-none" />
-            
+
             <div className="flex items-start gap-6 z-10">
               <span className="text-[240px] font-display leading-none text-white tracking-tighter font-light tabular-nums drop-shadow-[0_0_40px_rgba(255,255,255,0.1)]">
                 {loadingProgress.toString().padStart(3, '0')}
               </span>
               <span className="text-3xl font-mono text-[#ccff00] mt-10">%</span>
             </div>
-            
+
             {/* Decorative technical brackets */}
             <div className="absolute inset-0 pointer-events-none border border-white/5 rounded-[40px]" />
             <div className="absolute -top-1 -left-1 w-8 h-8 border-t-2 border-l-2 border-[#ccff00]/50 rounded-tl-[40px]" />
@@ -782,18 +782,18 @@ const StartNodeContent = ({ started, onStart, loadingProgress }: { started: bool
             {/* Track */}
             <div className="w-full h-[2px] bg-white/10 relative overflow-hidden">
               {/* Fill */}
-              <div 
+              <div
                 className="absolute top-0 left-0 h-full bg-[#ccff00] transition-all duration-300 ease-out shadow-[0_0_15px_rgba(204,255,0,0.6)]"
                 style={{ width: `${loadingProgress}%` }}
               />
             </div>
-            
+
             {/* Glowing Leading Edge */}
-            <div 
+            <div
               className="absolute top-1/2 -translate-y-1/2 w-[2px] h-8 bg-white transition-all duration-300 ease-out shadow-[0_0_15px_rgba(255,255,255,1)]"
               style={{ left: `calc(${loadingProgress}% - 1px)` }}
             />
-            
+
             {/* Decorative ticks */}
             <div className="absolute top-6 left-0 w-full flex justify-between px-1">
               {[0, 25, 50, 75, 100].map(tick => (
@@ -808,14 +808,14 @@ const StartNodeContent = ({ started, onStart, loadingProgress }: { started: bool
       </div>
 
       {/* Selection Split Screen */}
-      <button 
+      <button
         onClick={() => handleSelect('node-hero', 1100, 700, 'explore')}
         className="group relative flex-1 flex flex-col justify-between p-12 border-r border-white/10 text-left overflow-hidden no-drag cursor-pointer"
         style={{ transformStyle: 'preserve-3d' }}
       >
         {/* Hover Fill */}
         <div className="absolute inset-0 bg-[#ccff00] translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-[cubic-bezier(0.76,0,0.24,1)] z-0" />
-        
+
         {/* Massive Background Number */}
         <div className="split-reveal absolute -bottom-12 -right-12 z-0 pointer-events-none">
           <div className="text-[300px] font-display leading-none text-white/5 group-hover:text-black/10 transition-colors duration-700" style={{ transform: 'translateZ(20px)' }}>
@@ -846,14 +846,14 @@ const StartNodeContent = ({ started, onStart, loadingProgress }: { started: bool
         </div>
       </button>
 
-      <button 
+      <button
         onClick={() => handleSelect('node-hero', 1100, 700, 'direct')}
         className="group relative flex-1 flex flex-col justify-between p-12 text-left overflow-hidden no-drag cursor-pointer"
         style={{ transformStyle: 'preserve-3d' }}
       >
         {/* Hover Fill */}
         <div className="absolute inset-0 bg-[#ccff00] translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-[cubic-bezier(0.76,0,0.24,1)] z-0" />
-        
+
         {/* Massive Background Number */}
         <div className="split-reveal absolute -bottom-12 -right-12 z-0 pointer-events-none">
           <div className="text-[300px] font-display leading-none text-white/5 group-hover:text-black/10 transition-colors duration-700" style={{ transform: 'translateZ(20px)' }}>
@@ -955,7 +955,7 @@ export default function App() {
   useGSAP(() => {
     if (experienceStarted) {
       const tl = gsap.timeline();
-      
+
       tl.from(':not(#node-start) > .node-element', {
         opacity: 0,
         scale: 0.9,
@@ -1093,7 +1093,7 @@ export default function App() {
                   </svg>
                   <EasterEgg />
 
-                  {/* NODE 1: HERO (CENTER — initial focal point) */}
+                  {/* NODE 1: HERO (CENTER - initial focal point) */}
               <InteractiveNode loadingProgress={loadingProgress} id="node-hero" startX={1500} startY={1500} width={1100} height={700} zIndex={10} delay={0} innerClassName="bg-black/40 backdrop-blur-md rounded-3xl p-12 border border-white/10 shadow-2xl relative">
 
 
@@ -1152,7 +1152,7 @@ export default function App() {
 
                 <div className="hero-subtext mt-8 flex justify-between items-end gap-8 border-t border-white/20 pt-6" style={{ transform: 'translateZ(60px)' }}>
                   <p className="font-mono text-xl max-w-lg text-gray-400">
-                    I design novel system architectures and build what others say can't be done. Every project starts as an impossible idea — I make it real.
+                    I design novel system architectures and build what others say can't be done. Every project starts as an impossible idea - I make it real.
                   </p>
                   {/* Stats strip */}
                   <div className="flex gap-8 shrink-0">
@@ -1208,12 +1208,12 @@ export default function App() {
                       </div>
 
                       {/* Giant quotation marks */}
-                      <div className="absolute top-4 left-6 text-[200px] font-display leading-none text-black/10 pointer-events-none select-none" style={{ transform: 'translateZ(-30px) rotate(-5deg)' }}>"</div>
-                      <div className="absolute bottom-4 right-6 text-[200px] font-display leading-none text-black/10 pointer-events-none select-none" style={{ transform: 'translateZ(-30px) rotate(5deg)' }}>"</div>
+                      <div className="absolute top-4 left-6 text-[120px] font-display leading-none text-black/10 pointer-events-none select-none" style={{ transform: 'translateZ(-30px) rotate(-5deg)' }}>“</div>
+                      <div className="absolute bottom-4 right-6 text-[120px] font-display leading-none text-black/10 pointer-events-none select-none" style={{ transform: 'translateZ(-30px) rotate(5deg)' }}>”</div>
 
                       <div ref={manifestoRef} style={{ transformStyle: 'preserve-3d' }}>
-                        <h2 className="text-7xl font-display uppercase leading-tight relative z-10" style={{ transform: 'translateZ(100px)', transformStyle: 'preserve-3d' }}>
-                          {("I build things that should not exist. Every project starts as an impossible idea — a problem nobody has solved, a system nobody has architected. I do not accept limitations on language, domain, or tool. I design the breakthroughs, then I execute. AI is my force multiplier, not my replacement. The architecture is mine. The vision is mine. The result speaks for itself.").split(' ').map((word, i) => (
+                        <h2 className="text-3xl md:text-4xl font-display uppercase leading-snug relative z-10" style={{ transform: 'translateZ(100px)', transformStyle: 'preserve-3d' }}>
+                          {("I build things that should not exist. Every project starts as an impossible idea - a problem nobody has solved, a system nobody has architected. I do not accept limitations on language, domain, or tool. I design the breakthroughs, then I execute. AI is my force multiplier, not my replacement. The architecture is mine. The vision is mine. The result speaks for itself.").split(' ').map((word, i) => (
                             <span key={i} className="manifesto-word inline-block mr-4" style={{ transformStyle: 'preserve-3d' }}>
                               <span className="manifesto-word-hover cursor-default">{word}</span>
                             </span>
@@ -1234,7 +1234,7 @@ export default function App() {
               <InteractiveNode loadingProgress={loadingProgress} id="node-work" startX={3000} startY={1450} width={1600} height={900} zIndex={10} delay={0.4} innerClassName="bg-black/40 backdrop-blur-md rounded-3xl p-14 border border-white/10 shadow-2xl">
                 <div className="flex justify-between items-baseline mb-8" style={{ transform: 'translateZ(150px)' }}>
                   <h2 className="text-[120px] font-display uppercase tracking-wide text-white">Systems I Built</h2>
-                  <span className="font-mono text-gray-500 text-xl uppercase tracking-widest">2024 — 2026</span>
+                  <span className="font-mono text-gray-500 text-xl uppercase tracking-widest">2024 - 2026</span>
                 </div>
                 <div className="flex flex-col w-full border-t border-white/20">
                   {[
@@ -1320,7 +1320,7 @@ export default function App() {
                 </div>
               </InteractiveNode>
 
-              {/* NODE 6: ABOUT — Bento Grid */}
+              {/* NODE 6: ABOUT - Bento Grid */}
               <InteractiveNode loadingProgress={loadingProgress} id="node-about" startX={1700} startY={80} width={1100} height={700} zIndex={10} delay={1.0} innerClassName="bg-black/40 backdrop-blur-md rounded-3xl p-4 shadow-2xl border border-white/10">
                 <div className="w-full h-full grid grid-cols-12 grid-rows-6 gap-4" style={{ transformStyle: 'preserve-3d' }}>
                   {/* Block 1: Name and Title */}
@@ -1409,7 +1409,7 @@ export default function App() {
                     {/* Left: Bio */}
                     <div className="flex-1 flex flex-col justify-between relative z-10" style={{ transform: 'translateZ(30px)' }}>
                       <p className="font-mono text-gray-400 text-xs leading-relaxed group-hover:text-gray-300 transition-colors">
-                        I architect novel systems and use AI to build them fast. Every project I touch starts as an impossible idea — I design the breakthroughs, then execute. Not limited to any language or domain.
+                        I architect novel systems and use AI to build them fast. Every project I touch starts as an impossible idea - I design the breakthroughs, then execute. Not limited to any language or domain.
                       </p>
                       <div className="flex gap-2 relative z-10 mt-2">
                         {['Freelance', 'Open Source', 'System Design'].map(tag => (
@@ -1449,12 +1449,12 @@ export default function App() {
                 </div>
               </InteractiveNode>
 
-              {/* NODE 7: TECH STACK — Physics Marquee */}
+              {/* NODE 7: TECH STACK - Physics Marquee */}
               <InteractiveNode loadingProgress={loadingProgress} id="node-stack" startX={1600} startY={2950} width={1600} height={600} zIndex={10} delay={1.2}>
                 <PhysicsStack width={1600} height={600} />
               </InteractiveNode>
 
-              {/* NODE 8: PROCESS — Timeline (LEFT, beside Hero) */}
+              {/* NODE 8: PROCESS - Timeline (LEFT, beside Hero) */}
               <InteractiveNode loadingProgress={loadingProgress} id="node-process" startX={100} startY={1500} width={950} height={840} zIndex={10} delay={1.4} innerClassName="bg-black border border-white/10 p-14 rounded-3xl relative flex flex-col [transform-style:preserve-3d]">
                 {/* BG watermark */}
                 <div className="absolute right-4 bottom-2 font-display text-[260px] text-white/[0.025] leading-none pointer-events-none select-none" style={{ transform: 'translateZ(-50px)' }}>04</div>
@@ -1468,7 +1468,7 @@ export default function App() {
                 </div>
               </InteractiveNode>
 
-              {/* Ambient Background Elements — scattered across full canvas */}
+              {/* Ambient Background Elements - scattered across full canvas */}
               <div className="absolute top-[1600px] left-[1800px] w-[1200px] h-[1200px] bg-[#ccff00] rounded-full mix-blend-overlay filter blur-[300px] opacity-8 pointer-events-none" />
               <div className="absolute top-[400px] left-[3800px] w-[1000px] h-[1000px] bg-purple-600 rounded-full mix-blend-overlay filter blur-[250px] opacity-8 pointer-events-none" />
               <div className="absolute top-[2800px] left-[2000px] w-[900px] h-[900px] bg-blue-900 rounded-full mix-blend-overlay filter blur-[200px] opacity-10 pointer-events-none" />
