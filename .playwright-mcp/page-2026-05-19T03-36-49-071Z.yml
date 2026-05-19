@@ -1,0 +1,719 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - link "Skip to content" [ref=e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner [ref=e6]:
+      - heading "Navigation Menu" [level=2] [ref=e7]
+      - generic [ref=e8]:
+        - link "Homepage" [ref=e10] [cursor=pointer]:
+          - /url: /
+          - img [ref=e11]
+        - generic [ref=e13]:
+          - navigation "Global" [ref=e16]:
+            - list [ref=e17]:
+              - listitem [ref=e18]:
+                - button "Platform" [ref=e20] [cursor=pointer]:
+                  - text: Platform
+                  - img [ref=e21]
+              - listitem [ref=e23]:
+                - button "Solutions" [ref=e25] [cursor=pointer]:
+                  - text: Solutions
+                  - img [ref=e26]
+              - listitem [ref=e28]:
+                - button "Resources" [ref=e30] [cursor=pointer]:
+                  - text: Resources
+                  - img [ref=e31]
+              - listitem [ref=e33]:
+                - button "Open Source" [ref=e35] [cursor=pointer]:
+                  - text: Open Source
+                  - img [ref=e36]
+              - listitem [ref=e38]:
+                - button "Enterprise" [ref=e40] [cursor=pointer]:
+                  - text: Enterprise
+                  - img [ref=e41]
+              - listitem [ref=e43]:
+                - link "Pricing" [ref=e44] [cursor=pointer]:
+                  - /url: https://github.com/pricing
+                  - generic [ref=e45]: Pricing
+          - generic [ref=e46]:
+            - button "Search or jump to…" [ref=e49] [cursor=pointer]:
+              - img [ref=e51]
+            - link "Sign in" [ref=e54] [cursor=pointer]:
+              - /url: /login?return_to=https%3A%2F%2Fgithub.com%2FTheSpideX%2FNoRegret
+            - link "Sign up" [ref=e55] [cursor=pointer]:
+              - /url: /signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E&source=header-repo&source_repo=TheSpideX%2FNoRegret
+            - button "Appearance settings" [ref=e58] [cursor=pointer]:
+              - img
+  - main [ref=e62]:
+    - generic [ref=e63]:
+      - generic [ref=e64]:
+        - generic [ref=e66]:
+          - img [ref=e67]
+          - link "TheSpideX" [ref=e70] [cursor=pointer]:
+            - /url: /TheSpideX
+          - generic [ref=e71]: /
+          - strong [ref=e72]:
+            - link "NoRegret" [ref=e73] [cursor=pointer]:
+              - /url: /TheSpideX/NoRegret
+          - generic [ref=e74]: Public
+        - generic [ref=e75]:
+          - list:
+            - listitem [ref=e76]:
+              - link "You must be signed in to change notification settings" [ref=e77] [cursor=pointer]:
+                - /url: /login?return_to=%2FTheSpideX%2FNoRegret
+                - img [ref=e78]
+                - text: Notifications
+            - listitem [ref=e80]:
+              - link "Fork 0" [ref=e81] [cursor=pointer]:
+                - /url: /login?return_to=%2FTheSpideX%2FNoRegret
+                - img [ref=e82]
+                - text: Fork
+                - generic "0" [ref=e84]
+            - listitem [ref=e85]:
+              - link "You must be signed in to star a repository" [ref=e87] [cursor=pointer]:
+                - /url: /login?return_to=%2FTheSpideX%2FNoRegret
+                - img [ref=e88]
+                - text: Star
+                - generic "0 users starred this repository" [ref=e90]: "0"
+      - navigation "Repository" [ref=e91]:
+        - list [ref=e92]:
+          - listitem [ref=e93]:
+            - link "Code" [ref=e94] [cursor=pointer]:
+              - /url: /TheSpideX/NoRegret
+              - img [ref=e95]
+              - generic [ref=e97]: Code
+          - listitem [ref=e98]:
+            - link "Issues" [ref=e99] [cursor=pointer]:
+              - /url: /TheSpideX/NoRegret/issues
+              - img [ref=e100]
+              - generic [ref=e103]: Issues
+          - listitem [ref=e104]:
+            - link "Pull requests" [ref=e105] [cursor=pointer]:
+              - /url: /TheSpideX/NoRegret/pulls
+              - img [ref=e106]
+              - generic [ref=e108]: Pull requests
+          - listitem [ref=e109]:
+            - link "Actions" [ref=e110] [cursor=pointer]:
+              - /url: /TheSpideX/NoRegret/actions
+              - img [ref=e111]
+              - generic [ref=e113]: Actions
+          - listitem [ref=e114]:
+            - link "Projects" [ref=e115] [cursor=pointer]:
+              - /url: /TheSpideX/NoRegret/projects
+              - img [ref=e116]
+              - generic [ref=e118]: Projects
+          - listitem [ref=e119]:
+            - link "Security and quality" [ref=e120] [cursor=pointer]:
+              - /url: /TheSpideX/NoRegret/security
+              - img [ref=e121]
+              - generic [ref=e123]: Security and quality
+          - listitem [ref=e124]:
+            - link "Insights" [ref=e125] [cursor=pointer]:
+              - /url: /TheSpideX/NoRegret/pulse
+              - img [ref=e126]
+              - generic [ref=e128]: Insights
+    - generic [ref=e141]:
+      - heading "TheSpideX/NoRegret" [level=1] [ref=e143]
+      - generic [ref=e144]:
+        - generic [ref=e147]:
+          - generic [ref=e148]:
+            - generic [ref=e149]:
+              - button "main branch" [ref=e151] [cursor=pointer]:
+                - generic [ref=e152]:
+                  - generic [ref=e154]:
+                    - img [ref=e156]
+                    - generic [ref=e159]: main
+                  - generic:
+                    - img
+              - generic [ref=e160]:
+                - link "Branches" [ref=e161] [cursor=pointer]:
+                  - /url: /TheSpideX/NoRegret/branches
+                  - generic [ref=e162]:
+                    - generic:
+                      - img
+                    - generic [ref=e163]: Branches
+                - link "Tags" [ref=e164] [cursor=pointer]:
+                  - /url: /TheSpideX/NoRegret/tags
+                  - generic [ref=e165]:
+                    - generic:
+                      - img
+                    - generic [ref=e166]: Tags
+            - generic [ref=e167]:
+              - generic [ref=e171]:
+                - img [ref=e173]
+                - combobox "Go to file" [ref=e175]
+              - button "Code" [ref=e176] [cursor=pointer]:
+                - generic [ref=e177]:
+                  - generic:
+                    - img
+                  - generic [ref=e178]: Code
+                  - generic:
+                    - img
+          - generic [ref=e179]:
+            - generic [ref=e180]:
+              - heading "Folders and files" [level=2] [ref=e181]
+              - table "Folders and files" [ref=e182]:
+                - rowgroup:
+                  - row "Name Last commit message Last commit date":
+                    - columnheader "Name"
+                    - columnheader "Last commit message":
+                      - generic "Last commit message"
+                    - columnheader "Last commit date":
+                      - generic "Last commit date"
+                - rowgroup [ref=e183]:
+                  - row "Latest commit History 2 Commits" [ref=e184]:
+                    - cell "Latest commit History 2 Commits" [ref=e185]:
+                      - generic [ref=e186]:
+                        - heading "Latest commit" [level=2] [ref=e187]
+                        - generic [ref=e190]:
+                          - heading "History" [level=2] [ref=e191]
+                          - link "2 Commits" [ref=e192] [cursor=pointer]:
+                            - /url: /TheSpideX/NoRegret/commits/main/
+                            - generic [ref=e193]:
+                              - generic:
+                                - img
+                              - generic [ref=e194]: 2 Commits
+                  - row ".augment/rules, (Directory)" [ref=e195]:
+                    - cell ".augment/rules, (Directory)" [ref=e196]:
+                      - generic [ref=e197]:
+                        - img [ref=e198]
+                        - link ".augment/rules, (Directory)" [ref=e203] [cursor=pointer]:
+                          - /url: /TheSpideX/NoRegret/tree/main/.augment/rules
+                          - text: .augment/rules
+                    - cell [ref=e204]
+                    - cell [ref=e206]
+                  - row ".gradle, (Directory)" [ref=e209]:
+                    - cell ".gradle, (Directory)" [ref=e210]:
+                      - generic [ref=e211]:
+                        - img [ref=e212]
+                        - link ".gradle, (Directory)" [ref=e217] [cursor=pointer]:
+                          - /url: /TheSpideX/NoRegret/tree/main/.gradle
+                          - text: .gradle
+                    - cell [ref=e218]
+                    - cell [ref=e220]
+                  - row "app, (Directory)" [ref=e223]:
+                    - cell "app, (Directory)" [ref=e224]:
+                      - generic [ref=e225]:
+                        - img [ref=e226]
+                        - link "app, (Directory)" [ref=e231] [cursor=pointer]:
+                          - /url: /TheSpideX/NoRegret/tree/main/app
+                          - text: app
+                    - cell [ref=e232]
+                    - cell [ref=e234]
+                  - row "doc, (Directory)" [ref=e237]:
+                    - cell "doc, (Directory)" [ref=e238]:
+                      - generic [ref=e239]:
+                        - img [ref=e240]
+                        - link "doc, (Directory)" [ref=e245] [cursor=pointer]:
+                          - /url: /TheSpideX/NoRegret/tree/main/doc
+                          - text: doc
+                    - cell [ref=e246]
+                    - cell [ref=e248]
+                  - row "gradle, (Directory)" [ref=e251]:
+                    - cell "gradle, (Directory)" [ref=e252]:
+                      - generic [ref=e253]:
+                        - img [ref=e254]
+                        - link "gradle, (Directory)" [ref=e259] [cursor=pointer]:
+                          - /url: /TheSpideX/NoRegret/tree/main/gradle
+                          - text: gradle
+                    - cell [ref=e260]
+                    - cell [ref=e262]
+                  - row "mesh-core, (Directory)" [ref=e265]:
+                    - cell "mesh-core, (Directory)" [ref=e266]:
+                      - generic [ref=e267]:
+                        - img [ref=e268]
+                        - link "mesh-core, (Directory)" [ref=e273] [cursor=pointer]:
+                          - /url: /TheSpideX/NoRegret/tree/main/mesh-core
+                          - text: mesh-core
+                    - cell [ref=e274]
+                    - cell [ref=e276]
+                  - row "native, (Directory)" [ref=e279]:
+                    - cell "native, (Directory)" [ref=e280]:
+                      - generic [ref=e281]:
+                        - img [ref=e282]
+                        - link "native, (Directory)" [ref=e287] [cursor=pointer]:
+                          - /url: /TheSpideX/NoRegret/tree/main/native
+                          - text: native
+                    - cell [ref=e288]
+                    - cell [ref=e290]
+                  - row ".DS_Store, (File)" [ref=e293]:
+                    - cell ".DS_Store, (File)" [ref=e294]:
+                      - generic [ref=e295]:
+                        - img [ref=e296]
+                        - link ".DS_Store, (File)" [ref=e301] [cursor=pointer]:
+                          - /url: /TheSpideX/NoRegret/blob/main/.DS_Store
+                          - text: .DS_Store
+                    - cell [ref=e302]
+                    - cell [ref=e304]
+                  - row ".gitattributes, (File)" [ref=e307]:
+                    - cell ".gitattributes, (File)" [ref=e308]:
+                      - generic [ref=e309]:
+                        - img [ref=e310]
+                        - link ".gitattributes, (File)" [ref=e315] [cursor=pointer]:
+                          - /url: /TheSpideX/NoRegret/blob/main/.gitattributes
+                          - text: .gitattributes
+                    - cell [ref=e316]
+                    - cell [ref=e318]
+                  - row "README.md, (File)" [ref=e321]:
+                    - cell "README.md, (File)" [ref=e322]:
+                      - generic [ref=e323]:
+                        - img [ref=e324]
+                        - link "README.md, (File)" [ref=e329] [cursor=pointer]:
+                          - /url: /TheSpideX/NoRegret/blob/main/README.md
+                          - text: README.md
+                    - cell [ref=e330]
+                    - cell [ref=e332]
+                  - row "build.gradle.kts, (File)" [ref=e335]:
+                    - cell "build.gradle.kts, (File)" [ref=e336]:
+                      - generic [ref=e337]:
+                        - img [ref=e338]
+                        - link "build.gradle.kts, (File)" [ref=e343] [cursor=pointer]:
+                          - /url: /TheSpideX/NoRegret/blob/main/build.gradle.kts
+                          - text: build.gradle.kts
+                    - cell [ref=e344]
+                    - cell [ref=e346]
+                  - row "current.txt, (File)" [ref=e349]:
+                    - cell "current.txt, (File)" [ref=e350]:
+                      - generic [ref=e351]:
+                        - img [ref=e352]
+                        - link "current.txt, (File)" [ref=e357] [cursor=pointer]:
+                          - /url: /TheSpideX/NoRegret/blob/main/current.txt
+                          - text: current.txt
+                    - cell [ref=e358]
+                    - cell [ref=e360]
+                  - row "gradle.properties, (File)" [ref=e363]:
+                    - cell "gradle.properties, (File)" [ref=e364]:
+                      - generic [ref=e365]:
+                        - img [ref=e366]
+                        - link "gradle.properties, (File)" [ref=e371] [cursor=pointer]:
+                          - /url: /TheSpideX/NoRegret/blob/main/gradle.properties
+                          - text: gradle.properties
+                    - cell [ref=e372]
+                    - cell [ref=e374]
+                  - row "gradlew, (File)" [ref=e377]:
+                    - cell "gradlew, (File)" [ref=e378]:
+                      - generic [ref=e379]:
+                        - img [ref=e380]
+                        - link "gradlew, (File)" [ref=e385] [cursor=pointer]:
+                          - /url: /TheSpideX/NoRegret/blob/main/gradlew
+                          - text: gradlew
+                    - cell [ref=e386]
+                    - cell [ref=e388]
+                  - row "gradlew.bat, (File)" [ref=e391]:
+                    - cell "gradlew.bat, (File)" [ref=e392]:
+                      - generic [ref=e393]:
+                        - img [ref=e394]
+                        - link "gradlew.bat, (File)" [ref=e399] [cursor=pointer]:
+                          - /url: /TheSpideX/NoRegret/blob/main/gradlew.bat
+                          - text: gradlew.bat
+                    - cell [ref=e400]
+                    - cell [ref=e402]
+                  - row "settings.gradle.kts, (File)" [ref=e405]:
+                    - cell "settings.gradle.kts, (File)" [ref=e406]:
+                      - generic [ref=e407]:
+                        - img [ref=e408]
+                        - link "settings.gradle.kts, (File)" [ref=e413] [cursor=pointer]:
+                          - /url: /TheSpideX/NoRegret/blob/main/settings.gradle.kts
+                          - text: settings.gradle.kts
+                    - cell [ref=e414]
+                    - cell [ref=e416]
+            - generic [ref=e420]:
+              - generic [ref=e421]:
+                - heading "Repository files navigation" [level=2] [ref=e422]
+                - navigation "Repository files" [ref=e423]:
+                  - list [ref=e424]:
+                    - listitem [ref=e425]:
+                      - link "README" [ref=e426] [cursor=pointer]:
+                        - /url: "#"
+                        - img [ref=e428]
+                        - generic [ref=e430]: README
+                - button "Outline" [ref=e431] [cursor=pointer]:
+                  - img [ref=e432]
+              - article [ref=e435]:
+                - generic [ref=e436]:
+                  - 'heading "Pulse: The Social Productivity Engine" [level=1] [ref=e437]':
+                    - strong [ref=e438]: "Pulse: The Social Productivity Engine"
+                  - 'link "Permalink: Pulse: The Social Productivity Engine" [ref=e439] [cursor=pointer]':
+                    - /url: "#pulse-the-social-productivity-engine"
+                    - img [ref=e440]
+                - paragraph [ref=e442]:
+                  - strong [ref=e443]: Pulse is a groundbreaking social productivity application that transforms the invisible effort of peers into visible motivation. Built on a revolutionary, serverless mesh networking stack, Pulse creates a campus-wide social ecosystem that makes studying a shared, motivating experience rather than an isolated struggle.
+                - paragraph [ref=e444]:
+                  - text: The entire system is designed to be
+                  - strong [ref=e445]: 100% private and serverless
+                  - text: ", operating without any reliance on the internet or cellular infrastructure."
+                - paragraph [ref=e446]:
+                  - text: <p align="center">
+                  - text: <img src="
+                  - link "https://placehold.co/600x300/7c3aed/ffffff?text=Pulse+UI+Mockup" [ref=e447] [cursor=pointer]:
+                    - /url: https://placehold.co/600x300/7c3aed/ffffff?text=Pulse+UI+Mockup
+                  - text: "\" alt=\"Pulse UI Mockup - Visualizing Peer Effort\"/>"
+                  - text: </p>
+                - generic [ref=e448]:
+                  - 'heading "🧠 The Problem: Invisible Effort Syndrome" [level=2] [ref=e449]':
+                    - strong [ref=e450]: "🧠 The Problem: Invisible Effort Syndrome"
+                  - 'link "Permalink: 🧠 The Problem: Invisible Effort Syndrome" [ref=e451] [cursor=pointer]':
+                    - /url: "#-the-problem-invisible-effort-syndrome"
+                    - img [ref=e452]
+                - paragraph [ref=e454]: On a competitive campus like IIT Dhanbad, students often see their peers achieving excellent results seemingly without effort. This creates a false narrative of "natural talent" and can be deeply demotivating. The reality of late-night study sessions, consistent grinding, and disciplined effort remains completely invisible.
+                - paragraph [ref=e455]:
+                  - strong [ref=e456]: "Pulse was born from a simple psychological insight:"
+                  - emphasis [ref=e457]: We see the results, but never the process.
+                - paragraph [ref=e458]: This "Invisible Effort Syndrome" leads to a demotivation cycle where students feel inadequate and reduce their own efforts, believing they lack the innate talent to succeed.
+                - generic [ref=e459]:
+                  - 'heading "✨ The Solution: Making Effort Visible" [level=2] [ref=e460]':
+                    - strong [ref=e461]: "✨ The Solution: Making Effort Visible"
+                  - 'link "Permalink: ✨ The Solution: Making Effort Visible" [ref=e462] [cursor=pointer]':
+                    - /url: "#-the-solution-making-effort-visible"
+                    - img [ref=e463]
+                - paragraph [ref=e465]:
+                  - strong [ref=e466]: Pulse's mission is to transform solitary study into a shared, motivating experience by making peer effort visible in real-time.
+                - paragraph [ref=e467]: By leveraging a privacy-preserving, serverless mesh network, Pulse turns the invisible grind into powerful social proof. It helps students understand the direct correlation between effort and success, replacing myths of "natural talent" with data-driven reality.
+                - generic [ref=e468]:
+                  - heading "🚀 Core Features" [level=2] [ref=e469]:
+                    - strong [ref=e470]: 🚀 Core Features
+                  - 'link "Permalink: 🚀 Core Features" [ref=e471] [cursor=pointer]':
+                    - /url: "#-core-features"
+                    - img [ref=e472]
+                - paragraph [ref=e474]: Pulse is built on a multi-layer social proof system that provides context and motivation at every level of campus life, all while preserving user anonymity.
+                - generic [ref=e475]:
+                  - 'heading "1. Venue-Layer: Anonymous Campus Awareness" [level=3] [ref=e476]':
+                    - strong [ref=e477]: "1. Venue-Layer: Anonymous Campus Awareness"
+                  - 'link "Permalink: 1. Venue-Layer: Anonymous Campus Awareness" [ref=e478] [cursor=pointer]':
+                    - /url: "#1-venue-layer-anonymous-campus-awareness"
+                    - img [ref=e479]
+                - paragraph [ref=e481]: When you're in the library, Pulse gives you a real-time, anonymous overview of the collective effort around you.
+                - list [ref=e482]:
+                  - listitem [ref=e483]:
+                    - strong [ref=e484]: "\"47 people are currently in focus sessions here.\""
+                  - listitem [ref=e485]:
+                    - strong [ref=e486]: "\"Average study time today in this building: 6.2 hours.\""
+                  - listitem [ref=e487]:
+                    - strong [ref=e488]: "\"Someone here has been studying for 12 hours straight!\""
+                - paragraph [ref=e489]: This creates powerful social proof and a sense of shared purpose without revealing any individual's identity.
+                - generic [ref=e490]:
+                  - 'heading "2. Circle-Layer: Trusted Friend Groups" [level=3] [ref=e491]':
+                    - strong [ref=e492]: "2. Circle-Layer: Trusted Friend Groups"
+                  - 'link "Permalink: 2. Circle-Layer: Trusted Friend Groups" [ref=e493] [cursor=pointer]':
+                    - /url: "#2-circle-layer-trusted-friend-groups"
+                    - img [ref=e494]
+                - paragraph [ref=e496]: Create private, encrypted "study circles" with 5-10 close friends to share progress and maintain accountability.
+                - list [ref=e497]:
+                  - listitem [ref=e498]:
+                    - strong [ref=e499]: "\"Rahul studied 8 hours yesterday for Data Structures.\""
+                  - listitem [ref=e500]:
+                    - strong [ref=e501]: "\"Priya is on a 15-day study streak!\""
+                  - listitem [ref=e502]:
+                    - strong [ref=e503]: "\"Your group average: 5.8 hours/day. Let's hit 7+ for exam week!\""
+                - generic [ref=e504]:
+                  - 'heading "3. League-Layer: Interest-Based Competition" [level=3] [ref=e505]':
+                    - strong [ref=e506]: "3. League-Layer: Interest-Based Competition"
+                  - 'link "Permalink: 3. League-Layer: Interest-Based Competition" [ref=e507] [cursor=pointer]':
+                    - /url: "#3-league-layer-interest-based-competition"
+                    - img [ref=e508]
+                - paragraph [ref=e510]: Join campus-wide anonymous "leagues" based on your goals (e.g., "UPSC Aspirants," "Competitive Programming Grinders").
+                - list [ref=e511]:
+                  - listitem [ref=e512]:
+                    - strong [ref=e513]: "\"Top grinder: 14 hours today.\""
+                  - listitem [ref=e514]:
+                    - strong [ref=e515]: "\"You're rank #23 out of 156 active grinders.\""
+                  - listitem [ref=e516]:
+                    - strong [ref=e517]: "\"Average league member: 7.2 hours/day.\""
+                - generic [ref=e518]:
+                  - heading "4. The \"Reality Check\" Insights Engine" [level=3] [ref=e519]:
+                    - strong [ref=e520]: 4. The "Reality Check" Insights Engine
+                  - 'link "Permalink: 4. The \"Reality Check\" Insights Engine" [ref=e521] [cursor=pointer]':
+                    - /url: "#4-the-reality-check-insights-engine"
+                    - img [ref=e522]
+                - paragraph [ref=e524]: After exams, Pulse provides anonymous, aggregated insights that demystify success.
+                - list [ref=e525]:
+                  - listitem [ref=e526]:
+                    - strong [ref=e527]: "\"Students who scored 90+ in Data Structures averaged 9.2 hours/day.\""
+                  - listitem [ref=e528]:
+                    - strong [ref=e529]: "\"Your pattern: 4.1 hours/day. Success gap: +5.1 hours daily needed.\""
+                  - listitem [ref=e530]: "This feature is the core of Pulse—it replaces the \"they're just smart\" myth with the reality: \"they worked harder.\""
+                - generic [ref=e531]:
+                  - 'heading "🏗️ The Technology: Enhanced SqAN Mesh Stack" [level=2] [ref=e532]':
+                    - strong [ref=e533]: "🏗️ The Technology: Enhanced SqAN Mesh Stack"
+                  - 'link "Permalink: 🏗️ The Technology: Enhanced SqAN Mesh Stack" [ref=e534] [cursor=pointer]':
+                    - /url: "#️-the-technology-enhanced-sqan-mesh-stack"
+                    - img [ref=e535]
+                - paragraph [ref=e537]:
+                  - text: Pulse is powered by
+                  - strong [ref=e538]: Enhanced SqAN
+                  - text: ", a custom-built, high-performance, serverless mesh networking stack. This is not just a feature; it's the revolutionary foundation that makes Pulse's privacy-preserving features possible."
+                - generic [ref=e539]:
+                  - heading "Key Architectural Pillars:" [level=3] [ref=e540]:
+                    - strong [ref=e541]: "Key Architectural Pillars:"
+                  - 'link "Permalink: Key Architectural Pillars:" [ref=e542] [cursor=pointer]':
+                    - /url: "#key-architectural-pillars"
+                    - img [ref=e543]
+                - list [ref=e545]:
+                  - listitem [ref=e546]:
+                    - strong [ref=e547]: "Serverless & Private by Design:"
+                    - text: The entire system is peer-to-peer. There are no servers, meaning zero operational costs and a guarantee of 100% user privacy. Your data never leaves your device or the local mesh network.
+                  - listitem [ref=e548]:
+                    - strong [ref=e549]: "\"Power-First\" Component Philosophy:"
+                    - text: We integrate battle-tested, production-grade open-source components to achieve industry-defining performance and reliability.
+                    - list [ref=e550]:
+                      - listitem [ref=e551]:
+                        - strong [ref=e552]: "Routing:"
+                        - strong [ref=e553]: Yggdrasil
+                        - text: (proven with 4,000+ nodes) for academic O(log n) compact routing.
+                      - listitem [ref=e554]:
+                        - strong [ref=e555]: "Reliability:"
+                        - strong [ref=e556]: NASA-grade Serval FEC
+                        - text: (30+ years in space missions) for error correction, achieving
+                        - strong [ref=e557]: 95%+ message delivery
+                        - text: without infrastructure.
+                      - listitem [ref=e558]:
+                        - strong [ref=e559]: "Security:"
+                        - strong [ref=e560]: Briar's Noise Protocol
+                        - text: (used by 100,000+ activists) for military-grade, end-to-end encryption.
+                      - listitem [ref=e561]:
+                        - strong [ref=e562]: "Discovery & Overlay:"
+                        - strong [ref=e563]: CJDNS
+                        - text: (10+ years in production) for a resilient global mesh overlay.
+                  - listitem [ref=e564]:
+                    - strong [ref=e565]: "The \"Digital Factory\" Engine:"
+                    - text: At the core is a tactical engine written in
+                    - strong [ref=e566]: C++ using the Actor Framework (CAF)
+                    - text: . This creates an auto-scaling, self-healing system of supervised actors that handles all network operations with extreme efficiency and fault tolerance (<50ms recovery).
+                  - listitem [ref=e567]:
+                    - strong [ref=e568]: "Adaptive Three-Tier Delivery:"
+                    - text: "The network intelligently adapts its delivery strategy based on real-time conditions:"
+                    - list [ref=e569]:
+                      - listitem [ref=e570]:
+                        - strong [ref=e571]: "Tier 1 (High Confidence):"
+                        - text: Efficient single-path delivery.
+                      - listitem [ref=e572]:
+                        - strong [ref=e573]: "Tier 2 (Low Confidence):"
+                        - text: Redundant "multi-mule" forwarding.
+                      - listitem [ref=e574]:
+                        - strong [ref=e575]: "Tier 3 (No Confidence):"
+                        - text: Resilient epidemic broadcasting.
+                - paragraph [ref=e576]: This underlying stack is a massive engineering effort and a project in its own right, providing Pulse with capabilities that are impossible to achieve with traditional client-server architectures.
+                - generic [ref=e577]:
+                  - heading "🛠️ Tech Stack" [level=2] [ref=e578]:
+                    - strong [ref=e579]: 🛠️ Tech Stack
+                  - 'link "Permalink: 🛠️ Tech Stack" [ref=e580] [cursor=pointer]':
+                    - /url: "#️-tech-stack"
+                    - img [ref=e581]
+                - table [ref=e584]:
+                  - rowgroup [ref=e585]:
+                    - row "Layer Technologies" [ref=e586]:
+                      - columnheader "Layer" [ref=e587]
+                      - columnheader "Technologies" [ref=e588]
+                  - rowgroup [ref=e589]:
+                    - row "Application Kotlin, Jetpack Compose, Room, Coroutines & Flow" [ref=e590]:
+                      - cell "Application" [ref=e591]:
+                        - strong [ref=e592]: Application
+                      - cell "Kotlin, Jetpack Compose, Room, Coroutines & Flow" [ref=e593]
+                    - row "Strategic Engine Android SDK, Multi-radio Coordination (Wi-Fi Direct, Aware, Bluetooth)" [ref=e594]:
+                      - cell "Strategic Engine" [ref=e595]:
+                        - strong [ref=e596]: Strategic Engine
+                      - cell "Android SDK, Multi-radio Coordination (Wi-Fi Direct, Aware, Bluetooth)" [ref=e597]
+                    - row "Tactical Engine C++, C++ Actor Framework (CAF), JNI, Go (CGO Bridge)" [ref=e598]:
+                      - cell "Tactical Engine" [ref=e599]:
+                        - strong [ref=e600]: Tactical Engine
+                      - cell "C++, C++ Actor Framework (CAF), JNI, Go (CGO Bridge)" [ref=e601]:
+                        - strong [ref=e602]: C++
+                        - text: ","
+                        - strong [ref=e603]: C++ Actor Framework (CAF)
+                        - text: ", JNI, Go (CGO Bridge)"
+                    - row "Core Mesh Components Yggdrasil, Serval DNA (FEC & MeshMS), CJDNS, Briar (Noise Protocol)" [ref=e604]:
+                      - cell "Core Mesh Components" [ref=e605]:
+                        - strong [ref=e606]: Core Mesh Components
+                      - cell "Yggdrasil, Serval DNA (FEC & MeshMS), CJDNS, Briar (Noise Protocol)" [ref=e607]
+                - generic [ref=e608]:
+                  - heading "🗺️ Roadmap" [level=2] [ref=e609]:
+                    - strong [ref=e610]: 🗺️ Roadmap
+                  - 'link "Permalink: 🗺️ Roadmap" [ref=e611] [cursor=pointer]':
+                    - /url: "#️-roadmap"
+                    - img [ref=e612]
+                - paragraph [ref=e614]:
+                  - text: The project is currently
+                  - strong [ref=e615]: ~50% complete
+                  - text: . The core mesh networking stack (Enhanced SqAN) is the primary focus, with the foundational actor pipeline and component integrations well underway.
+                - list [ref=e616]:
+                  - listitem [ref=e617]:
+                    - checkbox "Completed task" [checked] [disabled] [ref=e618]
+                    - strong [ref=e619]: Architect
+                    - text: the "Digital Factory" C++ engine.
+                  - listitem [ref=e620]:
+                    - checkbox "Completed task" [checked] [disabled] [ref=e621]
+                    - strong [ref=e622]: Complete
+                    - text: initial implementation of the supervised actor pipeline.
+                  - listitem [ref=e623]:
+                    - checkbox "Completed task" [checked] [disabled] [ref=e624]
+                    - strong [ref=e625]: Integrate
+                    - text: all 5 battle-tested mesh components.
+                  - listitem [ref=e626]:
+                    - checkbox "Completed task" [checked] [disabled] [ref=e627]
+                    - strong [ref=e628]: Design
+                    - text: the adaptive Three-Tier Delivery Algorithm.
+                  - listitem [ref=e629]:
+                    - checkbox "Incomplete task" [disabled] [ref=e630]
+                    - strong [ref=e631]: Implement
+                    - text: all three tiers of the delivery logic.
+                  - listitem [ref=e632]:
+                    - checkbox "Incomplete task" [disabled] [ref=e633]
+                    - strong [ref=e634]: Build
+                    - text: the full multi-layer social proof system for the Pulse app.
+                  - listitem [ref=e635]:
+                    - checkbox "Incomplete task" [disabled] [ref=e636]
+                    - strong [ref=e637]: Develop
+                    - text: the "Reality Check" insights engine.
+                  - listitem [ref=e638]:
+                    - checkbox "Incomplete task" [disabled] [ref=e639]
+                    - strong [ref=e640]: Begin
+                    - text: campus-scale testing at IIT(ISM) Dhanbad.
+                - generic [ref=e641]:
+                  - heading "🤝 Contributing" [level=2] [ref=e642]:
+                    - strong [ref=e643]: 🤝 Contributing
+                  - 'link "Permalink: 🤝 Contributing" [ref=e644] [cursor=pointer]':
+                    - /url: "#-contributing"
+                    - img [ref=e645]
+                - paragraph [ref=e647]: This is currently an independent project. However, if you are passionate about distributed systems, privacy-preserving technologies, or the psychology of motivation, feel free to reach out to discuss ideas or potential collaborations.
+                - generic [ref=e648]:
+                  - heading "License" [level=2] [ref=e649]:
+                    - strong [ref=e650]: License
+                  - 'link "Permalink: License" [ref=e651] [cursor=pointer]':
+                    - /url: "#license"
+                    - img [ref=e652]
+                - paragraph [ref=e654]:
+                  - text: This project is licensed under the
+                  - link "MIT License" [ref=e655] [cursor=pointer]:
+                    - /url: https://opensource.org/licenses/MIT
+                  - text: .
+        - generic [ref=e659]:
+          - generic [ref=e662]:
+            - heading "About" [level=2] [ref=e663]
+            - generic [ref=e664]: No description, website, or topics provided.
+            - heading "Resources" [level=3] [ref=e665]
+            - link "Readme" [ref=e667] [cursor=pointer]:
+              - /url: "#readme-ov-file"
+              - img [ref=e668]
+              - text: Readme
+            - link "Activity" [ref=e671] [cursor=pointer]:
+              - /url: /TheSpideX/NoRegret/activity
+              - img [ref=e672]
+              - text: Activity
+            - heading "Stars" [level=3] [ref=e674]
+            - link "0 stars" [ref=e676] [cursor=pointer]:
+              - /url: /TheSpideX/NoRegret/stargazers
+              - img [ref=e677]
+              - strong [ref=e679]: "0"
+              - text: stars
+            - heading "Watchers" [level=3] [ref=e680]
+            - link "0 watching" [ref=e682] [cursor=pointer]:
+              - /url: /TheSpideX/NoRegret/watchers
+              - img [ref=e683]
+              - strong [ref=e685]: "0"
+              - text: watching
+            - heading "Forks" [level=3] [ref=e686]
+            - link "0 forks" [ref=e688] [cursor=pointer]:
+              - /url: /TheSpideX/NoRegret/forks
+              - img [ref=e689]
+              - strong [ref=e691]: "0"
+              - text: forks
+            - link "Report repository" [ref=e693] [cursor=pointer]:
+              - /url: /contact/report-content?content_url=https%3A%2F%2Fgithub.com%2FTheSpideX%2FNoRegret&report=TheSpideX+%28user%29
+          - generic [ref=e695]:
+            - heading "Releases" [level=2] [ref=e696]:
+              - link "Releases" [ref=e697] [cursor=pointer]:
+                - /url: /TheSpideX/NoRegret/releases
+            - generic [ref=e698]: No releases published
+          - generic "Loading latest packages" [ref=e701]:
+            - heading "Packages" [level=2] [ref=e702]:
+              - link "Packages" [ref=e703] [cursor=pointer]:
+                - /url: /users/TheSpideX/packages?repo_name=NoRegret
+          - generic "Loading contributors" [ref=e715]:
+            - generic:
+              - heading "Contributors" [level=2] [ref=e716]:
+                - link "Contributors" [ref=e717] [cursor=pointer]:
+                  - /url: /TheSpideX/NoRegret/graphs/contributors
+              - list [ref=e718]:
+                - listitem [ref=e719]
+                - listitem [ref=e721]
+                - listitem [ref=e723]
+          - generic [ref=e726]:
+            - heading "Languages" [level=2] [ref=e727]
+            - list [ref=e737]:
+              - listitem [ref=e738]:
+                - link "C 54.1%" [ref=e739] [cursor=pointer]:
+                  - /url: /TheSpideX/NoRegret/search?l=c
+                  - img [ref=e740]
+                  - generic [ref=e742]: C
+                  - generic [ref=e743]: 54.1%
+              - listitem [ref=e744]:
+                - link "Java 15.5%" [ref=e745] [cursor=pointer]:
+                  - /url: /TheSpideX/NoRegret/search?l=java
+                  - img [ref=e746]
+                  - generic [ref=e748]: Java
+                  - generic [ref=e749]: 15.5%
+              - listitem [ref=e750]:
+                - link "Makefile 11.4%" [ref=e751] [cursor=pointer]:
+                  - /url: /TheSpideX/NoRegret/search?l=makefile
+                  - img [ref=e752]
+                  - generic [ref=e754]: Makefile
+                  - generic [ref=e755]: 11.4%
+              - listitem [ref=e756]:
+                - link "C++ 8.2%" [ref=e757] [cursor=pointer]:
+                  - /url: /TheSpideX/NoRegret/search?l=c%2B%2B
+                  - img [ref=e758]
+                  - generic [ref=e760]: C++
+                  - generic [ref=e761]: 8.2%
+              - listitem [ref=e762]:
+                - link "Kotlin 5.4%" [ref=e763] [cursor=pointer]:
+                  - /url: /TheSpideX/NoRegret/search?l=kotlin
+                  - img [ref=e764]
+                  - generic [ref=e766]: Kotlin
+                  - generic [ref=e767]: 5.4%
+              - listitem [ref=e768]:
+                - link "Rust 2.1%" [ref=e769] [cursor=pointer]:
+                  - /url: /TheSpideX/NoRegret/search?l=rust
+                  - img [ref=e770]
+                  - generic [ref=e772]: Rust
+                  - generic [ref=e773]: 2.1%
+              - listitem [ref=e774]:
+                - generic [ref=e775]:
+                  - img [ref=e776]
+                  - generic [ref=e778]: Other
+                  - generic [ref=e779]: 3.3%
+  - contentinfo [ref=e781]:
+    - heading "Footer" [level=2] [ref=e782]
+    - generic [ref=e783]:
+      - generic [ref=e784]:
+        - link "GitHub Homepage" [ref=e785] [cursor=pointer]:
+          - /url: https://github.com
+          - img [ref=e786]
+        - generic [ref=e788]: © 2026 GitHub, Inc.
+      - navigation "Footer" [ref=e789]:
+        - heading "Footer navigation" [level=3] [ref=e790]
+        - list "Footer navigation" [ref=e791]:
+          - listitem [ref=e792]:
+            - link "Terms" [ref=e793] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+          - listitem [ref=e794]:
+            - link "Privacy" [ref=e795] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+          - listitem [ref=e796]:
+            - link "Security" [ref=e797] [cursor=pointer]:
+              - /url: https://github.com/security
+          - listitem [ref=e798]:
+            - link "Status" [ref=e799] [cursor=pointer]:
+              - /url: https://www.githubstatus.com/
+          - listitem [ref=e800]:
+            - link "Community" [ref=e801] [cursor=pointer]:
+              - /url: https://github.community/
+          - listitem [ref=e802]:
+            - link "Docs" [ref=e803] [cursor=pointer]:
+              - /url: https://docs.github.com/
+          - listitem [ref=e804]:
+            - link "Contact" [ref=e805] [cursor=pointer]:
+              - /url: https://support.github.com?tags=dotcom-footer
+          - listitem [ref=e806]:
+            - button "Manage cookies" [ref=e808] [cursor=pointer]
+          - listitem [ref=e809]:
+            - button "Do not share my personal information" [ref=e811] [cursor=pointer]

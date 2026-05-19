@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Anton", sans-serif;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* Custom Cursor */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #ccff00;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+}
+
+.custom-cursor-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(204, 255, 0, 0.5);
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s, background-color 0.3s;
+}
+
+/* Cursor Trail Dots */
+.cursor-trail-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ccff00;
+  pointer-events: none;
+  z-index: 9997;
+  mix-blend-mode: difference;
+  opacity: 0;
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Massive display typography */
+.title-text {
+  font-family: "Anton", sans-serif;
+  font-size: clamp(4rem, 15vw, 12rem);
+  line-height: 0.85;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.outline-text {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+}
+
+.outline-text:hover {
+  color: #ccff00;
+  -webkit-text-stroke: 1px #ccff00;
+  transition: all 0.3s ease;
+}
+
+/* Animated Gradient Text */
+.gradient-text {
+  background: linear-gradient(90deg,
+      #ccff00 0%,
+      #ffffff 25%,
+      #ccff00 50%,
+      #ffffff 75%,
+      #ccff00 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 4s linear infinite;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* Marquee animation */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Links and interactables */
+a,
+button {
+  cursor: none;
+}
+
+/* Grid Background */
+.grid-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: 0;
+  mask-image: radial-gradient(circle at center, black, transparent 80%);
+}
+
+/* Noise Overlay */
+.noise-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9990;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+.text-reveal-mask {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* Custom Animations */
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin 15s linear infinite;
+}
+
+/* Rotating Ring Animation */
+@keyframes ring-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-ring-rotate {
+  animation: ring-rotate 8s linear infinite;
+}
+
+/* Equalizer Bars */
+@keyframes eq-bar {
+
+  0%,
+  100% {
+    height: 4px;
+  }
+
+  50% {
+    height: 100%;
+  }
+}
+
+.eq-bar {
+  animation: eq-bar 0.8s ease-in-out infinite;
+}
+
+/* Signature SVG Draw */
+@keyframes draw-signature {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.signature-path {
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  animation: draw-signature 3s ease forwards;
+  animation-play-state: paused;
+}
+
+.signature-path.animate {
+  animation-play-state: running;
+}
+
+/* Particle spawned from letter hover */
+.letter-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #ccff00;
+  pointer-events: none;
+  z-index: 100;
+}
+
+/* Toast notification */
+@keyframes toast-in {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes toast-out {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+}
+
+.toast-enter {
+  animation: toast-in 0.3s ease forwards;
+}
+
+.toast-exit {
+  animation: toast-out 0.3s ease forwards;
+}
+
+.manifesto-word-hover {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.3s ease, text-shadow 0.3s ease;
+  transform: translateZ(0px);
+}
+
+.manifesto-word-hover:hover {
+  color: #ffffff;
+  transform: translateZ(80px) scale(1.1) translateY(-5px);
+  text-shadow: 0 20px 30px rgba(0,0,0,0.4);
+}
+
+/* Horizontal Scroll Container */
+.horizontal-scroll-wrapper {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.horizontal-scroll-container {
+  display: flex;
+  width: max-content;
+  height: 100%;
+  padding: 0 10vw;
+  align-items: center;
+}
+
+.horizontal-item {
+  width: 70vw;
+  height: 70vh;
+  margin-right: 5vw;
+  flex-shrink: 0;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .horizontal-item {
+    width: 85vw;
+    height: 60vh;
+  }
+}
+
+/* Infinite Marquee */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 80s linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marquee 80s linear infinite reverse;
+}
+
+/* Scan Animation */
+@keyframes scan {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}

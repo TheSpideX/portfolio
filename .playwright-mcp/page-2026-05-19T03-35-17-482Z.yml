@@ -1,0 +1,626 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - link "Skip to content" [ref=e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner [ref=e6]:
+      - heading "Navigation Menu" [level=2] [ref=e7]
+      - generic [ref=e8]:
+        - link "Homepage" [ref=e10] [cursor=pointer]:
+          - /url: /
+          - img [ref=e11]
+        - generic [ref=e13]:
+          - navigation "Global" [ref=e16]:
+            - list [ref=e17]:
+              - listitem [ref=e18]:
+                - button "Platform" [ref=e20] [cursor=pointer]:
+                  - text: Platform
+                  - img [ref=e21]
+              - listitem [ref=e23]:
+                - button "Solutions" [ref=e25] [cursor=pointer]:
+                  - text: Solutions
+                  - img [ref=e26]
+              - listitem [ref=e28]:
+                - button "Resources" [ref=e30] [cursor=pointer]:
+                  - text: Resources
+                  - img [ref=e31]
+              - listitem [ref=e33]:
+                - button "Open Source" [ref=e35] [cursor=pointer]:
+                  - text: Open Source
+                  - img [ref=e36]
+              - listitem [ref=e38]:
+                - button "Enterprise" [ref=e40] [cursor=pointer]:
+                  - text: Enterprise
+                  - img [ref=e41]
+              - listitem [ref=e43]:
+                - link "Pricing" [ref=e44] [cursor=pointer]:
+                  - /url: https://github.com/pricing
+                  - generic [ref=e45]: Pricing
+          - generic [ref=e46]:
+            - button "Search or jump to…" [ref=e49] [cursor=pointer]:
+              - img [ref=e51]
+            - link "Sign in" [ref=e54] [cursor=pointer]:
+              - /url: /login?return_to=https%3A%2F%2Fgithub.com%2FTheSpideX%2FSystemSim
+            - link "Sign up" [ref=e55] [cursor=pointer]:
+              - /url: /signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E&source=header-repo&source_repo=TheSpideX%2FSystemSim
+            - button "Appearance settings" [ref=e58] [cursor=pointer]:
+              - img
+  - main [ref=e62]:
+    - generic [ref=e63]:
+      - generic [ref=e64]:
+        - generic [ref=e66]:
+          - img [ref=e67]
+          - link "TheSpideX" [ref=e70] [cursor=pointer]:
+            - /url: /TheSpideX
+          - generic [ref=e71]: /
+          - strong [ref=e72]:
+            - link "SystemSim" [ref=e73] [cursor=pointer]:
+              - /url: /TheSpideX/SystemSim
+          - generic [ref=e74]: Public
+        - generic [ref=e75]:
+          - list:
+            - listitem [ref=e76]:
+              - link "You must be signed in to change notification settings" [ref=e77] [cursor=pointer]:
+                - /url: /login?return_to=%2FTheSpideX%2FSystemSim
+                - img [ref=e78]
+                - text: Notifications
+            - listitem [ref=e80]:
+              - link "Fork 0" [ref=e81] [cursor=pointer]:
+                - /url: /login?return_to=%2FTheSpideX%2FSystemSim
+                - img [ref=e82]
+                - text: Fork
+                - generic "0" [ref=e84]
+            - listitem [ref=e85]:
+              - link "You must be signed in to star a repository" [ref=e87] [cursor=pointer]:
+                - /url: /login?return_to=%2FTheSpideX%2FSystemSim
+                - img [ref=e88]
+                - text: Star
+                - generic "0 users starred this repository" [ref=e90]: "0"
+      - navigation "Repository" [ref=e91]:
+        - list [ref=e92]:
+          - listitem [ref=e93]:
+            - link "Code" [ref=e94] [cursor=pointer]:
+              - /url: /TheSpideX/SystemSim
+              - img [ref=e95]
+              - generic [ref=e97]: Code
+          - listitem [ref=e98]:
+            - link "Issues" [ref=e99] [cursor=pointer]:
+              - /url: /TheSpideX/SystemSim/issues
+              - img [ref=e100]
+              - generic [ref=e103]: Issues
+          - listitem [ref=e104]:
+            - link "Pull requests" [ref=e105] [cursor=pointer]:
+              - /url: /TheSpideX/SystemSim/pulls
+              - img [ref=e106]
+              - generic [ref=e108]: Pull requests
+          - listitem [ref=e109]:
+            - link "Actions" [ref=e110] [cursor=pointer]:
+              - /url: /TheSpideX/SystemSim/actions
+              - img [ref=e111]
+              - generic [ref=e113]: Actions
+          - listitem [ref=e114]:
+            - link "Projects" [ref=e115] [cursor=pointer]:
+              - /url: /TheSpideX/SystemSim/projects
+              - img [ref=e116]
+              - generic [ref=e118]: Projects
+          - listitem [ref=e119]:
+            - link "Security and quality" [ref=e120] [cursor=pointer]:
+              - /url: /TheSpideX/SystemSim/security
+              - img [ref=e121]
+              - generic [ref=e123]: Security and quality
+          - listitem [ref=e124]:
+            - link "Insights" [ref=e125] [cursor=pointer]:
+              - /url: /TheSpideX/SystemSim/pulse
+              - img [ref=e126]
+              - generic [ref=e128]: Insights
+    - generic [ref=e141]:
+      - heading "TheSpideX/SystemSim" [level=1] [ref=e143]
+      - generic [ref=e144]:
+        - generic [ref=e147]:
+          - generic [ref=e148]:
+            - generic [ref=e149]:
+              - button "main branch" [ref=e151] [cursor=pointer]:
+                - generic [ref=e152]:
+                  - generic [ref=e154]:
+                    - img [ref=e156]
+                    - generic [ref=e159]: main
+                  - generic:
+                    - img
+              - generic [ref=e160]:
+                - link "1 Branch" [ref=e161] [cursor=pointer]:
+                  - /url: /TheSpideX/SystemSim/branches
+                  - generic [ref=e162]:
+                    - generic:
+                      - img
+                    - generic [ref=e164]:
+                      - strong [ref=e165]: "1"
+                      - text: Branch
+                - link "0 Tags" [ref=e166] [cursor=pointer]:
+                  - /url: /TheSpideX/SystemSim/tags
+                  - generic [ref=e167]:
+                    - generic:
+                      - img
+                    - generic [ref=e169]:
+                      - strong [ref=e170]: "0"
+                      - text: Tags
+            - generic [ref=e171]:
+              - generic [ref=e175]:
+                - img [ref=e177]
+                - combobox "Go to file" [ref=e179]
+              - button "Code" [ref=e180] [cursor=pointer]:
+                - generic [ref=e181]:
+                  - generic:
+                    - img
+                  - generic [ref=e182]: Code
+                  - generic:
+                    - img
+          - generic [ref=e183]:
+            - generic [ref=e184]:
+              - heading "Folders and files" [level=2] [ref=e185]
+              - table "Folders and files" [ref=e186]:
+                - rowgroup:
+                  - row "Name Last commit message Last commit date":
+                    - columnheader "Name"
+                    - columnheader "Last commit message":
+                      - generic "Last commit message"
+                    - columnheader "Last commit date":
+                      - generic "Last commit date"
+                - rowgroup [ref=e187]:
+                  - row "Latest commit TheSpideX commits by TheSpideX Initial commit of readme.md for System Design Simulator Commit 9e25b57 · Aug 28, 20259 months ago History 2 Commits" [ref=e188]:
+                    - cell "Latest commit TheSpideX commits by TheSpideX Initial commit of readme.md for System Design Simulator Commit 9e25b57 · Aug 28, 20259 months ago History 2 Commits" [ref=e189]:
+                      - generic [ref=e190]:
+                        - heading "Latest commit" [level=2] [ref=e191]
+                        - generic [ref=e192]:
+                          - generic [ref=e194]:
+                            - link "TheSpideX" [ref=e195] [cursor=pointer]:
+                              - /url: /TheSpideX
+                              - img "TheSpideX" [ref=e196]
+                            - link "commits by TheSpideX" [ref=e197] [cursor=pointer]:
+                              - /url: /TheSpideX/SystemSim/commits?author=TheSpideX
+                              - text: TheSpideX
+                          - link "Initial commit of readme.md for System Design Simulator" [ref=e201] [cursor=pointer]:
+                            - /url: /TheSpideX/SystemSim/commit/9e25b571b35657363c478d9b81c810851810424f
+                        - generic [ref=e202]:
+                          - generic [ref=e204]:
+                            - link "Commit 9e25b57" [ref=e205] [cursor=pointer]:
+                              - /url: /TheSpideX/SystemSim/commit/9e25b571b35657363c478d9b81c810851810424f
+                              - text: 9e25b57
+                            - text: ·
+                            - generic "Aug 28, 2025, 4:40 PM GMT+5:30" [ref=e206]: Aug 28, 20259 months ago
+                          - generic [ref=e207]:
+                            - heading "History" [level=2] [ref=e208]
+                            - link "2 Commits" [ref=e209] [cursor=pointer]:
+                              - /url: /TheSpideX/SystemSim/commits/main/
+                              - generic [ref=e210]:
+                                - generic:
+                                  - img
+                                - generic [ref=e211]: 2 Commits
+                  - row "backend, (Directory) Initial commit Aug 28, 20259 months ago" [ref=e212]:
+                    - cell "backend, (Directory)" [ref=e213]:
+                      - generic [ref=e214]:
+                        - img [ref=e215]
+                        - link "backend, (Directory)" [ref=e220] [cursor=pointer]:
+                          - /url: /TheSpideX/SystemSim/tree/main/backend
+                          - text: backend
+                    - cell "Initial commit" [ref=e221]:
+                      - link "Initial commit" [ref=e224] [cursor=pointer]:
+                        - /url: /TheSpideX/SystemSim/commit/d5280d096cd47f842cf7df4842ed0699bb1fbd0b
+                    - cell "Aug 28, 20259 months ago" [ref=e225]:
+                      - generic [ref=e226]: Aug 28, 20259 months ago
+                  - row "docs, (Directory) Initial commit Aug 28, 20259 months ago" [ref=e227]:
+                    - cell "docs, (Directory)" [ref=e228]:
+                      - generic [ref=e229]:
+                        - img [ref=e230]
+                        - link "docs, (Directory)" [ref=e235] [cursor=pointer]:
+                          - /url: /TheSpideX/SystemSim/tree/main/docs
+                          - text: docs
+                    - cell "Initial commit" [ref=e236]:
+                      - link "Initial commit" [ref=e239] [cursor=pointer]:
+                        - /url: /TheSpideX/SystemSim/commit/d5280d096cd47f842cf7df4842ed0699bb1fbd0b
+                    - cell "Aug 28, 20259 months ago" [ref=e240]:
+                      - generic [ref=e241]: Aug 28, 20259 months ago
+                  - row "frontend, (Directory) Initial commit Aug 28, 20259 months ago" [ref=e242]:
+                    - cell "frontend, (Directory)" [ref=e243]:
+                      - generic [ref=e244]:
+                        - img [ref=e245]
+                        - link "frontend, (Directory)" [ref=e250] [cursor=pointer]:
+                          - /url: /TheSpideX/SystemSim/tree/main/frontend
+                          - text: frontend
+                    - cell "Initial commit" [ref=e251]:
+                      - link "Initial commit" [ref=e254] [cursor=pointer]:
+                        - /url: /TheSpideX/SystemSim/commit/d5280d096cd47f842cf7df4842ed0699bb1fbd0b
+                    - cell "Aug 28, 20259 months ago" [ref=e255]:
+                      - generic [ref=e256]: Aug 28, 20259 months ago
+                  - row ".DS_Store, (File) Initial commit Aug 28, 20259 months ago" [ref=e257]:
+                    - cell ".DS_Store, (File)" [ref=e258]:
+                      - generic [ref=e259]:
+                        - img [ref=e260]
+                        - link ".DS_Store, (File)" [ref=e265] [cursor=pointer]:
+                          - /url: /TheSpideX/SystemSim/blob/main/.DS_Store
+                          - text: .DS_Store
+                    - cell "Initial commit" [ref=e266]:
+                      - link "Initial commit" [ref=e269] [cursor=pointer]:
+                        - /url: /TheSpideX/SystemSim/commit/d5280d096cd47f842cf7df4842ed0699bb1fbd0b
+                    - cell "Aug 28, 20259 months ago" [ref=e270]:
+                      - generic [ref=e271]: Aug 28, 20259 months ago
+                  - row ".gitattributes, (File) Initial commit Aug 28, 20259 months ago" [ref=e272]:
+                    - cell ".gitattributes, (File)" [ref=e273]:
+                      - generic [ref=e274]:
+                        - img [ref=e275]
+                        - link ".gitattributes, (File)" [ref=e280] [cursor=pointer]:
+                          - /url: /TheSpideX/SystemSim/blob/main/.gitattributes
+                          - text: .gitattributes
+                    - cell "Initial commit" [ref=e281]:
+                      - link "Initial commit" [ref=e284] [cursor=pointer]:
+                        - /url: /TheSpideX/SystemSim/commit/d5280d096cd47f842cf7df4842ed0699bb1fbd0b
+                    - cell "Aug 28, 20259 months ago" [ref=e285]:
+                      - generic [ref=e286]: Aug 28, 20259 months ago
+                  - row "readme.md, (File) Initial commit of readme.md for System Design Simulator Aug 28, 20259 months ago" [ref=e287]:
+                    - cell "readme.md, (File)" [ref=e288]:
+                      - generic [ref=e289]:
+                        - img [ref=e290]
+                        - link "readme.md, (File)" [ref=e295] [cursor=pointer]:
+                          - /url: /TheSpideX/SystemSim/blob/main/readme.md
+                          - text: readme.md
+                    - cell "Initial commit of readme.md for System Design Simulator" [ref=e296]:
+                      - link "Initial commit of readme.md for System Design Simulator" [ref=e299] [cursor=pointer]:
+                        - /url: /TheSpideX/SystemSim/commit/9e25b571b35657363c478d9b81c810851810424f
+                    - cell "Aug 28, 20259 months ago" [ref=e300]:
+                      - generic [ref=e301]: Aug 28, 20259 months ago
+            - generic [ref=e303]:
+              - generic [ref=e304]:
+                - heading "Repository files navigation" [level=2] [ref=e305]
+                - navigation "Repository files" [ref=e306]:
+                  - list [ref=e307]:
+                    - listitem [ref=e308]:
+                      - link "README" [ref=e309] [cursor=pointer]:
+                        - /url: "#"
+                        - img [ref=e311]
+                        - generic [ref=e313]: README
+                - button "Outline" [ref=e314] [cursor=pointer]:
+                  - img [ref=e315]
+              - article [ref=e318]:
+                - generic [ref=e319]:
+                  - 'heading "System Design Simulator: A Reality-Grounded Distributed Systems Platform" [level=1] [ref=e320]':
+                    - strong [ref=e321]: "System Design Simulator: A Reality-Grounded Distributed Systems Platform"
+                  - 'link "Permalink: System Design Simulator: A Reality-Grounded Distributed Systems Platform" [ref=e322] [cursor=pointer]':
+                    - /url: "#system-design-simulator-a-reality-grounded-distributed-systems-platform"
+                    - img [ref=e323]
+                - paragraph [ref=e325]:
+                  - strong [ref=e326]: The System Design Simulator is a revolutionary platform for engineers to visually design, simulate, and predict the production behavior of complex distributed systems with 90-92% accuracy.
+                - paragraph [ref=e327]:
+                  - text: This is not just a simulation tool; it is a
+                  - strong [ref=e328]: configurable system design laboratory
+                  - text: . It serves as a "physics lab for system architecture," enabling students to learn through experimentation, engineers to validate architectures before deployment, and researchers to innovate through exploration.
+                - paragraph [ref=e329]:
+                  - text: <p align="center">
+                  - text: <img src="
+                  - link "https://placehold.co/800x400/1e293b/ffffff?text=High-Level+Architecture+Diagram" [ref=e330] [cursor=pointer]:
+                    - /url: https://placehold.co/800x400/1e293b/ffffff?text=High-Level+Architecture+Diagram
+                  - text: "\" alt=\"High-Level Architecture Diagram\"/>"
+                  - text: </p>
+                - generic [ref=e331]:
+                  - 'heading "🎯 Core Vision: From Theory to Hands-On Experimentation" [level=2] [ref=e332]':
+                    - strong [ref=e333]: "🎯 Core Vision: From Theory to Hands-On Experimentation"
+                  - 'link "Permalink: 🎯 Core Vision: From Theory to Hands-On Experimentation" [ref=e334] [cursor=pointer]':
+                    - /url: "#-core-vision-from-theory-to-hands-on-experimentation"
+                    - img [ref=e335]
+                - paragraph [ref=e337]: The current state of system design education is largely theoretical. Engineers make critical, multi-million dollar architectural decisions based on guesswork, leading to costly production surprises.
+                - paragraph [ref=e338]: "This platform bridges the gap between theory and reality by providing a space to:"
+                - list [ref=e339]:
+                  - listitem [ref=e340]:
+                    - strong [ref=e341]: "Validate Architectures:"
+                    - text: Test if your design will handle Black Friday traffic
+                    - emphasis [ref=e342]: before
+                    - text: you write a single line of production code.
+                  - listitem [ref=e343]:
+                    - strong [ref=e344]: "Compare Technologies:"
+                    - text: Quantitatively compare an Intel vs. AMD CPU or a Redis vs. Memcached layer using real hardware profiles.
+                  - listitem [ref=e345]:
+                    - strong [ref=e346]: "Learn by Doing:"
+                    - text: Visually observe how backpressure cascades through a system or why a specific database becomes a bottleneck under load.
+                - generic [ref=e347]:
+                  - heading "💡 Key Innovations" [level=2] [ref=e348]:
+                    - strong [ref=e349]: 💡 Key Innovations
+                  - 'link "Permalink: 💡 Key Innovations" [ref=e350] [cursor=pointer]':
+                    - /url: "#-key-innovations"
+                    - img [ref=e351]
+                - paragraph [ref=e353]: The platform's high accuracy and realism are achieved through several architectural breakthroughs.
+                - generic [ref=e354]:
+                  - heading "1. ACID-like Isolation & Natural Contention" [level=3] [ref=e355]:
+                    - strong [ref=e356]: 1. ACID-like Isolation & Natural Contention
+                  - 'link "Permalink: 1. ACID-like Isolation & Natural Contention" [ref=e357] [cursor=pointer]':
+                    - /url: "#1-acid-like-isolation--natural-contention"
+                    - img [ref=e358]
+                - paragraph [ref=e360]:
+                  - text: "Each user flow (e.g., \"user login,\" \"product purchase\") executes as if it owns the entire system. These independent flows are then run concurrently against a shared set of components with finite resources. The result:"
+                  - strong [ref=e361]: resource contention, bottlenecks, and queue buildups emerge naturally and realistically
+                  - text: ", without any complex or artificial coordination logic. This is a computer science breakthrough that mirrors how real microservices behave."
+                - generic [ref=e362]:
+                  - heading "2. Hardware-Adaptive Tick System" [level=3] [ref=e363]:
+                    - strong [ref=e364]: 2. Hardware-Adaptive Tick System
+                  - 'link "Permalink: 2. Hardware-Adaptive Tick System" [ref=e365] [cursor=pointer]':
+                    - /url: "#2-hardware-adaptive-tick-system"
+                    - img [ref=e366]
+                - paragraph [ref=e368]:
+                  - text: The engine features a unified, goroutine-based architecture that is infinitely scalable. It
+                  - strong [ref=e369]: automatically calibrates its simulation tick duration
+                  - text: (from 1ms to 10s) based on the scale of the system and the detected capabilities of the underlying hardware (CPU cores, memory). This eliminates the need for complex hybrid models and ensures deterministic, high-performance simulation at any scale.
+                - generic [ref=e370]:
+                  - heading "3. Profile-Based Reality Grounding" [level=3] [ref=e371]:
+                    - strong [ref=e372]: 3. Profile-Based Reality Grounding
+                  - 'link "Permalink: 3. Profile-Based Reality Grounding" [ref=e373] [cursor=pointer]':
+                    - /url: "#3-profile-based-reality-grounding"
+                    - img [ref=e374]
+                - paragraph [ref=e376]: "Every behavior in the simulation is grounded in reality, not arbitrary randomness. The engine uses a library of configurable profiles based on:"
+                - list [ref=e377]:
+                  - listitem [ref=e378]:
+                    - strong [ref=e379]: "Real Hardware Specifications:"
+                    - text: Performance curves and physical limits from Intel, AMD, Samsung, and Cisco datasheets.
+                  - listitem [ref=e380]:
+                    - strong [ref=e381]: "Physics-Based Constraints:"
+                    - text: Thermal dynamics for CPU throttling and the speed of light for network latency provide absolute, unbreakable bounds.
+                  - listitem [ref=e382]:
+                    - strong [ref=e383]: "Statistical Convergence:"
+                    - text: At scale, system behavior (like cache hit ratios) converges towards predictable statistical patterns, a principle that is mathematically modeled to achieve high accuracy.
+                - generic [ref=e384]:
+                  - heading "4. Production-Grade Architectural Patterns" [level=3] [ref=e385]:
+                    - strong [ref=e386]: 4. Production-Grade Architectural Patterns
+                  - 'link "Permalink: 4. Production-Grade Architectural Patterns" [ref=e387] [cursor=pointer]':
+                    - /url: "#4-production-grade-architectural-patterns"
+                    - img [ref=e388]
+                - paragraph [ref=e390]: "The simulator implements and allows users to experiment with real-world patterns used by major tech companies:"
+                - list [ref=e391]:
+                  - listitem [ref=e392]:
+                    - strong [ref=e393]: "Netflix-style Backpressure:"
+                    - text: A multi-level health aggregation system and direct health queries allow for graceful degradation under load.
+                  - listitem [ref=e394]:
+                    - strong [ref=e395]: "Kubernetes-style Service Registry:"
+                    - text: A sophisticated two-level registry system manages component discovery and instance health with atomic, race-condition-free coordination.
+                - generic [ref=e396]:
+                  - 'heading "🏗️ How It Works: The 3-Layer Architecture" [level=2] [ref=e397]':
+                    - strong [ref=e398]: "🏗️ How It Works: The 3-Layer Architecture"
+                  - 'link "Permalink: 🏗️ How It Works: The 3-Layer Architecture" [ref=e399] [cursor=pointer]':
+                    - /url: "#️-how-it-works-the-3-layer-architecture"
+                    - img [ref=e400]
+                - paragraph [ref=e402]: The platform is built on a three-layer hierarchy that allows for infinite flexibility in system design.
+                - list [ref=e403]:
+                  - listitem [ref=e404]:
+                    - text: "Layer 1: The 4 Universal Base Engines"
+                    - text: The foundation consists of 4 universal engines (CPU, Memory, Storage, Network In, Network Out, Coordination), each running in its own goroutine. Their behavior is dictated by the loaded hardware profiles (e.g., "Intel Xeon Gold 6248R," "Samsung 980 PRO NVMe").
+                  - listitem [ref=e405]:
+                    - text: "Layer 2: Component Composition"
+                    - text: Users design components (e.g., a "PostgreSQL Database," a "Redis Cache") by composing the 4 base engines. A database might use all 4 engines, while a simple cache might only use 4 (excluding Storage and Coordination).
+                  - listitem [ref=e406]:
+                    - text: "Layer 3: System Design"
+                    - text: Users build a complete distributed system by arranging and connecting components in a visual canvas, defining the user flows and routing logic between them.
+                - generic [ref=e407]:
+                  - heading "🛠️ Tech Stack" [level=2] [ref=e408]:
+                    - strong [ref=e409]: 🛠️ Tech Stack
+                  - 'link "Permalink: 🛠️ Tech Stack" [ref=e410] [cursor=pointer]':
+                    - /url: "#️-tech-stack"
+                    - img [ref=e411]
+                - table [ref=e414]:
+                  - rowgroup [ref=e415]:
+                    - row "Category Technologies" [ref=e416]:
+                      - columnheader "Category" [ref=e417]
+                      - columnheader "Technologies" [ref=e418]
+                  - rowgroup [ref=e419]:
+                    - row "Backend Engine Go, gRPC, Native WebSocket, PostgreSQL, Redis, Docker" [ref=e420]:
+                      - cell "Backend Engine" [ref=e421]:
+                        - strong [ref=e422]: Backend Engine
+                      - cell "Go, gRPC, Native WebSocket, PostgreSQL, Redis, Docker" [ref=e423]:
+                        - strong [ref=e424]: Go
+                        - text: ","
+                        - strong [ref=e425]: gRPC
+                        - text: ", Native"
+                        - strong [ref=e426]: WebSocket
+                        - text: ", PostgreSQL, Redis, Docker"
+                    - row "Frontend Canvas React (TypeScript), Konva.js (for 60fps Canvas), Zustand" [ref=e427]:
+                      - cell "Frontend Canvas" [ref=e428]:
+                        - strong [ref=e429]: Frontend Canvas
+                      - cell "React (TypeScript), Konva.js (for 60fps Canvas), Zustand" [ref=e430]:
+                        - strong [ref=e431]: React (TypeScript)
+                        - text: ","
+                        - strong [ref=e432]: Konva.js
+                        - text: (for 60fps Canvas), Zustand
+                    - row "Core Architecture Microservices, API Gateway, ACID-like Isolation, Hardware-Adaptive Tick System, Production-Grade Service Registry" [ref=e433]:
+                      - cell "Core Architecture" [ref=e434]:
+                        - strong [ref=e435]: Core Architecture
+                      - cell "Microservices, API Gateway, ACID-like Isolation, Hardware-Adaptive Tick System, Production-Grade Service Registry" [ref=e436]:
+                        - strong [ref=e437]: Microservices
+                        - text: ", API Gateway,"
+                        - strong [ref=e438]: ACID-like Isolation
+                        - text: ","
+                        - strong [ref=e439]: Hardware-Adaptive Tick System
+                        - text: ", Production-Grade Service Registry"
+                - generic [ref=e440]:
+                  - heading "🗺️ Project Status & Roadmap" [level=2] [ref=e441]:
+                    - strong [ref=e442]: 🗺️ Project Status & Roadmap
+                  - 'link "Permalink: 🗺️ Project Status & Roadmap" [ref=e443] [cursor=pointer]':
+                    - /url: "#️-project-status--roadmap"
+                    - img [ref=e444]
+                - paragraph [ref=e446]:
+                  - text: The project is currently
+                  - strong [ref=e447]: ~25% complete
+                  - text: . The architectural design and the implementation of the 4 universal base engines in Go are complete.
+                - list [ref=e448]:
+                  - listitem [ref=e449]:
+                    - checkbox "Completed task" [checked] [disabled] [ref=e450]
+                    - strong [ref=e451]: Design
+                    - text: the revolutionary "ACID-like Isolation" and "Hardware-Adaptive Tick" architecture.
+                  - listitem [ref=e452]:
+                    - checkbox "Completed task" [checked] [disabled] [ref=e453]
+                    - strong [ref=e454]: Implement
+                    - text: the 4 universal base engines in Go with profile-based reality grounding.
+                  - listitem [ref=e455]:
+                    - checkbox "Incomplete task" [disabled] [ref=e456]
+                    - strong [ref=e457]: Build
+                    - text: the component composition system for creating custom components.
+                  - listitem [ref=e458]:
+                    - checkbox "Incomplete task" [disabled] [ref=e459]
+                    - strong [ref=e460]: Develop
+                    - text: the visual drag-and-drop canvas and UI.
+                  - listitem [ref=e461]:
+                    - checkbox "Incomplete task" [disabled] [ref=e462]
+                    - strong [ref=e463]: Implement
+                    - text: the full backpressure and service registry systems.
+                  - listitem [ref=e464]:
+                    - checkbox "Incomplete task" [disabled] [ref=e465]
+                    - strong [ref=e466]: "Future:"
+                    - text: Introduce "Liveblocks-style" real-time collaboration for team-based design.
+                - generic [ref=e467]:
+                  - heading "🤝 Contributing" [level=2] [ref=e468]:
+                    - strong [ref=e469]: 🤝 Contributing
+                  - 'link "Permalink: 🤝 Contributing" [ref=e470] [cursor=pointer]':
+                    - /url: "#-contributing"
+                    - img [ref=e471]
+                - paragraph [ref=e473]: This project is currently being developed independently. However, if you are passionate about the future of system design, distributed systems, or engineering education, I would love to connect and discuss ideas.
+                - generic [ref=e474]:
+                  - heading "License" [level=2] [ref=e475]:
+                    - strong [ref=e476]: License
+                  - 'link "Permalink: License" [ref=e477] [cursor=pointer]':
+                    - /url: "#license"
+                    - img [ref=e478]
+                - paragraph [ref=e480]:
+                  - text: This project is licensed under the
+                  - link "MIT License" [ref=e481] [cursor=pointer]:
+                    - /url: https://opensource.org/licenses/MIT
+                  - text: .
+        - generic [ref=e485]:
+          - generic [ref=e488]:
+            - heading "About" [level=2] [ref=e489]
+            - generic [ref=e490]: No description, website, or topics provided.
+            - heading "Resources" [level=3] [ref=e491]
+            - link "Readme" [ref=e493] [cursor=pointer]:
+              - /url: "#readme-ov-file"
+              - img [ref=e494]
+              - text: Readme
+            - link "Activity" [ref=e497] [cursor=pointer]:
+              - /url: /TheSpideX/SystemSim/activity
+              - img [ref=e498]
+              - text: Activity
+            - heading "Stars" [level=3] [ref=e500]
+            - link "0 stars" [ref=e502] [cursor=pointer]:
+              - /url: /TheSpideX/SystemSim/stargazers
+              - img [ref=e503]
+              - strong [ref=e505]: "0"
+              - text: stars
+            - heading "Watchers" [level=3] [ref=e506]
+            - link "0 watching" [ref=e508] [cursor=pointer]:
+              - /url: /TheSpideX/SystemSim/watchers
+              - img [ref=e509]
+              - strong [ref=e511]: "0"
+              - text: watching
+            - heading "Forks" [level=3] [ref=e512]
+            - link "0 forks" [ref=e514] [cursor=pointer]:
+              - /url: /TheSpideX/SystemSim/forks
+              - img [ref=e515]
+              - strong [ref=e517]: "0"
+              - text: forks
+            - link "Report repository" [ref=e519] [cursor=pointer]:
+              - /url: /contact/report-content?content_url=https%3A%2F%2Fgithub.com%2FTheSpideX%2FSystemSim&report=TheSpideX+%28user%29
+          - generic [ref=e521]:
+            - heading "Releases" [level=2] [ref=e522]:
+              - link "Releases" [ref=e523] [cursor=pointer]:
+                - /url: /TheSpideX/SystemSim/releases
+            - generic [ref=e524]: No releases published
+          - generic [ref=e526]:
+            - heading "Packages" [level=2] [ref=e527]:
+              - link "Packages" [ref=e528] [cursor=pointer]:
+                - /url: /users/TheSpideX/packages?repo_name=SystemSim
+            - generic [ref=e529]: No packages published
+          - generic [ref=e531]:
+            - heading "Contributors 1" [level=2] [ref=e532]:
+              - link "Contributors 1" [ref=e533] [cursor=pointer]:
+                - /url: /TheSpideX/SystemSim/graphs/contributors
+                - text: Contributors
+                - generic "1" [ref=e534]
+            - list [ref=e535]:
+              - listitem [ref=e536]:
+                - link "@TheSpideX" [ref=e537] [cursor=pointer]:
+                  - /url: https://github.com/TheSpideX
+                  - img "@TheSpideX" [ref=e538]
+                - link "TheSpideX Kumar Satyam" [ref=e540] [cursor=pointer]:
+                  - /url: https://github.com/TheSpideX
+                  - strong [ref=e541]: TheSpideX
+                  - text: Kumar Satyam
+          - generic [ref=e543]:
+            - heading "Languages" [level=2] [ref=e544]
+            - list [ref=e554]:
+              - listitem [ref=e555]:
+                - link "Go 80.8%" [ref=e556] [cursor=pointer]:
+                  - /url: /TheSpideX/SystemSim/search?l=go
+                  - img [ref=e557]
+                  - generic [ref=e559]: Go
+                  - generic [ref=e560]: 80.8%
+              - listitem [ref=e561]:
+                - link "TypeScript 13.0%" [ref=e562] [cursor=pointer]:
+                  - /url: /TheSpideX/SystemSim/search?l=typescript
+                  - img [ref=e563]
+                  - generic [ref=e565]: TypeScript
+                  - generic [ref=e566]: 13.0%
+              - listitem [ref=e567]:
+                - link "Shell 4.5%" [ref=e568] [cursor=pointer]:
+                  - /url: /TheSpideX/SystemSim/search?l=shell
+                  - img [ref=e569]
+                  - generic [ref=e571]: Shell
+                  - generic [ref=e572]: 4.5%
+              - listitem [ref=e573]:
+                - link "CSS 0.6%" [ref=e574] [cursor=pointer]:
+                  - /url: /TheSpideX/SystemSim/search?l=css
+                  - img [ref=e575]
+                  - generic [ref=e577]: CSS
+                  - generic [ref=e578]: 0.6%
+              - listitem [ref=e579]:
+                - link "HTML 0.5%" [ref=e580] [cursor=pointer]:
+                  - /url: /TheSpideX/SystemSim/search?l=html
+                  - img [ref=e581]
+                  - generic [ref=e583]: HTML
+                  - generic [ref=e584]: 0.5%
+              - listitem [ref=e585]:
+                - link "JavaScript 0.4%" [ref=e586] [cursor=pointer]:
+                  - /url: /TheSpideX/SystemSim/search?l=javascript
+                  - img [ref=e587]
+                  - generic [ref=e589]: JavaScript
+                  - generic [ref=e590]: 0.4%
+              - listitem [ref=e591]:
+                - generic [ref=e592]:
+                  - img [ref=e593]
+                  - generic [ref=e595]: Other
+                  - generic [ref=e596]: 0.2%
+  - contentinfo [ref=e598]:
+    - heading "Footer" [level=2] [ref=e599]
+    - generic [ref=e600]:
+      - generic [ref=e601]:
+        - link "GitHub Homepage" [ref=e602] [cursor=pointer]:
+          - /url: https://github.com
+          - img [ref=e603]
+        - generic [ref=e605]: © 2026 GitHub, Inc.
+      - navigation "Footer" [ref=e606]:
+        - heading "Footer navigation" [level=3] [ref=e607]
+        - list "Footer navigation" [ref=e608]:
+          - listitem [ref=e609]:
+            - link "Terms" [ref=e610] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+          - listitem [ref=e611]:
+            - link "Privacy" [ref=e612] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+          - listitem [ref=e613]:
+            - link "Security" [ref=e614] [cursor=pointer]:
+              - /url: https://github.com/security
+          - listitem [ref=e615]:
+            - link "Status" [ref=e616] [cursor=pointer]:
+              - /url: https://www.githubstatus.com/
+          - listitem [ref=e617]:
+            - link "Community" [ref=e618] [cursor=pointer]:
+              - /url: https://github.community/
+          - listitem [ref=e619]:
+            - link "Docs" [ref=e620] [cursor=pointer]:
+              - /url: https://docs.github.com/
+          - listitem [ref=e621]:
+            - link "Contact" [ref=e622] [cursor=pointer]:
+              - /url: https://support.github.com?tags=dotcom-footer
+          - listitem [ref=e623]:
+            - button "Manage cookies" [ref=e625] [cursor=pointer]
+          - listitem [ref=e626]:
+            - button "Do not share my personal information" [ref=e628] [cursor=pointer]
