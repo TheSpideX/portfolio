@@ -1233,15 +1233,15 @@ export default function App() {
               {/* NODE 3: WORK (RIGHT, beside hero) */}
               <InteractiveNode loadingProgress={loadingProgress} id="node-work" startX={3000} startY={1450} width={1600} height={900} zIndex={10} delay={0.4} innerClassName="bg-black/40 backdrop-blur-md rounded-3xl p-14 border border-white/10 shadow-2xl">
                 <div className="flex justify-between items-baseline mb-8" style={{ transform: 'translateZ(150px)' }}>
-                  <h2 className="text-[120px] font-display uppercase tracking-wide text-white">Selected Work</h2>
-                  <span className="font-mono text-gray-500 text-xl uppercase tracking-widest">2022 — 2025</span>
+                  <h2 className="text-[120px] font-display uppercase tracking-wide text-white">Systems I Built</h2>
+                  <span className="font-mono text-gray-500 text-xl uppercase tracking-widest">2024 — 2026</span>
                 </div>
                 <div className="flex flex-col w-full border-t border-white/20">
                   {[
-                    { title: 'Aura', type: 'E-Commerce', year: '2025', img: '10', desc: 'A high-conversion e-commerce experience for a luxury skincare brand, featuring a fully custom 3D product viewer and seamless checkout flow built with Next.js and Three.js.', tech: ['Next.js', 'Three.js', 'GSAP', 'Stripe'], link: '#' },
-                    { title: 'Nexus', type: 'Portfolio', year: '2024', img: '20', desc: 'An award-winning creative developer portfolio leveraging WebGL shaders, physics-based interactions, and an infinite canvas navigation system.', tech: ['React', 'WebGL', 'Matter.js', 'GSAP'], link: '#' },
-                    { title: 'Void', type: 'Web App', year: '2024', img: '30', desc: 'A real-time collaborative mood board tool powered by WebSockets, with a fluid drag-and-drop canvas and AI-powered design suggestions.', tech: ['React', 'Socket.io', 'AI/ML', 'Framer Motion'], link: '#' },
-                    { title: 'Pulse', type: 'Dashboard', year: '2023', img: '40', desc: 'A live analytics dashboard for a fintech startup handling 500k+ daily events, with animated data visualizations and micro-interactive charts built with D3.js.', tech: ['Vue.js', 'D3.js', 'TypeScript', 'PostgreSQL'], link: '#' }
+                    { title: 'SystemSim', type: 'Distributed Systems Platform', year: '2025', img: '10', desc: 'A reality-grounded distributed systems simulator. Innovated an ACID-like Isolation architecture for emergent resource contention. Built 4 universal base engines in Go with 90-92% hardware-level accuracy using real Intel/Samsung profiles.', tech: ['Go', 'gRPC', 'WebSocket', 'PostgreSQL', 'Redis', 'Docker', 'React'], link: 'https://github.com/TheSpideX/SystemSim' },
+                    { title: 'NoRegret', type: 'Mesh Networking Stack', year: '2025', img: '20', desc: 'A serverless mesh networking stack that operates without internet or cellular infrastructure. Architected a Digital Factory C++ engine using the Actor model with NASA-grade FEC and Yggdrasil routing for resilient packet processing.', tech: ['C++', 'Kotlin', 'JNI', 'CAF', 'Go', 'Yggdrasil', 'Noise Protocol'], link: 'https://github.com/TheSpideX/NoRegret' },
+                    { title: 'This Portfolio', type: 'Interactive Canvas', year: '2026', img: '30', desc: 'The portfolio you are exploring right now. An infinite canvas with physics simulation, 3D terrain, audio synthesis, and draggable nodes. Designed the architecture, used AI to build it. Proof that I can make anything I can imagine.', tech: ['React', 'Three.js', 'Matter.js', 'GSAP', 'Web Audio', 'Tailwind'], link: '#' },
+                    { title: 'Next Project', type: 'Your Idea Here', year: '2026', img: '40', desc: 'Have a problem that needs a novel solution? I architect systems that do not exist yet, then build them. Tell me what you need.', tech: ['Any Stack', 'Any Domain', 'AI-Augmented'], link: '#contact' }
                   ].map((item, index) => (
                     <div
                       key={index}
