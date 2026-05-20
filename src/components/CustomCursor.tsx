@@ -6,6 +6,7 @@ export function CustomCursor() {
   const cursorRef = useRef<HTMLDivElement>(null);
   const followerRef = useRef<HTMLDivElement>(null);
   const cursorTextRef = useRef<HTMLSpanElement>(null);
+  const cursorSvgRef = useRef<HTMLDivElement>(null);
   const trailRefs = useRef<HTMLDivElement[]>([]);
   const TRAIL_COUNT = 12;
 
@@ -44,11 +45,20 @@ export function CustomCursor() {
         const text = cursorTarget.getAttribute('data-cursor');
         const size = cursorTarget.getAttribute('data-cursor-size');
         const inverted = cursorTarget.getAttribute('data-cursor-inverted') === 'true';
+        const svgContent = cursorTarget.getAttribute('data-cursor-svg');
 
-        if (cursorTextRef.current && text) {
+        if (svgContent && cursorSvgRef.current) {
+          // Show SVG icon
+          cursorSvgRef.current.innerHTML = svgContent;
+          gsap.to(cursorSvgRef.current, { opacity: 1, duration: 0.2 });
+          gsap.to(cursorTextRef.current, { opacity: 0, duration: 0.1 });
+        } else if (cursorTextRef.current && text) {
+          // Show text
           cursorTextRef.current.innerText = text;
           gsap.to(cursorTextRef.current, { opacity: 1, duration: 0.2 });
+          gsap.to(cursorSvgRef.current, { opacity: 0, duration: 0.1 });
         }
+        
         gsap.to(cursorRef.current, { scale: 0, duration: 0.3, ease: 'power2.out' });
 
         const targetScale = size ? parseFloat(size) : 3;
@@ -72,6 +82,9 @@ export function CustomCursor() {
         if (cursorTextRef.current) {
           gsap.to(cursorTextRef.current, { opacity: 0, duration: 0.2 });
         }
+        if (cursorSvgRef.current) {
+          gsap.to(cursorSvgRef.current, { opacity: 0, duration: 0.2 });
+        }
       }
       gsap.to(cursorRef.current, { scale: 1, duration: 0.3, ease: 'power2.out' });
       gsap.to(followerRef.current, { scale: 1, backgroundColor: 'transparent', borderColor: 'rgba(204, 255, 0, 0.5)', mixBlendMode: 'normal', duration: 0.3 });
@@ -93,6 +106,7 @@ export function CustomCursor() {
       <div ref={cursorRef} className="custom-cursor hidden md:block pointer-events-none z-[10002]" />
       <div ref={followerRef} className="custom-cursor-follower hidden md:flex items-center justify-center pointer-events-none z-[10002]">
         <span ref={cursorTextRef} className="font-mono text-[10px] font-bold text-black opacity-0 pointer-events-none tracking-wider" />
+        <div ref={cursorSvgRef} className="opacity-0 pointer-events-none [&_svg]:w-full [&_svg]:h-full" />
       </div>
       {Array.from({ length: TRAIL_COUNT }).map((_, i) => (
         <div
