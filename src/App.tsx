@@ -691,6 +691,8 @@ function DesktopApp() {
                             setTimeout(() => setCopied(false), 2000);
                           }}
                           className="font-mono text-lg border-b-2 border-white/30 pb-1 hover:text-[#ccff00] hover:border-[#ccff00] transition-colors mix-blend-difference cursor-pointer"
+                          data-cursor="EMAIL"
+                          data-cursor-size="4"
                         >
                           {copied ? 'COPIED TO CLIPBOARD' : 'satyamiitdnbd@gmail.com'}
                         </button>
@@ -699,13 +701,13 @@ function DesktopApp() {
                     
                     {/* Social Links */}
                     <div className="flex gap-4">
-                      <a href="https://github.com/TheSpideX" target="_blank" rel="noopener noreferrer" className="font-mono text-[10px] text-gray-500 hover:text-[#ccff00] transition-colors uppercase tracking-widest mix-blend-difference">
+                      <a href="https://github.com/TheSpideX" target="_blank" rel="noopener noreferrer" className="font-mono text-[10px] text-gray-500 hover:text-[#ccff00] transition-colors uppercase tracking-widest mix-blend-difference" data-cursor="GITHUB" data-cursor-size="4">
                         GitHub
                       </a>
-                      <a href="https://www.linkedin.com/in/kumar-satyam-64a807255" target="_blank" rel="noopener noreferrer" className="font-mono text-[10px] text-gray-500 hover:text-[#ccff00] transition-colors uppercase tracking-widest mix-blend-difference">
+                      <a href="https://www.linkedin.com/in/kumar-satyam-64a807255" target="_blank" rel="noopener noreferrer" className="font-mono text-[10px] text-gray-500 hover:text-[#ccff00] transition-colors uppercase tracking-widest mix-blend-difference" data-cursor="LINKEDIN" data-cursor-size="4">
                         LinkedIn
                       </a>
-                      <a href="https://leetcode.com/u/spideX/" target="_blank" rel="noopener noreferrer" className="font-mono text-[10px] text-gray-500 hover:text-[#ccff00] transition-colors uppercase tracking-widest mix-blend-difference">
+                      <a href="https://leetcode.com/u/spideX/" target="_blank" rel="noopener noreferrer" className="font-mono text-[10px] text-gray-500 hover:text-[#ccff00] transition-colors uppercase tracking-widest mix-blend-difference" data-cursor="LEETCODE" data-cursor-size="4">
                         LeetCode
                       </a>
                     </div>
