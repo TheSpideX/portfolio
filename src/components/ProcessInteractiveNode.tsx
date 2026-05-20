@@ -50,6 +50,7 @@ const InteractiveNode = ({ children, startX, startY, width, height, shape = 'rec
     if (!engine) return;
 
     const options: Matter.IChamferableBodyDefinition = {
+      label: id || 'process-node',
       restitution: 0.3,
       friction: 0.05,
       frictionAir: 0.08,

@@ -1,5 +1,6 @@
 {
-  "name": "Creative Developer Portfolio",
-  "description": "A modern, creative, and professional portfolio for a software developer featuring a split-screen layout and smooth animations.",
-  "requestFramePermissions": []
+  "name": "",
+  "description": "",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

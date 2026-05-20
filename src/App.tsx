@@ -426,7 +426,7 @@ function DesktopApp() {
           wheel={{ step: 0.08 }}
           onPanningStart={startHum}
           onPanningStop={stopHum}
-          onTransformed={(ref) => {
+          onTransform={(ref) => {
             transformRef.current = {
               x: ref.state.positionX,
               y: ref.state.positionY,

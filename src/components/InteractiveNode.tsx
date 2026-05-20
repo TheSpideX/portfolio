@@ -50,6 +50,7 @@ const InteractiveNode = ({ children, startX, startY, width, height, shape = 'rec
     if (!engine) return;
 
     const options: Matter.IChamferableBodyDefinition = {
+      label: id || 'interactive-node',
       restitution: 0.3,
       friction: 0.05,
       frictionAir: 0.08,
@@ -74,22 +75,7 @@ const InteractiveNode = ({ children, startX, startY, width, height, shape = 'rec
         const { x, y } = bodyRef.current.position;
         nodeRef.current.style.transform = `translate(${x - width / 2}px, ${y - height / 2}px)`;
 
-        // Visibility-based sleep logic
-        const visible = isVisibleRef.current;
-        const dragging = isDraggingRef.current;
-        const hasMomentum = bodyRef.current.speed > 0.5;
-
-        if (!visible && !dragging && !hasMomentum) {
-          // Put body to sleep (not static!) - can be woken by collision
-          if (!bodyRef.current.isSleeping) {
-            Matter.Sleeping.set(bodyRef.current, true);
-          }
-        } else {
-          // Wake up body if it's sleeping
-          if (bodyRef.current.isSleeping) {
-            Matter.Sleeping.set(bodyRef.current, false);
-          }
-        }
+        // Remove manual sleep logic, matter.js handles it automatically based on sleepThreshold
       }
       animationFrameId = requestAnimationFrame(updateTransform);
     };

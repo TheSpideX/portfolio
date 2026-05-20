@@ -6,6 +6,7 @@ export interface Project {
   tech: string[];
   img: string;
   link: string;
+  github?: string;
 }
 
 export const PROJECTS: Project[] = [
@@ -16,7 +17,8 @@ export const PROJECTS: Project[] = [
     img: '10',
     desc: 'A reality-grounded distributed systems simulator. Innovated an ACID-like Isolation architecture for emergent resource contention. Built 4 universal base engines in Go with 90-92% hardware-level accuracy using real Intel/Samsung profiles.',
     tech: ['Go', 'gRPC', 'WebSocket', 'PostgreSQL', 'Redis', 'Docker', 'React'],
-    link: 'https://github.com/TheSpideX/SystemSim'
+    link: '#',
+    github: 'https://github.com/TheSpideX/SystemSim'
   },
   {
     title: 'NoRegret',
@@ -25,7 +27,8 @@ export const PROJECTS: Project[] = [
     img: '20',
     desc: 'A serverless mesh networking stack that operates without internet or cellular infrastructure. Architected a Digital Factory C++ engine using the Actor model with NASA-grade FEC and Yggdrasil routing for resilient packet processing.',
     tech: ['C++', 'Kotlin', 'JNI', 'CAF', 'Go', 'Yggdrasil', 'Noise Protocol'],
-    link: 'https://github.com/TheSpideX/NoRegret'
+    link: '#',
+    github: 'https://github.com/TheSpideX/NoRegret'
   },
   {
     title: 'This Portfolio',
@@ -34,7 +37,8 @@ export const PROJECTS: Project[] = [
     img: '30',
     desc: 'The portfolio you are exploring right now. An infinite canvas with physics simulation, 3D terrain, audio synthesis, and draggable nodes. Designed the architecture, used AI to build it. Proof that I can make anything I can imagine.',
     tech: ['React', 'Three.js', 'Matter.js', 'GSAP', 'Web Audio', 'Tailwind'],
-    link: '#'
+    link: '#',
+    github: 'https://github.com/TheSpideX/AIPortfolio' // made up link, will leave it empty or make one. Let's just put github for the upper two.
   },
   {
     title: 'Next Project',

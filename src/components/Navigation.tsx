@@ -44,21 +44,32 @@ export const Navigation = ({ discoveredNodes }: { discoveredNodes: string[] }) =
     const distanceFactor = 0.6; // ms per pixel
     const duration = Math.min(1500, Math.max(baseDuration, baseDuration + distance * distanceFactor));
 
-    // Pause physics during zoom for smooth animation
-    if (runner && engine) {
-      Matter.Runner.stop(runner);
+    isZoomingRef.current = true;
+    
+    // Find target body and freeze it
+    let targetBody: Matter.Body | undefined;
+    let originalIsStatic = false;
+    
+    if (engine) {
+      targetBody = engine.world.bodies.find(b => b.label === id);
+      if (targetBody) {
+        originalIsStatic = targetBody.isStatic;
+        Matter.Body.setStatic(targetBody, true);
+        Matter.Body.setVelocity(targetBody, { x: 0, y: 0 });
+        Matter.Body.setAngularVelocity(targetBody, 0);
+      }
     }
 
-    isZoomingRef.current = true;
     zoomToElement(id, targetScale, duration, 'easeInOutQuad');
 
-    // Resume physics after zoom completes
+    // Small buffer after animation
     zoomTimeoutRef.current = setTimeout(() => {
-      if (runner && engine) {
-        Matter.Runner.run(runner, engine);
-      }
       isZoomingRef.current = false;
-    }, duration + 50); // Small buffer after animation
+      if (targetBody && !originalIsStatic) {
+        // Wake it back up so it doesn't stay frozen forever
+        Matter.Body.setStatic(targetBody, false);
+      }
+    }, duration + 50);
   }, [zoomToElement, transformRef, engine, runner]);
 
   return (
