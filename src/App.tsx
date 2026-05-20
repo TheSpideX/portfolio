@@ -9,7 +9,6 @@ import { ScrambleText } from './components/ScrambleText';
 import { MobileLayout } from './components/MobileLayout';
 import { Navigation } from './components/Navigation';
 import { GravityButton } from './components/GravityButton';
-import { ProjectDetailPanel } from './components/ProjectDetailPanel';
 import { CustomCursor } from './components/CustomCursor';
 import { FlashlightSection } from './components/FlashlightSection';
 import { Magnetic } from './components/Magnetic';
@@ -18,7 +17,7 @@ import { KeyboardNavigation } from './components/KeyboardNavigation';
 import { useIsMobile } from './hooks/useIsMobile';
 import { useAudio } from './contexts/AudioContext';
 import { NAV_ITEMS, NODE_ORDER } from './constants/navItems';
-import { Project, PROJECTS } from './constants/projects';
+import { WorkSection } from './components/WorkSection';
 import { PhysicsContextType, InteractiveNodeProps } from './types';
 import { PhysicsContext } from './contexts/PhysicsContext';
 
@@ -292,7 +291,6 @@ function DesktopApp() {
   const [experienceStarted, setExperienceStarted] = useState(false);
   const transformRef = useRef({ x: -1000, y: -800, scale: 0.6 });
   const [isDragging, setIsDragging] = useState(false);
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const { startHum, stopHum, isMuted, toggleMute, playUnlock, playWhoosh } = useAudio();
   const [discoveredNodes, setDiscoveredNodes] = useState<string[]>(['node-hero']);
   const discoveredNodesRef = useRef<Set<string>>(new Set(['node-hero']));
@@ -391,7 +389,6 @@ function DesktopApp() {
         </Suspense>
         <div className="grid-bg fixed inset-0 pointer-events-none" />
         <div className="noise-bg fixed inset-0 pointer-events-none" />
-        <ProjectDetailPanel project={selectedProject} onClose={() => setSelectedProject(null)} />
 
         {/* Audio Toggle Button */}
         <button
@@ -415,7 +412,7 @@ function DesktopApp() {
         <GravityButton />
 
         <TransformWrapper
-          panning={{ disabled: isDragging }}
+          panning={{ disabled: isDragging, excluded: ['no-drag', 'no-wheel'] }}
           doubleClick={{ disabled: true }}
           initialScale={1.0}
           initialPositionX={-1050}
@@ -423,7 +420,7 @@ function DesktopApp() {
           minScale={0.15}
           maxScale={2}
           limitToBounds={false}
-          wheel={{ step: 0.08 }}
+          wheel={{ step: 0.08, excluded: ['no-drag', 'no-wheel'] }}
           onPanningStart={startHum}
           onPanningStop={stopHum}
           onTransform={(ref) => {
@@ -633,35 +630,7 @@ function DesktopApp() {
 
               {/* NODE 3: WORK (RIGHT, beside hero) */}
               <InteractiveNode loadingProgress={loadingProgress} id="node-work" startX={3800} startY={1800} width={1600} height={900} zIndex={10} delay={0.4} innerClassName="bg-black/40 backdrop-blur-md rounded-3xl p-14 border border-white/10 shadow-2xl">
-                <div className="flex justify-between items-baseline mb-8" style={{ transform: 'translateZ(150px)' }}>
-                  <h2 className="text-[120px] font-display uppercase tracking-wide text-white">Systems I Built</h2>
-                  <span className="font-mono text-gray-500 text-xl uppercase tracking-widest">2024 - 2026</span>
-                </div>
-                <div className="flex flex-col w-full border-t border-white/20">
-                  {PROJECTS.map((item, index) => (
-                    <div
-                      key={index}
-                      onClick={() => setSelectedProject(item)}
-                      className="group relative border-b border-white/20 py-10 flex justify-between items-center cursor-pointer hover:px-12 transition-all duration-500 hover:bg-[#ccff00]/5 backdrop-blur-sm no-drag"
-                      data-cursor="VIEW"
-                      style={{ transform: `translateZ(${60 + index * 20}px)`, transformStyle: 'preserve-3d' }}
-                    >
-                      <div className="flex items-center gap-8 relative z-10" style={{ transform: 'translateZ(40px)' }}>
-                        <span className="font-mono text-gray-600 text-xl w-8">{String(index + 1).padStart(2, '0')}</span>
-                        <h3 className="text-7xl font-display uppercase text-white group-hover:text-[#ccff00] transition-colors">{item.title}</h3>
-                      </div>
-                      <div className="flex items-center gap-6 relative z-10" style={{ transform: 'translateZ(20px)' }}>
-                        <span className="font-mono text-gray-500 text-lg">{item.year}</span>
-                        <span className="font-mono text-xl text-gray-400 group-hover:text-[#ccff00] transition-colors">{item.type}</span>
-                        <ArrowUpRight className="w-6 h-6 text-gray-600 group-hover:text-[#ccff00] group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
-                      </div>
-                      {/* Hover Image Reveal */}
-                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] aspect-video pointer-events-none opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-500 z-0 overflow-hidden rounded-2xl shadow-2xl" style={{ transform: 'translate(-50%, -50%) translateZ(-50px)' }}>
-                        <img src={`https://picsum.photos/seed/brutalist${item.img}/1000/600?grayscale`} alt={item.title} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                <WorkSection />
               </InteractiveNode>
 
               {/* NODE 5: CONTACT (FAR TOP LEFT) */}
@@ -679,7 +648,12 @@ function DesktopApp() {
                   </Magnetic>
 
                   {/* Copy Email Button */}
-                  <div className="absolute bottom-24 z-20 flex flex-col items-center gap-4" data-cursor="HELLO" data-cursor-size="4">
+                  <div 
+                    className="absolute bottom-24 z-20 flex flex-col items-center bg-transparent p-6"
+                    data-cursor=" "
+                    data-cursor-inverted="true"
+                    data-cursor-size="3"
+                  >
                     {(() => {
                       const [copied, setCopied] = useState(false);
                       return (
@@ -690,10 +664,10 @@ function DesktopApp() {
                             setCopied(true);
                             setTimeout(() => setCopied(false), 2000);
                           }}
-                          className="font-mono text-lg border-b-2 border-white/30 pb-1 hover:text-[#ccff00] hover:border-[#ccff00] transition-colors mix-blend-difference cursor-pointer"
-                          data-cursor="EMAIL"
-                          data-cursor-size="2.5"
+                          className="font-mono text-lg border-b-2 border-transparent px-4 py-3 hover:text-[#ccff00] transition-colors mix-blend-difference cursor-pointer"
                           data-cursor-icon="email"
+                          data-cursor-inverted="true"
+                          data-cursor-size="2.5"
                         >
                           {copied ? 'COPIED TO CLIPBOARD' : 'satyamiitdnbd@gmail.com'}
                         </button>
@@ -701,14 +675,14 @@ function DesktopApp() {
                     })()}
                     
                     {/* Social Links */}
-                    <div className="flex gap-4">
-                      <a href="https://github.com/TheSpideX" target="_blank" rel="noopener noreferrer" className="font-mono text-[10px] text-gray-500 hover:text-[#ccff00] transition-colors uppercase tracking-widest mix-blend-difference" data-cursor="GITHUB" data-cursor-size="2.5" data-cursor-icon="github">
+                    <div className="flex">
+                      <a href="https://github.com/TheSpideX" target="_blank" rel="noopener noreferrer" className="font-mono text-[10px] text-gray-500 hover:text-[#ccff00] transition-colors uppercase tracking-widest mix-blend-difference px-4 py-3" data-cursor-icon="github" data-cursor-inverted="true" data-cursor-size="2.5">
                         GitHub
                       </a>
-                      <a href="https://www.linkedin.com/in/kumar-satyam-64a807255" target="_blank" rel="noopener noreferrer" className="font-mono text-[10px] text-gray-500 hover:text-[#ccff00] transition-colors uppercase tracking-widest mix-blend-difference" data-cursor="LINKEDIN" data-cursor-size="2.5" data-cursor-icon="linkedin">
+                      <a href="https://www.linkedin.com/in/kumar-satyam-64a807255" target="_blank" rel="noopener noreferrer" className="font-mono text-[10px] text-gray-500 hover:text-[#ccff00] transition-colors uppercase tracking-widest mix-blend-difference px-4 py-3" data-cursor-icon="linkedin" data-cursor-inverted="true" data-cursor-size="2.5">
                         LinkedIn
                       </a>
-                      <a href="https://leetcode.com/u/spideX/" target="_blank" rel="noopener noreferrer" className="font-mono text-[10px] text-gray-500 hover:text-[#ccff00] transition-colors uppercase tracking-widest mix-blend-difference" data-cursor="LEETCODE" data-cursor-size="2.5" data-cursor-icon="leetcode">
+                      <a href="https://leetcode.com/u/spideX/" target="_blank" rel="noopener noreferrer" className="font-mono text-[10px] text-gray-500 hover:text-[#ccff00] transition-colors uppercase tracking-widest mix-blend-difference px-4 py-3" data-cursor-icon="leetcode" data-cursor-inverted="true" data-cursor-size="2.5">
                         LeetCode
                       </a>
                     </div>

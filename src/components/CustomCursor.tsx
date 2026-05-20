@@ -42,7 +42,7 @@ export function CustomCursor() {
 
     const onMouseOver = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      const cursorTarget = target.closest('[data-cursor]');
+      const cursorTarget = target.closest('[data-cursor], [data-cursor-icon]');
       if (cursorTarget) {
         const text = cursorTarget.getAttribute('data-cursor');
         const size = cursorTarget.getAttribute('data-cursor-size');
@@ -81,7 +81,7 @@ export function CustomCursor() {
 
     const onMouseOut = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      const cursorTarget = target.closest('[data-cursor]');
+      const cursorTarget = target.closest('[data-cursor], [data-cursor-icon]');
       if (cursorTarget) {
         if (cursorTextRef.current) {
           gsap.to(cursorTextRef.current, { opacity: 0, duration: 0.2 });
@@ -108,9 +108,9 @@ export function CustomCursor() {
   return (
     <>
       <div ref={cursorRef} className="custom-cursor hidden md:block pointer-events-none z-[10002]" />
-      <div ref={followerRef} className="custom-cursor-follower hidden md:flex items-center justify-center pointer-events-none z-[10002]">
-        <span ref={cursorTextRef} className="font-mono text-[8px] font-bold text-black opacity-0 pointer-events-none tracking-wider" />
-        <div ref={cursorIconRef} className="opacity-0 pointer-events-none flex items-center justify-center [&_svg]:w-[14px] [&_svg]:h-[14px]" />
+      <div ref={followerRef} className="custom-cursor-follower hidden md:flex items-center justify-center pointer-events-none z-[10002] relative">
+        <span ref={cursorTextRef} className="font-mono text-[8px] font-bold text-black opacity-0 pointer-events-none tracking-wider absolute top-1/2 left-1/2 w-full text-center" style={{ transform: 'translate(-50%, -50%)', lineHeight: 1 }} />
+        <div ref={cursorIconRef} className="opacity-0 pointer-events-none flex items-center justify-center [&_svg]:w-[14px] [&_svg]:h-[14px] absolute top-1/2 left-1/2" style={{ transform: 'translate(-50%, -50%)' }} />
       </div>
       {Array.from({ length: TRAIL_COUNT }).map((_, i) => (
         <div
@@ -130,7 +130,7 @@ function getIconSvg(type: string): string {
     case 'linkedin':
       return '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>';
     case 'leetcode':
-      return '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.4 2L4.2 8.2c-1.2 1.2-1.2 3.2 0 4.4l6.2 6.2c1.2 1.2 3.2 1.2 4.4 0l6.2-6.2c1.2-1.2 1.2-3.2 0-4.4L14.8 2c-1.2-1.2-3.2-1.2-4.4 0z"/><path d="M9 15l3-3 3 3"/><path d="M12 12v6"/></svg>';
+      return '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="black"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.252c.54-.64 1.517-1.144 2.894-1.144h6.059a4.237 4.237 0 0 0 2.222-.294 3.999 3.999 0 0 0 1.706-1.571 3.65 3.65 0 0 0 .5-1.99 3.6 3.6 0 0 0-.493-1.986 4.024 4.024 0 0 0-1.748-1.579A4.316 4.316 0 0 0 16.98 10H8.384l3.528-3.784h4.088c2.404-.007 2.404-3.593 0-3.593H13.483zM16.98 12.333c.48.006.88.163 1.18.47.24.246.368.583.364.954.004.372-.124.71-.364.955-.3.308-.7.465-1.18.471H7.8A11.392 11.392 0 0 1 7.8 12.333h9.18z"/></svg>';
     case 'email':
       return '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>';
     default:
