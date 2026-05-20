@@ -476,21 +476,21 @@ function DesktopApp() {
                       .path-flow { animation: flow 1.4s linear infinite; }
                     `}</style>
                     {/* Contact → About */}
-                    <path className="path-flow" d="M 475 475 Q 1400 150 2200 450" stroke="#ccff00" strokeWidth="2" fill="none" strokeDasharray="10 10" />
+                    <path className="path-flow" d="M 900 475 Q 1400 200 2200 450" stroke="#ccff00" strokeWidth="2" fill="none" strokeDasharray="10 10" />
                     {/* About → Manifesto */}
-                    <path className="path-flow" d="M 2750 450 Q 3400 100 4000 450" stroke="#ccff00" strokeWidth="2" fill="none" strokeDasharray="10 10" />
+                    <path className="path-flow" d="M 3300 450 Q 3600 200 4000 450" stroke="#ccff00" strokeWidth="2" fill="none" strokeDasharray="10 10" />
                     {/* Hero → About */}
-                    <path className="path-flow" d="M 2350 1800 Q 2400 1100 2750 450" stroke="#ccff00" strokeWidth="2" fill="none" strokeDasharray="10 10" />
+                    <path className="path-flow" d="M 2350 1800 Q 2400 1100 2750 800" stroke="#ccff00" strokeWidth="2" fill="none" strokeDasharray="10 10" />
                     {/* Hero → Process */}
-                    <path className="path-flow" d="M 1800 2150 Q 1100 2000 575 2220" stroke="#ccff00" strokeWidth="2" fill="none" strokeDasharray="10 10" />
+                    <path className="path-flow" d="M 1800 2150 Q 1400 2150 1050 2220" stroke="#ccff00" strokeWidth="2" fill="none" strokeDasharray="10 10" />
                     {/* Hero → Work */}
-                    <path className="path-flow" d="M 2350 2150 Q 3000 2000 3800 2250" stroke="#ccff00" strokeWidth="2" fill="none" strokeDasharray="10 10" />
+                    <path className="path-flow" d="M 2900 2150 Q 3300 2150 3800 2250" stroke="#ccff00" strokeWidth="2" fill="none" strokeDasharray="10 10" />
                     {/* Hero → Manifesto */}
-                    <path className="path-flow" d="M 2350 1800 Q 3200 1000 4000 450" stroke="#ccff00" strokeWidth="2" fill="none" strokeDasharray="10 10" />
+                    <path className="path-flow" d="M 2900 1800 Q 3400 1000 4000 450" stroke="#ccff00" strokeWidth="2" fill="none" strokeDasharray="10 10" />
                     {/* Hero → TechStack */}
-                    <path className="path-flow" d="M 2350 2150 Q 2200 2800 2800 3500" stroke="#ccff00" strokeWidth="2" fill="none" strokeDasharray="10 10" />
+                    <path className="path-flow" d="M 2350 2500 Q 2300 3000 2800 3500" stroke="#ccff00" strokeWidth="2" fill="none" strokeDasharray="10 10" />
                     {/* Process → TechStack */}
-                    <path className="path-flow" d="M 575 2220 Q 1300 2800 2000 3500" stroke="#ccff00" strokeWidth="2" fill="none" strokeDasharray="10 10" />
+                    <path className="path-flow" d="M 575 2640 Q 1300 3100 2000 3500" stroke="#ccff00" strokeWidth="2" fill="none" strokeDasharray="10 10" />
                   </svg>
                   <EasterEgg />
 
