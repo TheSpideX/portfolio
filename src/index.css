@@ -350,3 +350,17 @@ button {
     opacity: 0;
   }
 }
+
+/* Flow Down Animation for Pipeline */
+@keyframes flow-down {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.animate-flow-down {
+  animation: flow-down 2s linear infinite;
+}

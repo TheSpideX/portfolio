@@ -4,7 +4,7 @@ import { useGSAP } from '@gsap/react';
 import { Move, Github, Linkedin, Twitter, Dribbble, ExternalLink, ArrowUpRight, X, Copy, Check, MapPin, Clock, Volume2, VolumeX, Box, LayoutGrid, ArrowRight, Sparkles } from 'lucide-react';
 import { TransformWrapper, TransformComponent, useControls } from "react-zoom-pan-pinch";
 
-import { ProcessTimeline } from './components/ProcessTimeline';
+import { ProcessPipeline } from './components/ProcessPipeline';
 import { ExpertiseSection } from './components/ExpertiseSection';
 import { ScrambleText } from './components/ScrambleText';
 import { MobileLayout } from './components/MobileLayout';
@@ -27,6 +27,7 @@ import { PhysicsContext } from './contexts/PhysicsContext';
 const Background3D = React.lazy(() => import('./components/Background3D'));
 const PhysicsStack = React.lazy(() => import('./components/PhysicsStack'));
 import InteractiveNode from './components/InteractiveNode';
+import ProcessInteractiveNode from './components/ProcessInteractiveNode';
 import Matter from 'matter-js';
 
 // Re-export for backward compatibility
@@ -868,18 +869,17 @@ function DesktopApp() {
               </InteractiveNode>
 
               {/* NODE 8: PROCESS - Timeline (LEFT, beside Hero) */}
-              <InteractiveNode loadingProgress={loadingProgress} id="node-process" startX={100} startY={1500} width={950} height={840} zIndex={10} delay={1.4} innerClassName="bg-black border border-white/10 p-14 rounded-3xl relative flex flex-col [transform-style:preserve-3d]">
-                {/* BG watermark */}
-                <div className="absolute right-4 bottom-2 font-display text-[260px] text-white/[0.025] leading-none pointer-events-none select-none" style={{ transform: 'translateZ(-50px)' }}>04</div>
-                <div className="flex justify-between items-end mb-14 shrink-0" style={{ transform: 'translateZ(100px)' }}>
-                  <h2 className="text-[72px] font-display uppercase text-[#ccff00] leading-none">How I Work</h2>
-                  <div className="font-mono text-xs text-gray-500 uppercase tracking-widest border border-white/10 px-4 py-2 rounded-full hidden md:block">SYS.PROCESS_FLOW</div>
+              <ProcessInteractiveNode loadingProgress={loadingProgress} id="node-process" startX={100} startY={1500} width={950} height={840} zIndex={10} delay={1.4} innerClassName="bg-zinc-950 border border-white/10 p-10 rounded-3xl relative overflow-hidden">
+                {/* Header */}
+                <div className="flex justify-between items-end mb-8 shrink-0" style={{ transform: 'translateZ(100px)' }}>
+                  <h2 className="text-[60px] font-display uppercase text-[#ccff00] leading-none">How I Work</h2>
+                  <div className="font-mono text-[10px] text-gray-500 uppercase tracking-widest border border-white/10 px-3 py-1.5 rounded-full hidden md:block">SYS.PROCESS_FLOW</div>
                 </div>
-                {/* Timeline */}
-                <div className="flex-1 min-h-0" style={{ transformStyle: 'preserve-3d' }}>
-                  <ProcessTimeline />
+                {/* Pipeline */}
+                <div className="relative flex-1">
+                  <ProcessPipeline />
                 </div>
-              </InteractiveNode>
+              </ProcessInteractiveNode>
 
               {/* Ambient Background Elements - scattered across full canvas */}
               <div className="absolute top-[1600px] left-[1800px] w-[1200px] h-[1200px] bg-[#ccff00] rounded-full mix-blend-overlay filter blur-[300px] opacity-8 pointer-events-none" />
