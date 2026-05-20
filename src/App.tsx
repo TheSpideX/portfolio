@@ -5,7 +5,6 @@ import { Move, Github, Linkedin, Twitter, Dribbble, ExternalLink, ArrowUpRight, 
 import { TransformWrapper, TransformComponent, useControls } from "react-zoom-pan-pinch";
 
 import { ProcessPipeline } from './components/ProcessPipeline';
-import { ExpertiseSection } from './components/ExpertiseSection';
 import { ScrambleText } from './components/ScrambleText';
 import { MobileLayout } from './components/MobileLayout';
 import { Navigation } from './components/Navigation';
@@ -498,7 +497,7 @@ function DesktopApp() {
                   <EasterEgg />
 
                   {/* NODE 1: HERO (CENTER - initial focal point) */}
-              <InteractiveNode loadingProgress={loadingProgress} id="node-hero" startX={1500} startY={1500} width={1100} height={700} zIndex={10} delay={0} innerClassName="bg-black/40 backdrop-blur-md rounded-3xl p-12 border border-white/10 shadow-2xl relative">
+              <InteractiveNode loadingProgress={loadingProgress} id="node-hero" startX={1800} startY={1800} width={1100} height={700} zIndex={10} delay={0} innerClassName="bg-black/40 backdrop-blur-md rounded-3xl p-12 border border-white/10 shadow-2xl relative">
 
 
 
@@ -571,7 +570,7 @@ function DesktopApp() {
               </InteractiveNode>
 
               {/* NODE 2: MANIFESTO (FAR TOP RIGHT) */}
-              <InteractiveNode loadingProgress={loadingProgress} id="node-manifesto" startX={3300} startY={50} width={1200} height={800} zIndex={10} delay={0.2} innerClassName="bg-[#ccff00] text-black p-20 rounded-3xl shadow-[0_0_100px_rgba(204,255,0,0.2)] border border-[#ccff00]/50 relative">
+              <InteractiveNode loadingProgress={loadingProgress} id="node-manifesto" startX={4000} startY={50} width={1200} height={800} zIndex={10} delay={0.2} innerClassName="bg-[#ccff00] text-black p-20 rounded-3xl shadow-[0_0_100px_rgba(204,255,0,0.2)] border border-[#ccff00]/50 relative">
                 {(() => {
                   const manifestoRef = useRef<HTMLDivElement>(null);
                   const signatureRef = useRef<SVGPathElement>(null);
@@ -635,7 +634,7 @@ function DesktopApp() {
               </InteractiveNode>
 
               {/* NODE 3: WORK (RIGHT, beside hero) */}
-              <InteractiveNode loadingProgress={loadingProgress} id="node-work" startX={3000} startY={1450} width={1600} height={900} zIndex={10} delay={0.4} innerClassName="bg-black/40 backdrop-blur-md rounded-3xl p-14 border border-white/10 shadow-2xl">
+              <InteractiveNode loadingProgress={loadingProgress} id="node-work" startX={3800} startY={1800} width={1600} height={900} zIndex={10} delay={0.4} innerClassName="bg-black/40 backdrop-blur-md rounded-3xl p-14 border border-white/10 shadow-2xl">
                 <div className="flex justify-between items-baseline mb-8" style={{ transform: 'translateZ(150px)' }}>
                   <h2 className="text-[120px] font-display uppercase tracking-wide text-white">Systems I Built</h2>
                   <span className="font-mono text-gray-500 text-xl uppercase tracking-widest">2024 - 2026</span>
@@ -667,21 +666,8 @@ function DesktopApp() {
                 </div>
               </InteractiveNode>
 
-              {/* NODE 4: EXPERTISE (FAR BOTTOM LEFT) */}
-              <InteractiveNode loadingProgress={loadingProgress} id="node-expertise" startX={200} startY={2900} width={1050} height={960} zIndex={10} delay={0.6} innerClassName="[transform-style:preserve-3d]">
-                <FlashlightSection className="bg-zinc-950 p-20 rounded-3xl border border-white/10 h-full w-full shadow-2xl flex flex-col" style={{ transformStyle: 'preserve-3d' }}>
-                  <div className="flex justify-between items-end mb-12 shrink-0" style={{ transform: 'translateZ(120px)' }}>
-                    <h2 className="text-[100px] font-display uppercase tracking-wide text-[#ccff00] leading-none">Expertise</h2>
-                    <div className="font-mono text-xs text-gray-500 uppercase tracking-widest border border-white/10 px-4 py-2 rounded-full hidden md:block">CORE_MODULES</div>
-                  </div>
-                  <div className="flex-1 min-h-0" style={{ transformStyle: 'preserve-3d' }}>
-                    <ExpertiseSection />
-                  </div>
-                </FlashlightSection>
-              </InteractiveNode>
-
               {/* NODE 5: CONTACT (FAR TOP LEFT) */}
-              <InteractiveNode loadingProgress={loadingProgress} id="node-contact" startX={100} startY={100} width={850} height={850} shape="circle" zIndex={10} delay={0.8} innerClassName="rounded-full relative object-cover bg-black border-[3px] border-white text-white shadow-2xl overflow-hidden group">
+              <InteractiveNode loadingProgress={loadingProgress} id="node-contact" startX={50} startY={50} width={850} height={850} shape="circle" zIndex={10} delay={0.8} innerClassName="rounded-full relative object-cover bg-black border-[3px] border-white text-white shadow-2xl overflow-hidden group">
                 <div
                   className="absolute inset-0 w-full h-full flex flex-col items-center justify-center cursor-none transition-colors duration-700"
                   data-cursor="HELLO"
@@ -733,7 +719,7 @@ function DesktopApp() {
               </InteractiveNode>
 
               {/* NODE 6: ABOUT - Bento Grid */}
-              <InteractiveNode loadingProgress={loadingProgress} id="node-about" startX={1700} startY={80} width={1100} height={700} zIndex={10} delay={1.0} innerClassName="bg-black/40 backdrop-blur-md rounded-3xl p-4 shadow-2xl border border-white/10">
+              <InteractiveNode loadingProgress={loadingProgress} id="node-about" startX={2200} startY={100} width={1100} height={700} zIndex={10} delay={1.0} innerClassName="bg-black/40 backdrop-blur-md rounded-3xl p-4 shadow-2xl border border-white/10">
                 <div className="w-full h-full grid grid-cols-12 grid-rows-6 gap-4" style={{ transformStyle: 'preserve-3d' }}>
                   {/* Block 1: Name and Title */}
                   <div className="col-span-7 row-span-4 rounded-2xl p-10 flex flex-col justify-between group relative" style={{ transform: 'translateZ(60px)', transformStyle: 'preserve-3d' }}>
@@ -862,14 +848,14 @@ function DesktopApp() {
               </InteractiveNode>
 
               {/* NODE 7: TECH STACK - Physics Marquee */}
-              <InteractiveNode loadingProgress={loadingProgress} id="node-stack" startX={1600} startY={2950} width={1600} height={600} zIndex={10} delay={1.2}>
+              <InteractiveNode loadingProgress={loadingProgress} id="node-stack" startX={2000} startY={3500} width={1600} height={600} zIndex={10} delay={1.2}>
                 <Suspense fallback={null}>
                   <PhysicsStack width={1600} height={600} />
                 </Suspense>
               </InteractiveNode>
 
               {/* NODE 8: PROCESS - Timeline (LEFT, beside Hero) */}
-              <ProcessInteractiveNode loadingProgress={loadingProgress} id="node-process" startX={100} startY={1500} width={950} height={840} zIndex={10} delay={1.4} innerClassName="bg-zinc-950 border border-white/10 p-10 rounded-3xl relative overflow-hidden">
+              <ProcessInteractiveNode loadingProgress={loadingProgress} id="node-process" startX={100} startY={1800} width={950} height={840} zIndex={10} delay={1.4} innerClassName="bg-zinc-950 border border-white/10 p-10 rounded-3xl relative overflow-hidden">
                 {/* Header */}
                 <div className="flex justify-between items-end mb-8 shrink-0" style={{ transform: 'translateZ(100px)' }}>
                   <h2 className="text-[60px] font-display uppercase text-[#ccff00] leading-none">How I Work</h2>
