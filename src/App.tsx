@@ -499,7 +499,7 @@ function DesktopApp() {
                 {/* Rotating Role Badge */}
                 {(() => {
                   const [badgeIdx, setBadgeIdx] = useState(0);
-                  const badges = ['Open for Freelance', 'IIT Dhanbad CSE', 'AI-Augmented Builder'];
+                  const badges = ['Open for Freelance', 'IIT Graduate', 'AI-Augmented Builder'];
                   useEffect(() => {
                     const interval = setInterval(() => setBadgeIdx(i => (i + 1) % badges.length), 3000);
                     return () => clearInterval(interval);
@@ -554,7 +554,7 @@ function DesktopApp() {
                   </p>
                   {/* Stats strip */}
                   <div className="flex gap-8 shrink-0">
-                    {[{ n: '3+', l: 'Novel Systems' }, { n: 'AIR 5007', l: 'JEE Advanced' }, { n: '8.59', l: 'CGPA / 10' }].map(s => (
+                    {[{ n: '3+', l: 'Novel Systems' }, { n: 'Top 0.1%', l: 'of India' }, { n: '8.5+', l: 'CGPA / 10' }].map(s => (
                       <div key={s.l} className="text-center">
                         <div className="font-display text-4xl text-[#ccff00]">{s.n}</div>
                         <div className="font-mono text-xs text-gray-500 uppercase tracking-widest mt-1">{s.l}</div>
@@ -660,7 +660,7 @@ function DesktopApp() {
                         <button
                           onClick={(e) => {
                             e.stopPropagation();
-                            navigator.clipboard.writeText('satyamiitdnbd@gmail.com');
+                            navigator.clipboard.writeText('contact@spidexlab.me');
                             setCopied(true);
                             setTimeout(() => setCopied(false), 2000);
                           }}
@@ -669,7 +669,7 @@ function DesktopApp() {
                           data-cursor-inverted="true"
                           data-cursor-size="2.5"
                         >
-                          {copied ? 'COPIED TO CLIPBOARD' : 'satyamiitdnbd@gmail.com'}
+                          {copied ? 'COPIED TO CLIPBOARD' : 'contact@spidexlab.me'}
                         </button>
                       );
                     })()}
@@ -720,7 +720,7 @@ function DesktopApp() {
                   <div className="col-span-5 row-span-3 rounded-2xl relative group" style={{ transform: 'translateZ(40px)', transformStyle: 'preserve-3d' }}>
                     {/* Background Layer */}
                     <div className="absolute inset-0 bg-zinc-900 rounded-2xl border border-white/5 overflow-hidden pointer-events-none">
-                      <img src="/myself.png" alt="Kumar Satyam" className="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 group-hover:grayscale-0 grayscale" />
+                      <img src="/character.jpeg" alt="SpideX" className="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 group-hover:grayscale-0 grayscale" />
                       <div className="absolute inset-0 bg-[#ccff00] mix-blend-overlay opacity-0 group-hover:opacity-30 transition-opacity duration-500" />
                     </div>
                     {/* Live Clock */}
@@ -799,8 +799,8 @@ function DesktopApp() {
                           <div className="absolute inset-0 bg-[#ccff00]/20 rounded-full animate-ping" />
                         </div>
                         <div>
-                          <div className="font-mono text-[10px] text-gray-400 uppercase tracking-widest">Dhanbad</div>
-                          <div className="font-mono text-[9px] text-gray-600">IIT Dhanbad, India</div>
+                          <div className="font-mono text-[10px] text-gray-400 uppercase tracking-widest">India</div>
+                          <div className="font-mono text-[9px] text-gray-600">IIT Graduate, India</div>
                         </div>
                       </div>
                       {/* Spotify Now Playing */}

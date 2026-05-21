@@ -1,4 +1,4 @@
-# Kumar Satyam — Expressive Portfolio
+# SpideX — Expressive Portfolio
 
 An infinite canvas portfolio with physics simulation, 3D terrain, audio synthesis, and draggable nodes.
 
@@ -34,8 +34,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Author
 
-**Kumar Satyam**
+**SpideX**
 - GitHub: [TheSpideX](https://github.com/TheSpideX)
 - LinkedIn: [kumar-satyam-64a807255](https://www.linkedin.com/in/kumar-satyam-64a807255)
 - LeetCode: [spideX](https://leetcode.com/u/spideX/)
-- Email: satyamiitdnbd@gmail.com
+- Email: contact@spidexlab.me

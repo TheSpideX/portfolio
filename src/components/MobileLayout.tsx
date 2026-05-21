@@ -12,7 +12,7 @@ const projects = [
 
 export const MobileLayout = () => {
   const [badgeIdx, setBadgeIdx] = useState(0);
-  const badges = ['Open for Freelance', 'IIT Dhanbad CSE', 'AI-Augmented Builder'];
+  const badges = ['Open for Freelance', 'IIT Graduate', 'AI-Augmented Builder'];
   const [copied, setCopied] = useState(false);
   const [time, setTime] = useState('');
   const [showDesktopDialog, setShowDesktopDialog] = useState(true);
@@ -30,7 +30,7 @@ export const MobileLayout = () => {
   }, []);
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText('satyamiitdnbd@gmail.com');
+    navigator.clipboard.writeText('contact@spidexlab.me');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -96,7 +96,7 @@ export const MobileLayout = () => {
             <div className="font-mono text-[10px] text-gray-500 uppercase tracking-widest">Novel Systems</div>
           </div>
           <div className="text-center">
-            <div className="font-display text-3xl text-[#ccff00]">AIR 5007</div>
+            <div className="font-display text-3xl text-[#ccff00]">Top 0.1%</div>
             <div className="font-mono text-[10px] text-gray-500 uppercase tracking-widest">JEE Advanced</div>
           </div>
           <div className="text-center">
@@ -126,8 +126,8 @@ export const MobileLayout = () => {
           <div className="bg-zinc-950 rounded-2xl p-4 border border-white/5 flex items-center gap-3">
             <MapPin className="w-4 h-4 text-[#ccff00]" />
             <div>
-              <div className="font-mono text-[10px] text-gray-400 uppercase">Dhanbad</div>
-              <div className="font-mono text-[9px] text-gray-600">IIT Dhanbad, India</div>
+              <div className="font-mono text-[10px] text-gray-400 uppercase">India</div>
+              <div className="font-mono text-[9px] text-gray-600">IIT Graduate, India</div>
             </div>
           </div>
           <div className="bg-zinc-950 rounded-2xl p-4 border border-white/5 flex items-center gap-3">
@@ -209,7 +209,7 @@ export const MobileLayout = () => {
           className="w-full bg-[#ccff00] text-black font-mono font-bold text-lg py-4 rounded-full mb-6 flex items-center justify-center gap-2"
         >
           {copied ? <Check className="w-5 h-5" /> : <Copy className="w-5 h-5" />}
-          {copied ? 'Copied!' : 'satyamiitdnbd@gmail.com'}
+          {copied ? 'Copied!' : 'contact@spidexlab.me'}
         </button>
 
         <div className="flex gap-4 justify-center flex-wrap">
