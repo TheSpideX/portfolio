@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowUpRight } from 'lucide-react';
+import { FaGithub } from 'react-icons/fa';
 import { Project, PROJECTS } from '../constants/projects';
 import { Magnetic } from './Magnetic';
 
@@ -51,6 +52,21 @@ export function WorkSection() {
               transition={{ duration: 0.4, ease: "easeOut" }}
               className="absolute inset-0 flex flex-col"
             >
+              {/* GitHub icon in top right */}
+              {activeProject.github && (
+                <a
+                  href={activeProject.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute top-6 right-6 z-20 p-3 bg-black/50 backdrop-blur-sm border border-white/10 rounded-full hover:bg-zinc-800 hover:border-white/30 transition-all"
+                  data-cursor="GITHUB"
+                  data-cursor-size="2.5"
+                  data-cursor-icon="github"
+                >
+                  <FaGithub className="w-6 h-6 text-white" />
+                </a>
+              )}
+              
               <div className="h-[45%] overflow-hidden relative shrink-0">
                 <img 
                   src={`https://picsum.photos/seed/tech${activeProject.img}/1200/600?grayscale`} 
@@ -109,8 +125,12 @@ export function WorkSection() {
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-3 bg-zinc-800 text-white border border-white/10 px-8 py-4 rounded-full font-mono font-bold text-sm uppercase tracking-widest hover:bg-zinc-700 hover:border-white/30 transition-colors w-max"
+                          data-cursor="GITHUB"
+                          data-cursor-size="2.5"
+                          data-cursor-icon="github"
                         >
-                          Source Code <ArrowUpRight className="w-5 h-5" />
+                          <FaGithub className="w-5 h-5" />
+                          Source Code
                         </a>
                       </Magnetic>
                     )}
